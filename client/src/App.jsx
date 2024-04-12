@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState } from "react";
-
 function App() {
   const [hero, setHero] = useState(null);
   console.log("ttt");

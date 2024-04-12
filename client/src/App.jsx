@@ -4,7 +4,7 @@ import { useState } from "react";
 function App() {
 
 const [hero, setHero] = useState(null);
-console.log(hero);
+console.log("hero");
 
 const getApi = () => {
   fetch("https://akabab.github.io/superhero-api/api/all.json")

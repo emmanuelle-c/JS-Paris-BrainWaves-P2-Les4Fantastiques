@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+
 function App() {
   const [hero, setHero] = useState(null);
   console.log("ttt");
@@ -14,7 +15,7 @@ function App() {
       <button type="button" onClick={getApi}>
         Get API
       </button>
-      {hero && hero.map((star) => <p key={star.id}>{star.name}</p>)}
+      {/* {hero && hero.map((star) => <p key={star.id}>{star.name}</p>)} */}
     </>
   );
 }

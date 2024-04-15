@@ -39,7 +39,7 @@ a.burgermenu_link {
 }
 .burger-bar {
   width: 40px;
-  height: 40px;
+  height: 4Opx;
   background-color: transparent;
   border: none;
   color: inherit;
@@ -71,5 +71,5 @@ a.burgermenu_link {
   transform: translateY(-12px);
 }
 .burger-bar::after {
-  transform: translateY(12px);
+  transform: translateY(10px);
 }

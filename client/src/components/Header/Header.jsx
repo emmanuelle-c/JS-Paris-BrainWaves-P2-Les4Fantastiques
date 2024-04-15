@@ -12,7 +12,6 @@ function BurgerMenu() {
   return (
     <header>
       <div className={`burgermenu ${showLinks ? "show-burger" : "hide-burger"}`}>
-        <div className="burgermenu_logo">
         <ul className="burgermenu_links">
           <li className="burgermenu_items">
           <a href="/" className="burgermenu_link">Accueil</a>
@@ -27,7 +26,6 @@ function BurgerMenu() {
           <a href="/" className="burgermenu_link">A Propos</a>
           </li>
         </ul>
-        </div>
             <button className="burger-bar" type="button" alt="menu" onClick={handleShowLinks} onKeyDown={handleShowLinks}/>
       </div>
       <div className="logo">

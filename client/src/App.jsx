@@ -4,7 +4,7 @@ import axios from "axios";
 import ScrollToTp from "react-scroll-to-top";
 
 // import des composants
-import HeroCard from "./components/Hero";
+import HeroCard from "./components/HeroCard/Hero";
 import BurgerMenu from "./components/Header/Header";
 
 // import des fichiers style
@@ -48,7 +48,9 @@ function App() {
           </div>
         ))}
         <div className="show-more">
-          <button onClick={loadMoreHeroes} type="button">Voir plus</button>
+          <button onClick={loadMoreHeroes} type="button">
+            Voir plus
+          </button>
           <div className="scroll">
             <ScrollToTp />
           </div>

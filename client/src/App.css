@@ -3,13 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --main-color: #00008b;
   --secondary-color: #7b7b7b;
   --star-color: #fcb340;
 }
-
 @font-face {
   font-family: "Bebas Neue";
   src: url(./assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf);
@@ -30,16 +28,13 @@
   src: url(./assets/fonts/Poppins/Poppins-ExtraBold.ttf);
   font-weight: extra-bold;
 }
-
 button {
   font-family: "Bebas Neue";
 }
-
 h2 {
   font-family: Poppins;
   font-weight: bold;
 }
-
 ul {
   list-style: none;
   font-family: "poppins";
@@ -52,7 +47,6 @@ a {
   flex-wrap: wrap;
   justify-content: center; /* Centrer les cartes horizontalement */
 }
-
 .hero-card {
   margin: 10px;
   width: 20%;
@@ -80,7 +74,6 @@ a {
   display: block;
   border: none;
 }
-
 .show-more > button:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
@@ -89,7 +82,6 @@ a {
 /* VERSION MOBILE */
 @media screen and (max-width: 760px) {
 }
-
 /* VERSION TABLETTE */
 @media screen and (min-width: 761px) and (max-width: 960px) {
 }

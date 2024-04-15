@@ -37,7 +37,7 @@ a.burgermenu_link {
   padding: 1.5rem;
   color: inherit;
 }
-.button {
+.burger-bar {
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -48,7 +48,7 @@ a.burgermenu_link {
   top: 1rem;
   left: 1rem;
 }
-.button:hover {
+.burger-bar:hover {
   cursor: pointer;
 }
 .burger-bar,

@@ -16,7 +16,7 @@ function App() {
         "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json"
       )
       .then((response) => {
-        const {data} = response.data;
+        const data = response.data;
         const shuffledHeroes = data.sort(() => Math.random() - 0.5); // fonction de comparaison aléatoire
         setAllHeroes(shuffledHeroes);
         setDisplayedHeroes(shuffledHeroes.slice(0, 12)); // charger les 12 premiers héros du tableau qui a été mélangé

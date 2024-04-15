@@ -1,0 +1,75 @@
+header .logo {
+  display: flex;
+  justify-content: center;
+}
+.burgermenu {
+  color: white;
+}
+a.burgermenu_link {
+  font-size: 1rem;
+  padding-left: 0;
+}
+.burgermenu_links {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  height: 100vh;
+  max-width: 20%;
+  padding: 5rem;
+  visibility: hidden;
+  background-color: rgba(123, 123, 123, 0.9);
+  left: 0;
+  transition: all 0.1s ease-out;
+}
+.show-burger .burger-bar,
+.show-burger .burger-bar::before,
+.show-burger .burger-bar::after {
+  background-color: white;
+}
+.show-burger .burgermenu_links {
+  width: 17rem;
+  visibility: visible;
+}
+.burgermenu_link {
+  display: block;
+  padding: 1.5rem;
+  color: inherit;
+}
+.burger-bar {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  display: block;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+.burger-bar:hover {
+  cursor: pointer;
+}
+.burger-bar,
+.burger-bar::before,
+.burger-bar::after {
+  display: block;
+  width: 40px;
+  height: 4px;
+  position: relative;
+  border-radius: 3px;
+  background-color: #7b7b7b;
+}
+.burger-bar::before,
+.burger-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.burger-bar::before {
+  transform: translateY(-12px);
+}
+.burger-bar::after {
+  transform: translateY(12px);
+}

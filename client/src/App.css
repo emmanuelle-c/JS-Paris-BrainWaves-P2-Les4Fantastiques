@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -39,12 +40,51 @@ h2 {
   font-weight: bold;
 }
 
-.card-container {
+ul {
+  list-style: none;
+  font-family: "poppins";
+}
+a {
+  text-decoration: none;
+}
+.hero-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 5%;
-  align-items: flex-start;
-  justify-content: space-around;
+  justify-content: center; /* Centrer les cartes horizontalement */
+}
+
+.hero-card {
+  margin: 10px;
+  width: 20%;
+}
+.show-more {
+  display: flex;
+  width: 20%;
+}
+.show-more > button {
+  background-image: linear-gradient(
+    to right,
+    #7b7b7b 0%,
+    #eef2f3 51%,
+    #8e9eab 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border: none;
+}
+
+.show-more > button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 /* VERSION MOBILE */
 @media screen and (max-width: 760px) {

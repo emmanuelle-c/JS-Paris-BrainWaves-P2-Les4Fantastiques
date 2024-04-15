@@ -1,9 +1,14 @@
-import "./App.css";
-import axios from "axios";
+// import des librairies
 import { useState, useEffect } from "react";
+import axios from "axios";
 import ScrollToTp from "react-scroll-to-top";
+
+// import des composants
 import HeroCard from "./components/Hero";
 import BurgerMenu from "./components/Header/Header";
+
+// import des fichiers style
+import "./App.css";
 
 function App() {
   const [allHeroes, setAllHeroes] = useState([]);

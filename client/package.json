@@ -26,6 +26,11 @@
     "prettier": "^3.2.5",
     "vite": "^5.0.12"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{html,scss,css}": "prettier --check",
     "*.{jsx,js}": "eslint --report-unused-disable-directives"

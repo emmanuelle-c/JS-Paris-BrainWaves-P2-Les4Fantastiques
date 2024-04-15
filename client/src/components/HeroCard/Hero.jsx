@@ -11,11 +11,11 @@ function HeroCard({ hero }) {
         <h1>{hero.name}</h1>
       </section>
       <article>
-        <p className="description">
+        <div className="description">
           <p>{hero.biography.fullName}</p>
           <p>{hero.work.occupation}</p>
-          <p>prix : 100€ par jour</p>
-        </p>
+          <p>prix : {hero.price}€ par jour</p>
+        </div>
       </article>
     </div>
   );

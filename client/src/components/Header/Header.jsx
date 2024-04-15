@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
-import { Bannière } from "../../assets/images/Images";
+import ban from "../../assets/images/logos/banniere.svg";
 
 function BurgerMenu() {
   const [showLinks, setShowLinks] = useState(false);
@@ -11,25 +11,50 @@ function BurgerMenu() {
 
   return (
     <header>
-      <div className={`burgermenu ${showLinks ? "show-burger" : "hide-burger"}`}>
-        <ul className="burgermenu_links">
-          <li className="burgermenu_items">
-          <a href="/" className="burgermenu_link">Accueil</a>
+      <div
+        className={`burgermenu ${showLinks ? "show-burger" : "hide-burger"}`}
+      >
+        <ul className="burgermenu-links">
+          <li className="burgermenu-items">
+            <a href="/" className="burgermenu-link">
+              Accueil
+            </a>
           </li>
-          <li className="burgermenu_items">
-          <a href="/" className="burgermenu_link">Portfolio</a>
+          <li className="burgermenu-items">
+            <a href="/" className="burgermenu-link">
+              Portfolio
+            </a>
           </li>
-          <li className="burgermenu__items">
-          <a href="/" className="burgermenu_link">Services</a>
+          <li className="burgermenu-items">
+            <a href="/" className="burgermenu-link">
+              Services
+            </a>
           </li>
-          <li className="burgermenu_items">
-          <a href="/" className="burgermenu_link">A Propos</a>
+          <li className="burgermenu-items">
+            <a href="/" className="burgermenu-link">
+              A Propos
+            </a>
           </li>
         </ul>
-            <button className="burger-bar" type="button" alt="menu" onClick={handleShowLinks} onKeyDown={handleShowLinks}/>
+        <button
+          aria-label="button"
+          type="button"
+          className="burger-bar"
+          onClick={handleShowLinks}
+          onKeyDown={handleShowLinks}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="48"
+            viewBox="0 -960 960 960"
+            width="48"
+          >
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg>
+        </button>
       </div>
       <div className="logo">
-        <img src={Bannière} alt="logo" />
+        <img src={ban} alt="logo" />
       </div>
     </header>
   );

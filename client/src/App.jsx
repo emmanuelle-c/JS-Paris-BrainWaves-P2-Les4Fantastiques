@@ -1,9 +1,14 @@
-import "./App.css";
-import axios from "axios";
+// import des librairies
 import { useState, useEffect } from "react";
+import axios from "axios";
 import ScrollToTp from "react-scroll-to-top";
-import HeroCard from "./components/Hero";
+
+// import des composants
+import HeroCard from "./components/HeroCard/Hero";
 import BurgerMenu from "./components/Header/Header";
+
+// import des fichiers style
+import "./App.css";
 
 function App() {
   const [allHeroes, setAllHeroes] = useState([]);
@@ -43,7 +48,9 @@ function App() {
           </div>
         ))}
         <div className="show-more">
-          <button onClick={loadMoreHeroes} type="button">Voir plus</button>
+          <button onClick={loadMoreHeroes} type="button">
+            Voir plus
+          </button>
           <div className="scroll">
             <ScrollToTp />
           </div>

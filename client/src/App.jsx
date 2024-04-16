@@ -6,9 +6,9 @@ import ScrollToTp from "react-scroll-to-top";
 // import des composants
 import HeroCard from "./components/HeroCard/Hero";
 import BurgerMenu from "./components/Header/Header";
-
 // import des fichiers style
 import "./App.css";
+import IconsBar from "./components/IconsBar/IconsBar";
 
 function App() {
   const [allHeroes, setAllHeroes] = useState([]);
@@ -28,7 +28,7 @@ function App() {
       });
   }, []);
 
-  const loadMoreHeroes = () => {
+    const loadMoreHeroes = () => {
     const endIndex = startIndex + 12; // calculer index de fin pour les suivants
     const nextHeroes = allHeroes.slice(startIndex, endIndex); // extraire les héros suivants de la liste complète
     // (prevHeroes)contient les premiers héros déjà affichés
@@ -41,6 +41,7 @@ function App() {
       <div>
         <BurgerMenu />
       </div>
+      <IconsBar/>
       <div className="hero-container">
         {displayedHeroes.map((hero) => (
           <div className="hero-card" key={hero.id}>

@@ -32,7 +32,7 @@ button {
   font-family: "Bebas Neue";
 }
 h2 {
-  font-family: Poppins;
+  font-family: "poppins";
   font-weight: bold;
 }
 ul {
@@ -78,6 +78,12 @@ a {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
+}
+
+.search-menu{
+  display: flex;
+  justify-content: center;
+  margin : 2rem 0;
 }
 /* VERSION MOBILE */
 @media screen and (max-width: 760px) {

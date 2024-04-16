@@ -17,6 +17,7 @@ function App() {
   const [startIndex, setStartIndex] = useState(12);
   const [search, setSearch] = useState("");
   const [filterHeroes, setFilterHeroes] = useState([]);
+  const [searchDate, setSearchDate] = useState("")
 
   // fetch les données API, suffle les données et afficher seulement 12 par défaut :
   useEffect(() => {
@@ -49,18 +50,19 @@ function App() {
     );
   });
   // ajouter une date random à chaque objet :
-  function randomDate(start, end) {
-    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-  }
 
-  allHeroes.forEach(function (hero){
-    hero.date = randomDate(new Date(2024, 12, 31), new Date());
-  })
+  function randomDate(start, end) {
+    return new Date( +start + Math.random() * (end - start));
+  };
+  allHeroes.forEach(function (hero) {
+    hero.date = randomDate(new Date(2024, 4, 30),new Date(2024, 9, 30));
+  });
 
   // faire une recherche par prix :
 
   const handleClick = () => {
     const filter = allHeroes.filter((hero) => hero.price >= Number(search));
+    const filter2 = allHeroes.filter((hero) => hero.date === searchDate);
     if (filter.length === 0) {
       setFilterHeroes(displayedHeroes);
     } else {
@@ -68,6 +70,7 @@ function App() {
       setDisplayedHeroes(filter.slice(0, 12));
     }
   };
+
 
   return (
     <>
@@ -79,6 +82,8 @@ function App() {
           setSearch={setSearch}
           handleClick={handleClick}
           search={search}
+          searchDate={searchDate}
+          setSearchDate={setSearchDate}
         />
       </div>
       <div className="hero-container">

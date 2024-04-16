@@ -16,9 +16,7 @@ function convertMonth(month) {
   if (month === 12) return "Décembre";
 }
 
-
 function HeroCard({ hero }) {
-
   return (
     <div className="card">
       <div className="avatar">

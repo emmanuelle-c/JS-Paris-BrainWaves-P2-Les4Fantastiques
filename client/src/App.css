@@ -80,10 +80,10 @@ a {
   text-decoration: none;
 }
 
-.search-menu{
+.search-menu {
   display: flex;
   justify-content: center;
-  margin : 2rem 0;
+  margin: 2rem 0;
 }
 /* VERSION MOBILE */
 @media screen and (max-width: 760px) {

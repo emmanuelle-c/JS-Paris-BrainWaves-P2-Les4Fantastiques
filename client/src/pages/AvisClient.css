@@ -1,0 +1,65 @@
+.commandcontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.commentaire {
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 50%;  
+  height:300px;  
+  /* padding: 20px 150px 20px 20px; */
+  
+}
+.utilisateur {
+
+
+}
+
+.date {
+   
+  color: brown;
+
+
+}
+
+.avis {
+
+}
+
+.etoiles {
+    display: inline-block;
+    color: var(--star-color);
+  }
+  
+
+  .lineTop {
+     display: flex;
+      
+     margin:auto;
+     top: 0;
+     left: 0;
+  }
+
+.linecenter {
+  position: absolute;
+  top: 18%;
+  width: 1px;
+  left: 50%;
+  min-height: 40vh;
+  background: black;
+}
+  
+.lineDown {
+    display: flex;
+    justify-content: center;
+    align-self :flex-end;
+  }
+  
+
+  /* mettre des tirets dans les lines et pas de majuscule  */
+
+  

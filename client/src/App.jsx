@@ -21,7 +21,11 @@ function App() {
   const [search, setSearch] = useState("");
   const [filterHeroes, setFilterHeroes] = useState([]);
   const [searchDate, setSearchDate] = useState("");
-
+  
+  // générer une date random :
+  function randomDate(start, end) {
+    return new Date(+start + Math.random() * (end - start));
+  }
   // fetch les données API, suffle les données et afficher seulement 12 par défaut :
   useEffect(() => {
     axios
@@ -31,12 +35,16 @@ function App() {
       .then((response) => {
         const data = response.data;
         const shuffledHeroes = data.sort(() => Math.random() - 0.5); // fonction de comparaison aléatoire
+        // ajout d'une date random à chaque héro :
+        shuffledHeroes.forEach((hero) => {
+          hero.date = randomDate(new Date(2024, 4, 30), new Date(2024, 9, 30));
+        });
         setAllHeroes(shuffledHeroes);
         setDisplayedHeroes(shuffledHeroes.slice(0, 12)); // charger les 12 premiers héros du tableau qui a été mélangé
         setFilterHeroes(shuffledHeroes);
       });
-  }, []);
-
+    }, []);
+    
   // ajouter des héros en affichage 12 par 12 :
   const loadMoreHeroes = () => {
     const endIndex = startIndex + 12; // calculer index de fin pour les suivants
@@ -45,35 +53,23 @@ function App() {
     setDisplayedHeroes((prevHeroes) => [...prevHeroes, ...nextHeroes]); // cette syntaxe(...) permet de fusionner les héros précédents avec les suivants sans écraser les 1ers
     setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant
   }; 
-
-    const filterHeroesByOccupation = (occupation) => {
-    const filteredHeroesWork = allHeroes.filter(hero => hero.work.occupation.includes(occupation));
-          // console.log(allHeroes);
-          // console.log(filteredHeroesWork);
-    setDisplayedHeroes(filteredHeroesWork);
-          // console.log(filteredHeroesWork);
-
+  
+  const filterHeroesByOccupation = (occupation) => {
+    const filteredHeroesWork = allHeroes.filter(hero => hero.work.occupation.toLowerCase().includes(occupation));
+    setFilterHeroes(filteredHeroesWork);
+    setDisplayedHeroes(filteredHeroesWork)    
   };
-
   // ajouter une propriété "price" à chaque héro du tableau :
   allHeroes.forEach((hero) => {
     hero.price = Number(
       hero.powerstats.durability + hero.powerstats.strength
     );
   });
-  // ajouter une date random à chaque objet :
-
-  function randomDate(start, end) {
-    return new Date(+start + Math.random() * (end - start));
-  }
-  allHeroes.forEach((hero) => {
-    hero.date = randomDate(new Date(2024, 4, 30), new Date(2024, 9, 30));
-  });
-
+  
   // faire une recherche par prix :
-
   const handleClick = () => {
     const filter = allHeroes.filter((hero) => hero.price >= Number(search));
+    // const filter2 = allHeroes.filter((hero) => hero.date === searchDate);
     if (filter.length === 0) {
       setFilterHeroes(displayedHeroes);
     } else {

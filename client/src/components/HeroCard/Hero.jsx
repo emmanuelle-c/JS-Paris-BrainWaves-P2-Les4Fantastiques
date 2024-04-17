@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
 import "./Hero.css";
+import { Link } from 'react-router-dom';
 
 function HeroCard({ hero }) {
   return (
     <div className="card">
       <div className="avatar">
-        <img src={hero.images.sm} alt="avatar" />
+        <Link key={hero.id} to={`/pagehero/${hero.id}`} className="profilHero">
+            <img src={hero.images.sm} alt="avatar" />
+        </Link>
       </div>
       <section>
         <h1>{hero.name}</h1>
@@ -22,6 +25,7 @@ function HeroCard({ hero }) {
 }
 HeroCard.propTypes = {
   hero: PropTypes.shape({
+    id: PropTypes.shape.isRequired, 
     appearance: PropTypes.shape.isRequired,
     name: PropTypes.string.isRequired,
     biography: PropTypes.shape.isRequired,

@@ -13,15 +13,14 @@ import SearchBar from "./components/SearchBar/SearchBar";
 // import des fichiers style
 import "./App.css";
 
-
 function App() {
   const [allHeroes, setAllHeroes] = useState([]);
   const [displayedHeroes, setDisplayedHeroes] = useState([]);
   const [startIndex, setStartIndex] = useState(12);
   const [search, setSearch] = useState("");
   const [filterHeroes, setFilterHeroes] = useState([]);
-  const [searchDate, setSearchDate] = useState("");
-  
+  const [searchDate, setSearchDate] = useState(new Date());
+
   // générer une date random :
   function randomDate(start, end) {
     return new Date(+start + Math.random() * (end - start));
@@ -43,8 +42,8 @@ function App() {
         setDisplayedHeroes(shuffledHeroes.slice(0, 12)); // charger les 12 premiers héros du tableau qui a été mélangé
         setFilterHeroes(shuffledHeroes);
       });
-    }, []);
-    
+  }, []);
+
   // ajouter des héros en affichage 12 par 12 :
   const loadMoreHeroes = () => {
     const endIndex = startIndex + 12; // calculer index de fin pour les suivants
@@ -52,24 +51,30 @@ function App() {
     // (prevHeroes)contient les premiers héros déjà affichés
     setDisplayedHeroes((prevHeroes) => [...prevHeroes, ...nextHeroes]); // cette syntaxe(...) permet de fusionner les héros précédents avec les suivants sans écraser les 1ers
     setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant
-  }; 
-  
+  };
+
   const filterHeroesByOccupation = (occupation) => {
-    const filteredHeroesWork = allHeroes.filter(hero => hero.work.occupation.toLowerCase().includes(occupation));
+    const filteredHeroesWork = allHeroes.filter((hero) =>
+      hero.work.occupation.toLowerCase().includes(occupation)
+    );
     setFilterHeroes(filteredHeroesWork);
-    setDisplayedHeroes(filteredHeroesWork)    
+    setDisplayedHeroes(filteredHeroesWork);
   };
   // ajouter une propriété "price" à chaque héro du tableau :
   allHeroes.forEach((hero) => {
-    hero.price = Number(
-      hero.powerstats.durability + hero.powerstats.strength
-    );
+    hero.price = Number(hero.powerstats.durability + hero.powerstats.strength);
   });
-  
+
   // faire une recherche par prix :
   const handleClick = () => {
-    const filter = allHeroes.filter((hero) => hero.price >= Number(search));
-    // const filter2 = allHeroes.filter((hero) => hero.date === searchDate);
+    const filter = allHeroes.filter(
+      (hero) =>
+        (hero.price >= Number(search) &&
+          hero.date.getMonth() > searchDate.getMonth()) ||
+        (hero.price >= Number(search) &&
+          hero.date.getMonth() === searchDate.getMonth() &&
+          hero.date.getDate() >= searchDate.getDate())
+    );
     if (filter.length === 0) {
       setFilterHeroes(displayedHeroes);
     } else {
@@ -92,7 +97,7 @@ function App() {
           setSearchDate={setSearchDate}
         />
       </div>
-      <IconsBar filterHeroesByOccupation={filterHeroesByOccupation} />      
+      <IconsBar filterHeroesByOccupation={filterHeroesByOccupation} />
       <div className="hero-container">
         {displayedHeroes.map((hero) => (
           <div className="hero-card" key={hero.id}>

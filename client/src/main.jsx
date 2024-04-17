@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AvisClient from "./pages/AvisClient";
 
 import App from "./App";
+import PageHero from "./pages/PageHero";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,13 @@ const router = createBrowserRouter([
           <AvisClient />
         </main>
   
+    path: "/pagehero/:id",
+    element: (
+      
+        <main>
+          <PageHero />
+        </main>
+      
     ),
   },
 ]);

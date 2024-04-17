@@ -52,10 +52,18 @@ function App() {
     // (prevHeroes)contient les premiers héros déjà affichés
     setDisplayedHeroes((prevHeroes) => [...prevHeroes, ...nextHeroes]); // cette syntaxe(...) permet de fusionner les héros précédents avec les suivants sans écraser les 1ers
     setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant
-  }; 
+  };
   
-  const filterHeroesByOccupation = (occupation) => {
-    const filteredHeroesWork = allHeroes.filter(hero => hero.work.occupation.toLowerCase().includes(occupation));
+  const checkOccupations = (hero, occupations) => {
+    let exist = false;
+    occupations.forEach((occupation) => {
+            if (hero.work.occupation.toLowerCase().includes(occupation)) exist = true;      
+    })
+    return exist;
+  }
+  
+  const filterHeroesByOccupation = (occupations) => {
+    const filteredHeroesWork = allHeroes.filter(hero => checkOccupations(hero, occupations));
     setFilterHeroes(filteredHeroesWork);
     setDisplayedHeroes(filteredHeroesWork)    
   };

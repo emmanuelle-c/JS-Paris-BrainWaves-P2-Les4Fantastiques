@@ -1,4 +1,5 @@
 import "./IconsBar.css";
+import PropTypes from "prop-types";
 import { FaTheaterMasks } from "react-icons/fa";
 import { TbBallFootball } from "react-icons/tb";
 import { BsBoxSeam } from "react-icons/bs";
@@ -7,10 +8,11 @@ import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 import { LuPartyPopper } from "react-icons/lu";
 
 
-function IconsBar() {
+function IconsBar({filterHeroesByOccupation}) {
+
     return(
         <div className="icons-bar">
-        <button className="sport" type="button">
+        <button className="sport" type="button" onClick={() => filterHeroesByOccupation("Terrorist")}>
         <TbBallFootball/>
         <p className="text">Sport</p>
         </button>
@@ -45,5 +47,14 @@ function IconsBar() {
        </div>
  )
 }
+
+IconsBar.propTypes = {
+    filterHeroesByOccupation: PropTypes.shape({
+            filterHeroesByOccupation: PropTypes.shape.isRequired,
+
+    }).isRequired,
+
+}
+
 
 export default IconsBar;

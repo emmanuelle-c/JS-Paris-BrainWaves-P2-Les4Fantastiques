@@ -40,8 +40,8 @@ function PageHero() {
               Ipsum unde cupiditate neque eum deleniti! Illum et corporis
               praesentium perspiciatis, sequi pariatur repudiandae qui.
             </p>
+            <p>{superhero.biography.publisher}</p>
           </div>
-          {/* <p>{superhero.biography.publisher}</p> */}
         </section>
       )}
     </div>

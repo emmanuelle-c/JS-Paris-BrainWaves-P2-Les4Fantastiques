@@ -6,10 +6,12 @@ import ScrollToTp from "react-scroll-to-top";
 // import des composants
 import HeroCard from "./components/HeroCard/Hero";
 import BurgerMenu from "./components/Header/Header";
+import IconsBar from "./components/IconsBar/IconsBar";
 import SearchBar from "./components/SearchBar/SearchBar";
 
 // import des fichiers style
 import "./App.css";
+
 
 function App() {
   const [allHeroes, setAllHeroes] = useState([]);
@@ -41,6 +43,15 @@ function App() {
     // (prevHeroes)contient les premiers héros déjà affichés
     setDisplayedHeroes((prevHeroes) => [...prevHeroes, ...nextHeroes]); // cette syntaxe(...) permet de fusionner les héros précédents avec les suivants sans écraser les 1ers
     setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant
+  }; 
+
+    const filterHeroesByOccupation = (occupation) => {
+    const filteredHeroesWork = allHeroes.filter(hero => hero.work.occupation.includes(occupation));
+          // console.log(allHeroes);
+          // console.log(filteredHeroesWork);
+    setDisplayedHeroes(filteredHeroesWork);
+          // console.log(filteredHeroesWork);
+
   };
 
   // ajouter une propriété "price" à chaque héro du tableau :
@@ -85,6 +96,7 @@ function App() {
           setSearchDate={setSearchDate}
         />
       </div>
+      <IconsBar filterHeroesByOccupation={filterHeroesByOccupation} />      
       <div className="hero-container">
         {displayedHeroes.map((hero) => (
           <div className="hero-card" key={hero.id}>

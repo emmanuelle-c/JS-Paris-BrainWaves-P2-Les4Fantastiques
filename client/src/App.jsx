@@ -1,3 +1,4 @@
+/* eslint no-param-reassign: ["error", { "props": false }] */
 // import des librairies
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -55,8 +56,8 @@ function App() {
   };
 
   // ajouter une propriété "price" à chaque héro du tableau :
-  allHeroes.forEach(function (hero) {
-    hero.price = parseInt(
+  allHeroes.forEach((hero) => {
+    hero.price = Number(
       hero.powerstats.durability + hero.powerstats.strength
     );
   });
@@ -65,7 +66,7 @@ function App() {
   function randomDate(start, end) {
     return new Date(+start + Math.random() * (end - start));
   }
-  allHeroes.forEach(function (hero) {
+  allHeroes.forEach((hero) => {
     hero.date = randomDate(new Date(2024, 4, 30), new Date(2024, 9, 30));
   });
 
@@ -73,7 +74,6 @@ function App() {
 
   const handleClick = () => {
     const filter = allHeroes.filter((hero) => hero.price >= Number(search));
-    const filter2 = allHeroes.filter((hero) => hero.date === searchDate);
     if (filter.length === 0) {
       setFilterHeroes(displayedHeroes);
     } else {

@@ -14,6 +14,7 @@ function convertMonth(month) {
   if (month === 10) return "Octobre";
   if (month === 11) return "Novembre";
   if (month === 12) return "Décembre";
+  return false;
 }
 
 function HeroCard({ hero }) {
@@ -40,13 +41,15 @@ function HeroCard({ hero }) {
 }
 HeroCard.propTypes = {
   hero: PropTypes.shape({
-    appearance: PropTypes.shape.isRequired,
-    name: PropTypes.string.isRequired,
-    biography: PropTypes.shape.isRequired,
-    connections: PropTypes.shape.isRequired,
-    images: PropTypes.shape.isRequired,
-    powerstats: PropTypes.shape.isRequired,
-    work: PropTypes.shape.isRequired,
+    date: PropTypes.shape,
+    appearance: PropTypes.shape,
+    price: PropTypes.string,
+    name: PropTypes.string,
+    biography: PropTypes.shape,
+    connections: PropTypes.shape,
+    images: PropTypes.shape,
+    powerstats: PropTypes.shape,
+    work: PropTypes.shape,
   }).isRequired,
 };
 

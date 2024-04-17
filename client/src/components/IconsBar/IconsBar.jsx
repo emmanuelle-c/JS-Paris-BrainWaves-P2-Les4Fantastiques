@@ -49,9 +49,7 @@ function IconsBar({filterHeroesByOccupation}) {
 }
 
 IconsBar.propTypes = {
-    filterHeroesByOccupation: PropTypes.shape({
-        filterHeroesByOccupation: PropTypes.shape.isRequired,
-    }).isRequired,
+    filterHeroesByOccupation: PropTypes.func.isRequired
 }
 
 

@@ -1,6 +1,5 @@
-import { useState } from "react";
 import DatePicker from "react-datepicker";
-
+import PropTypes from "prop-types";
 import "react-datepicker/dist/react-datepicker.css";
 
 import "./SearchBar.css";
@@ -10,7 +9,6 @@ function SearchBar({
   search,
   setSearch,
   searchDate,
-  setSearchDate,
 }) {
   return (
     <section className="search-bar">
@@ -19,7 +17,7 @@ function SearchBar({
         <DatePicker
           value={searchDate}
           selected={searchDate}
-          onChange={(searchDate) => setSearchDate(searchDate)}
+          onChange
         />
       </div>
       <div id="price-container">
@@ -31,13 +29,19 @@ function SearchBar({
           name="price"
           placeholder=" choisir votre tarif"
           onInput={(event) => setSearch(event.target.value)}
-        ></input>
+        />
       </div>
-      <button type="button" onClick={handleClick}>
+      <button className="search" type="button" onClick={handleClick}>
         chercher
       </button>
     </section>
   );
 }
+SearchBar.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+  search: PropTypes.string.isRequired,
+  setSearch: PropTypes.func.isRequired,
+  searchDate: PropTypes.string.isRequired,
+};
 
 export default SearchBar;

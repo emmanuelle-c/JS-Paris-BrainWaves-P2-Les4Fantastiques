@@ -9,6 +9,7 @@ function SearchBar({
   search,
   setSearch,
   searchDate,
+  setSearchDate,
 }) {
   return (
     <section className="search-bar">
@@ -17,7 +18,7 @@ function SearchBar({
         <DatePicker
           value={searchDate}
           selected={searchDate}
-          onChange
+          onChange={(date) => setSearchDate(date)}
         />
       </div>
       <div id="price-container">
@@ -42,6 +43,7 @@ SearchBar.propTypes = {
   search: PropTypes.string.isRequired,
   setSearch: PropTypes.func.isRequired,
   searchDate: PropTypes.string.isRequired,
+  setSearchDate: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

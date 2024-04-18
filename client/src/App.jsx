@@ -105,14 +105,15 @@ function App() {
           searchDate={searchDate}
           setSearchDate={setSearchDate}
         />
+        <IconsBar filterHeroesByOccupation={filterHeroesByOccupation} />
       </div>
-      <IconsBar filterHeroesByOccupation={filterHeroesByOccupation} />
       <div className="hero-container">
         {displayedHeroes.map((hero) => (
           <div className="hero-card" key={hero.id}>
             <HeroCard hero={hero} />
           </div>
         ))}
+      </div>
         <div className="show-more">
           <button onClick={loadMoreHeroes} type="button">
             Voir plus
@@ -121,7 +122,6 @@ function App() {
             <ScrollToTp />
           </div>
         </div>
-      </div>
       <Footer />
     </div>
   );

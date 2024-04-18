@@ -25,19 +25,26 @@
 .burgermenu {
   color: white;
 }
-a.burgermenu-link {
-  font-size: 1rem;
-  padding-left: 0;
+.burgermenu-link{
+  font-weight: 600;
+  font-size: clamp(0.6rem, 2vw, 1rem);
 }
+
+.burgermenu-items:hover{
+  border-bottom: 0.1rem solid white;
+  transition-duration: 0.2s;
+}
+
 .burgermenu-links {
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: fixed;
   top: 0;
   margin-top: 0;
   height: 100vh;
   max-width: 20%;
-  padding: 5rem;
+  padding: 4rem;
   visibility: hidden;
   background-color: rgba(123, 123, 123, 0.9);
   left: 0;
@@ -49,7 +56,7 @@ a.burgermenu-link {
 }
 .burgermenu-link {
   display: block;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   color: inherit;
 }
 .burger-bar {
@@ -64,4 +71,8 @@ a.burgermenu-link {
 }
 .show-burger .burger-bar path {
   fill: white;
+}
+
+.burgermenu-items{
+  width: 50%;
 }

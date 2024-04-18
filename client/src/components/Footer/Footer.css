@@ -1,12 +1,17 @@
-#footer > p {
+.copyright{
     font-family: poppins;
     color: white;
+    font-weight: 300;
+    margin-left: 1rem;
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
 }
 
 #footer{
     background-color: black;
     height: 25rem;
     width: 100%;
+    font-family: poppins;
+    color: white;
 }
 
 #footer-content{

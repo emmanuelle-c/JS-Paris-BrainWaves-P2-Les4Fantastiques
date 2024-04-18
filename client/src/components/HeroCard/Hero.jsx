@@ -22,14 +22,14 @@ function HeroCard({ hero }) {
   return (
     <div className="card">
       <div className="avatar">
-      <Link key={hero.id} to={`/pagehero/${hero.id}`} className="profilHero">
+        <Link key={hero.id} to={`/pagehero/${hero.id}`}>
           <img src={hero.images.sm} alt="avatar" />
         </Link>
       </div>
-      <section>
+      <section id="card-title">
         <h1>{hero.name}</h1>
       </section>
-      <article>
+      <article className="description-container">
         <div className="description">
           <p>{hero.biography.fullName}</p>
           <p>

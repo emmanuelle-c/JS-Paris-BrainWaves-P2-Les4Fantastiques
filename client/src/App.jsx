@@ -9,6 +9,7 @@ import HeroCard from "./components/HeroCard/Hero";
 import BurgerMenu from "./components/Header/Header";
 import IconsBar from "./components/IconsBar/IconsBar";
 import SearchBar from "./components/SearchBar/SearchBar";
+import Footer from "./components/Footer/Footer";
 
 // import des fichiers style
 import "./App.css";
@@ -113,6 +114,7 @@ function App() {
           </div>
         </div>
       </div>
+      < Footer />
     </>
   );
 }

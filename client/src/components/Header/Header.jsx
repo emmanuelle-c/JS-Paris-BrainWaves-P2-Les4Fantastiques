@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 import ban from "../../assets/images/logos/banniere.svg";
+
 
 function BurgerMenu() {
   const [showLinks, setShowLinks] = useState(false);
@@ -54,10 +56,13 @@ function BurgerMenu() {
         </button>
       </div>
       <div className="logo">
-        <img src={ban} alt="logo" />
+      <Link  to="/" >
+          <img src={ban} alt="logo" />  
+      </Link>
       </div>
     </header>
   );
 }
 
 export default BurgerMenu;
+

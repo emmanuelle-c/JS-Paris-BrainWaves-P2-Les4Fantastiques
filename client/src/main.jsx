@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import PageHero from "./pages/PageHero";
+import FirstPage from "./pages/FirstPage";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,16 @@ const router = createBrowserRouter([
           <PageHero />
         </main>
       
+    ),
+  },
+  {
+    path: "/firstpage",
+    element:(
+
+      <main>
+        <FirstPage/>
+      </main>
+
     ),
   },
 ]);

@@ -66,7 +66,7 @@ function BurgerMenu() {
         </div>
       </div>
       <div className="logo">
-      <Link  to="/" >
+      <Link  to="/accueil" >
           <img src={ban} alt="logo" />  
       </Link>
       </div>

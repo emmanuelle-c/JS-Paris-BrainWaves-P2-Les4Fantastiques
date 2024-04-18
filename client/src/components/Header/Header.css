@@ -25,12 +25,12 @@
 .burgermenu {
   color: white;
 }
-.burgermenu-link{
+.burgermenu-link {
   font-weight: 600;
   font-size: clamp(0.6rem, 2vw, 1rem);
 }
 
-.burgermenu-items:hover{
+.burgermenu-items:hover {
   border-bottom: 0.1rem solid white;
   transition-duration: 0.2s;
 }
@@ -73,6 +73,6 @@
   fill: white;
 }
 
-.burgermenu-items{
+.burgermenu-items {
   width: 50%;
 }

@@ -14,7 +14,7 @@ function SearchBar({
   return (
     <section className="search-bar">
       <div id="date">
-        <p>Date </p>
+        <p>A partir du : </p>
         <DatePicker
           value={searchDate}
           selected={searchDate}
@@ -22,7 +22,7 @@ function SearchBar({
         />
       </div>
       <div id="price-container">
-        <label htmlFor="price">Prix </label>
+        <label htmlFor="price">Prix minimum :</label>
         <input
           value={search}
           type="text"

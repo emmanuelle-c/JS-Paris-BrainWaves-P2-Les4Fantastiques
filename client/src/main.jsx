@@ -8,7 +8,7 @@ import FirstPage from "./pages/FirstPage/FirstPage";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/accueil",
     element: <App />,
   },
   {
@@ -22,13 +22,11 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/firstpage",
+    path: "/",
     element:(
-
       <main>
         <FirstPage/>
       </main>
-
     ),
   },
 ]);

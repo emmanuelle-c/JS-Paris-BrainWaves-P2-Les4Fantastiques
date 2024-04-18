@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import PageHero from "./pages/PageHero";
-import FirstPage from "./pages/FirstPage";
+import FirstPage from "./pages/FirstPage/FirstPage";
 
 const router = createBrowserRouter([
   {

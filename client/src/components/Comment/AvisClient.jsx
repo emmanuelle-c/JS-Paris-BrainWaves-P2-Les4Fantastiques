@@ -1,5 +1,6 @@
 import "./AvisClient.css";
-import Commentaire from "../components/Comment/Commentaire";
+import Commentaire from "./Commentaire";
+ 
 
 
 
@@ -7,38 +8,38 @@ function AvisClient() {
     // Données de commentaires
     const commentaires = [
       {
-        utilisateur: "Sophie Martin",
+        utilisateur: "Jean - Pierre P.",
         date: "Le 15 février 2024",
-        avis: "Excellent service ! Les superhéros étaient fantastiques.",
+        avis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . Lorem",
         notation: 2
       },
       {
-        utilisateur: "Antoine Dubois",
+        utilisateur: "Catherine T.",
         date: "Le 10 février 2024",
-        avis: "Le processus de réservation en ligne était simple et pratique.",
+        avis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . Lorem",
         notation: 5
+        
       },
       {
-        utilisateur: "Camille Leroy",
+        utilisateur: "Martin  L.",
         date: "Le 5 mars 2024",
-        avis: "Les superhéros étaient très professionnels et ont vraiment pris le temps d'interagir avec les enfants.",
+        avis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . Lorem",
         notation: 2
       },
       {
-        utilisateur: "Lucas Garcia",
+        utilisateur: "Maximilien T.",
         date: "Le 20 janvier 2024",
-        avis: "La variété de superhéros disponibles est impressionnante.",
+        avis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . Lorem",
         notation: 4
       }
     ];
   
     return (
-      <div className="commandcontainer">
-         <div className="lineTop">
-                    <svg    width="874" height="4" viewBox="0 0 874 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0.00171624" y1="2" x2="874.002" y2="2" stroke="black"/>
-                    </svg>
-            </div>
+
+      <div className="command-container">
+        
+        <div className="total-avis"> <p className="number"> ⭐ 4,8 | 70 avis:</p> </div>
+        <div className="line-top"></div>
 
         {commentaires.map((commentaire) => (
           <Commentaire 
@@ -51,21 +52,16 @@ function AvisClient() {
           
         ))} 
 
-        <div className="linecenter"> </div>
-        
-        
-
-            <div className="lineDown">
-                     <svg   width="874" height="" viewBox="0 0 874 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0.00171624" y1="2" x2="874.002" y2="2" stroke="red"/>
-                     </svg>
-            </div>
+        <div className="line-center"></div>
+        <div className="line-down"></div>
             
-            <hr />
+           
 
       </div>
     );
   }
+
+  
   
   export default AvisClient;
 

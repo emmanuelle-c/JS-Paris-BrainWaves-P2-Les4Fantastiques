@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AvisClient from "./pages/AvisClient";
+import AvisClient from "./components/Comment/AvisClient";
 
 import App from "./App";
 import PageHero from "./pages/PageHero";
+import Formulaire from "./components/Formulaire/Formulaire";
 
 const router = createBrowserRouter([
   {
@@ -12,13 +13,6 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/avisclient",
-    element: (
-  
-        <main>
-          <AvisClient />
-        </main>
-  
     path: "/pagehero/:id",
     element: (
       
@@ -27,6 +21,24 @@ const router = createBrowserRouter([
         </main>
       
     ),
+  },
+  {
+    path: "/avisclient",
+    element: (
+  
+        <main>
+          <AvisClient />
+        </main>
+    )
+  },
+  {
+    path: "/formulaire",
+    element: (
+  
+        <main>
+          <Formulaire />
+        </main>
+    )
   },
 ]);
 

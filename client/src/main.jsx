@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/pagehero",
+    path: "/pagehero/:id",
     element: (
       
         <main>

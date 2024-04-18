@@ -89,7 +89,7 @@ a {
 .search-menu {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 4rem 0 2rem;
 }
 /* VERSION MOBILE */
 @media screen and (max-width: 760px) {

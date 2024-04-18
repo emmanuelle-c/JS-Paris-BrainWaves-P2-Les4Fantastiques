@@ -1,7 +1,27 @@
+/* style des bouttons connexion */
+.connexion > button {
+  color: var(--secondary-color);
+  background-color: rgba(0, 0, 139, 0.1);
+}
+
+.connexion {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* style de la bannière */
 .logo {
   display: flex;
   justify-content: center;
+  margin: 2rem 0;
 }
+
+/* style du burger menu */
 .burgermenu {
   color: white;
 }

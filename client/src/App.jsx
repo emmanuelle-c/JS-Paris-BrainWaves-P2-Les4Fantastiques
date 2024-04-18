@@ -63,7 +63,6 @@ function App() {
   
   const filterHeroesByOccupation = (occupations) => {
     const filteredHeroesWork = allHeroes.filter(hero => checkOccupations(hero, occupations));
-
     setFilterHeroes(filteredHeroesWork);
     setDisplayedHeroes(filteredHeroesWork);
   };

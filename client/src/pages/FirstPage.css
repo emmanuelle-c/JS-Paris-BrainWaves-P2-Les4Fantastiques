@@ -1,0 +1,62 @@
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../assets/images/image-entree.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  object-fit: cover;
+  /* margin-top: -100px; */
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  width: 113%;
+}
+.login {
+  margin-left: 18%;
+}
+.login,
+.sign {
+  width: 8rem;
+  height: 3rem;
+  margin-top: 2rem;
+  margin-right: 2.5rem;
+  background-color: transparent;
+  color: var(--main-color);
+  font-size: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--main-color);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.logo-entry {
+  max-width: 15%;
+}
+.banniere {
+  margin-top: 3rem;
+}
+.text-entry {
+  color: white;
+  margin-left: 18rem;
+  margin-right: 18rem;
+  margin-bottom: 7rem;
+  margin-top: 5rem;
+}
+.button-entry {
+  width: 20rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  color: var(--main-color);
+  font-size: 2rem;
+  font-weight: 600;
+}

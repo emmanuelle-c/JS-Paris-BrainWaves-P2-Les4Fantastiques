@@ -90,7 +90,7 @@ function App() {
   };
 
   return (
-    <>
+    <div id="app">
       <div>
         <BurgerMenu />
       </div>
@@ -119,7 +119,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

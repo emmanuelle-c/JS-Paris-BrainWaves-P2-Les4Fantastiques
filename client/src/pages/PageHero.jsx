@@ -11,9 +11,6 @@ function PageHero() {
   const [superhero, setSuperhero] = useState(null);
   const { id } = useParams();
 
-
-
-
   useEffect(() => {
     axios
       .get(`https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/id/${id}.json`)
@@ -34,6 +31,7 @@ function PageHero() {
 
   const firstMaj = (string) => string.charAt(0).toUpperCase() + string.slice(1) ;
 
+  
   return (
     <>
     <div>

@@ -59,7 +59,8 @@ a {
 }
 .show-more {
   display: flex;
-  width: 20%;
+  width: 100%;
+  justify-content: center;
 }
 .show-more > button {
   background-image: linear-gradient(
@@ -88,12 +89,13 @@ a {
 
 .search-menu {
   display: flex;
-  justify-content: center;
-  margin: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0 2rem;
 }
 /* VERSION MOBILE */
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 744px) {
 }
 /* VERSION TABLETTE */
-@media screen and (min-width: 761px) and (max-width: 960px) {
+@media screen and (min-width: 744px) and (max-width: 1024px) {
 }

@@ -9,6 +9,7 @@ import HeroCard from "./components/HeroCard/Hero";
 import BurgerMenu from "./components/Header/Header";
 import IconsBar from "./components/IconsBar/IconsBar";
 import SearchBar from "./components/SearchBar/SearchBar";
+import Footer from "./components/Footer/Footer";
 
 // import des fichiers style
 import "./App.css";
@@ -52,17 +53,19 @@ function App() {
     setDisplayedHeroes((prevHeroes) => [...prevHeroes, ...nextHeroes]); // cette syntaxe(...) permet de fusionner les héros précédents avec les suivants sans écraser les 1ers
     setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant
   };
-  
+
   const checkOccupations = (hero, occupations) => {
     let exist = false;
     occupations.forEach((occupation) => {
-            if (hero.work.occupation.toLowerCase().includes(occupation)) exist = true;      
-    })
+      if (hero.work.occupation.toLowerCase().includes(occupation)) exist = true;
+    });
     return exist;
-  }
-  
+  };
+
   const filterHeroesByOccupation = (occupations) => {
-    const filteredHeroesWork = allHeroes.filter(hero => checkOccupations(hero, occupations));
+    const filteredHeroesWork = allHeroes.filter((hero) =>
+      checkOccupations(hero, occupations)
+    );
     setFilterHeroes(filteredHeroesWork);
     setDisplayedHeroes(filteredHeroesWork);
   };
@@ -102,14 +105,15 @@ function App() {
           searchDate={searchDate}
           setSearchDate={setSearchDate}
         />
+        <IconsBar filterHeroesByOccupation={filterHeroesByOccupation} />
       </div>
-      <IconsBar filterHeroesByOccupation={filterHeroesByOccupation} />
       <div className="hero-container">
         {displayedHeroes.map((hero) => (
           <div className="hero-card" key={hero.id}>
             <HeroCard hero={hero} />
           </div>
         ))}
+      </div>
         <div className="show-more">
           <button onClick={loadMoreHeroes} type="button">
             Voir plus
@@ -118,7 +122,7 @@ function App() {
             <ScrollToTp />
           </div>
         </div>
-      </div>
+      <Footer />
     </div>
   );
 }

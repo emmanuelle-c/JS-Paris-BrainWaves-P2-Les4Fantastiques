@@ -96,8 +96,11 @@ a {
 /* VERSION MOBILE */
 @media screen and (max-width: 744px) {
   .hero-card {
-    margin: 10px;
-    width: 100%;
+    width: 95%;
+    margin: 10px 0;
+  }
+  .search-menu{
+    margin: 2rem 0;
   }
 }
 /* VERSION TABLETTE */

@@ -48,10 +48,12 @@
     flex-direction: column;
     align-items: center;
   }
+
   .card {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    width: 100%;
   }
   .avatar {
     margin-right: 1rem;

@@ -10,7 +10,6 @@
 .header {
   display: flex;
   justify-content: flex-end;
-  width: 113%;
 }
 .user-responsive {
   display: none;
@@ -75,24 +74,46 @@
   .sign {
     display: none;
   }
+  .header {
+    display: flex;
+    justify-content: flex-start;
+  }
   .logo-entry {
-    max-width: 22%;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 29%;
+    margin-right: 12%;
   }
   .log-responsive {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1.5rem;
+    z-index: 1;
+    position: absolute;
+    top: 9%;
+    left: 78%;
+    width: 16%;
+  }
+  .button-responsive {
+    display: flex;
+    flex-direction: column;
   }
   .button-user {
     border: none;
-    font-size: 1rem;
+    font-size: 2.2rem;
     color: var(--main-color);
     background-color: transparent;
     margin-top: 1rem;
+    width: 6rem;
   }
+  .hide-login,
+  .hide-sign {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    background-color: transparent;
+    border-radius: 1.5rem;
+    border: none;
+    margin-top: 0%;
+  }
+
   .banniere {
     margin-top: 4.5rem;
     width: 80%;

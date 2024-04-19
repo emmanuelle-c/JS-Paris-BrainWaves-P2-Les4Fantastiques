@@ -19,8 +19,7 @@ function FirstPage() {
         <img src={logo} className='logo-entry' alt="logo" />
         <button type='button' className='login'>LOGIN</button>
         <button type='button' className='sign'>SIGN IN</button>
-    </div>
-    <div className="button-responsive">
+        <div className="button-responsive">
         <button type="button" aria-label="button" className="button-user" onClick={handleShowLog} onKeyDown={handleShowLog} >
           <FaRegUser className="user" />
         </button>
@@ -30,6 +29,7 @@ function FirstPage() {
         <button type='button' className='hide-sign'>SIGN IN</button>
         </ul>
         )}
+        </div>
     </div>
         <img src={ban} className='banniere' alt="banniere"/>
         <p className='text-entry'><span>Rendez votre quotidien extraordinaire</span> <br/>déménagements sans stress, cours de sport dynamiques, animations d'anniversaires mémorables et bien plus encore...Louez dès aujourd'hui et vivez l'aventure avec nos héros à vos côtés!</p>    

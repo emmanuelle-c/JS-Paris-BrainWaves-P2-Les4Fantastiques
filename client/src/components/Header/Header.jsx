@@ -1,15 +1,22 @@
 import { useState } from "react";
+import { FaRegUser } from "react-icons/fa6";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import ban from "../../assets/images/logos/banniere.svg";
+import logo from "../../assets/images/logos/logo-fond-0.png"
 
 
 function BurgerMenu() {
   const [showLinks, setShowLinks] = useState(false);
+  const [showLog, setShowLog] = useState(false);
 
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
+
+  const handleShowLog = () => {
+    setShowLog(!showLog);
+  }
 
   return (
     <header>
@@ -64,10 +71,22 @@ function BurgerMenu() {
             SIGN IN
           </button>
         </div>
+        <div className="button-responsive">
+        <button type="button" aria-label="button" className="button-user" onClick={handleShowLog} onKeyDown={handleShowLog} >
+          <FaRegUser className="user" />
+        </button>
+        {showLog &&(
+        <ul className="log-responsive">
+        <button type='button' className='hide-login'>LOGIN</button>
+        <button type='button' className='hide-sign'>SIGN IN</button>
+        </ul>
+        )}
+    </div>
       </div>
       <div className="logo">
       <Link  to="/" >
-          <img src={ban} alt="logo" />  
+          <img id="banniere" src={ban} alt="logo" />
+          <img id="logo" src={logo} alt="logo-mini" />  
       </Link>
       </div>
     </header>

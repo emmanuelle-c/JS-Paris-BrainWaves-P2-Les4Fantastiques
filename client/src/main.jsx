@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AvisClient from "./components/Comment/AvisClient";
-
 import App from "./App";
 import PageHero from "./pages/PageHero";
 import FirstPage from "./pages/FirstPage";
@@ -32,6 +30,7 @@ const router = createBrowserRouter([
 
     ),
   },
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

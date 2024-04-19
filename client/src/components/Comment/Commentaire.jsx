@@ -12,23 +12,27 @@ function Commentaire({ utilisateur, date, avis, notation }) {
           etoiles.push(<span key={i}>&#9734;</span>); // Étoile vide
         }
       }
-      return etoiles;
-    }
-  
-    return (
-      <div className="commentaire">
-        <h1 className="utilisateur">{utilisateur}</h1>
-        <div className="date">
-          <p>{date}</p>
-        </div>
-        
-        <div className="etoiles" >{genererEtoiles(notation)}</div>
-        <div className="avis">
-          <p>{avis}</p>
-        </div>
-      </div>
-    );
+    
+    return etoiles;
   }
+
+ 
+ 
+  return (
+
+    <div className="commentaire">
+      <h1 className="utilisateur">{utilisateur}</h1>
+      <div className="date">
+        <p>{date}</p>
+      </div>
+
+      <div className="etoiles">{genererEtoiles(notation)}</div>
+      <div className="avis">
+        <p>{avis}</p>
+      </div>
+    </div>
+  );
+}
 
   Commentaire.propTypes = {
     utilisateur: PropTypes.string.isRequired,
@@ -37,21 +41,7 @@ function Commentaire({ utilisateur, date, avis, notation }) {
     notation: PropTypes.number.isRequired
   };
 
-  export default Commentaire;
- 
+   
 
 
-
-
-
-// Composant Commentaire
-// function Commentaire({ utilisateur, avis }) {
-//   return (
-//     <div className="commentaire">
-//       <h3>{utilisateur}</h3>
-//       <p>{avis}</p>
-//     </div>
-//   );
-// }
-
-// export default Commentaire;
+export default Commentaire;

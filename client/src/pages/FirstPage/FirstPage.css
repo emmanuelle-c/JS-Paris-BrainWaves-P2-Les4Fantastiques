@@ -80,7 +80,7 @@
   }
   .logo-entry {
     max-width: 29%;
-    margin-right: 12%;
+    margin-right: 21%;
   }
   .log-responsive {
     display: flex;
@@ -89,7 +89,7 @@
     z-index: 1;
     position: absolute;
     top: 9%;
-    left: 78%;
+    left: 85%;
     width: 16%;
   }
   .button-responsive {

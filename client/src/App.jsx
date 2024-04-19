@@ -27,7 +27,7 @@ function App() {
   function randomDate(start, end) {
     return new Date(+start + Math.random() * (end - start));
   }
-  // fetch les données API, suffle les données et afficher seulement 12 par défaut :
+  // fetch les données API, shuffle les données et afficher seulement 12 par défaut :
   useEffect(() => {
     axios
       .get(

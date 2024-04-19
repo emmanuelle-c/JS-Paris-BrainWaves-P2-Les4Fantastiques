@@ -114,7 +114,7 @@
 }
 
 /* tablette */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1124px) {
   .background {
     height: 100vh;
     background-image: url("/src/assets/images/entree-nicos.jpg");

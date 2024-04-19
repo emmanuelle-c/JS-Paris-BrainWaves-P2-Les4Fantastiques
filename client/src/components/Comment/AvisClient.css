@@ -21,7 +21,6 @@
 .number {
   font-weight: bold;
   color: var(--main-color);
-  font-size: 23px;
   font-family: "Poppins";
   font-size: clamp(0.5rem, 2.5vw, 7rem);
 }

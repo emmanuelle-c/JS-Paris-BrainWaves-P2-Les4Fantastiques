@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import PageHero from "./pages/PageHero";
 import FirstPage from "./pages/FirstPage";
+import AvisClient from "./components/Comment/AvisClient";
+import Formulaire from "./components/Formulaire/Formulaire";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,27 @@ const router = createBrowserRouter([
 
     ),
   },
+  {
+    path: "/formulaire",
+    element: (
+      
+        <main>
+          <Formulaire />
+        </main>
+      
+    ),
+  },
+{
+    path: "/avisclient",
+    element: (
+      
+        <main>
+          <AvisClient />
+        </main>
+      
+    ),
+  },
+
   
 ]);
 

@@ -1,7 +1,24 @@
-.command-container {
+/* .command-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.element-commentaire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  width: 88%;
+  height: 85vh;
+  border-style: solid;
+  border-radius: 45px 45px 45px 45px;
+  
+}
+
+.Avis {
+   display: grid;
+   grid-template-columns: m;   
 }
 
 .total-avis {
@@ -58,7 +75,7 @@
   top: 0%;
   width: 50%;
   left: 25%;
-  min-height: 1.5px;
+  min-height: 1.5px;  
   background: black;
 }
 
@@ -78,4 +95,110 @@
   left: 25%;
   min-height: 1.5px;
   background: black;
+} */
+
+.command-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
+.element-commentaire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88%;
+  height: 85vh;
+  border: 1px;
+  border-radius: 45px;
+  position: relative;
+}
+
+.Avis {
+  display: grid;
+  gap: 20px;
+  padding: 5%;
+  grid-template: 1fr 1fr/ 1fr 1fr;
+}
+
+.total-avis {
+  position: relative;
+  top: 89px;
+  right: 0;
+  left: -63vh;
+  width: 13%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  font-weight: bold;
+  color: var(--main-color);
+  font-family: "Poppins";
+  font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+}
+
+.utilisateur {
+  color: var(--main-color);
+}
+
+.commentaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4%;
+  width: 60%;
+  margin-left: 20%;
+  font-weight: bold;
+  font-family: "Poppins";
+  font-size: clamp(0.5rem, 2.5vw, 0.77rem);
+}
+
+.date {
+  color: black;
+}
+
+.etoiles {
+  display: inline-block;
+  color: var(--star-color);
+}
+
+.line-top {
+  width: 100%;
+  min-height: 1.5px;
+  background: rgb(255, 0, 0);
+}
+
+hr {
+  rotate: 90;
+  color: red;
+  width: 100px;
+}
+
+/* .line-top {
+  top: 0;
+} */
+
+/* .line-down {
+  bottom: 15%;
+} */
+
+.line-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.5px;
+  height: 50%;
+  transform: translate(-50%, -60%);
+  background: black;
+}
+
+/* .liner {
+  display: flex;
+
+  width: 50%;
+} */

@@ -3,6 +3,8 @@ import axios from "axios";
 import "./PageHero.css";
 import { useParams } from 'react-router-dom';
 import Header from "../components/Header/Header";
+import AvisClient from "../components/Comment/AvisClient"
+import Formulaire from "../components/Formulaire/Formulaire";
 
 
 
@@ -67,6 +69,9 @@ function PageHero() {
         </section>
       )}
     </div>
+
+  <AvisClient/>
+  <Formulaire/>
     </> );
 
 }

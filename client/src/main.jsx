@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import PageHero from "./pages/PageHero";
-import FirstPage from "./pages/FirstPage";
+import FirstPage from "./pages/FirstPage/FirstPage";
 import AvisClient from "./components/Comment/AvisClient";
 import Formulaire from "./components/Formulaire/Formulaire";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/accueil",
     element: <App />,
   },
   {
@@ -23,13 +23,11 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/firstpage",
+    path: "/",
     element:(
-
       <main>
         <FirstPage/>
       </main>
-
     ),
   },
   {

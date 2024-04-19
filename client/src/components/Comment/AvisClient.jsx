@@ -33,10 +33,7 @@ function AvisClient() {
   
   return (
     <div className="command-container">
-      <div className="total-avis">
-        {" "}
-        <p className="number"> ⭐ 4,8 | 70 avis:</p>{" "}
-      </div>
+      <div className="total-avis"> {" "}<p className="number"> ⭐ 4,8 | 70 avis:</p>{" "}</div>
       <div className="line-top"/>
 
       {commentaires.map((commentaire) => (

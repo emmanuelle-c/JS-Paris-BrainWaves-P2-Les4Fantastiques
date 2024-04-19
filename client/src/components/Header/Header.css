@@ -21,7 +21,7 @@
   margin: 2rem 0;
 }
 
-#logo{
+#logo {
   display: none;
 }
 
@@ -97,10 +97,10 @@
     justify-content: center;
   }
 }
-#banniere{
+#banniere {
   display: none;
 }
-#logo{
+#logo {
   display: block;
   width: 70%;
 }
@@ -120,7 +120,7 @@
 .button-user {
   padding-top: 0.2rem;
 }
-.log-responsive{
+.log-responsive {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -129,11 +129,11 @@
   width: 100%;
   left: 90%;
 }
-.log-responsive button{
+.log-responsive button {
   padding-top: 0.5rem;
   cursor: pointer;
 }
-.log-responsive button:hover{
+.log-responsive button:hover {
   border-bottom: 0.1rem solid var(--main-color);
   transition-duration: 0.2s;
 }
@@ -147,7 +147,7 @@
 }
 .burgermenu-links {
   padding: 1.5rem;
-}  
+}
 .hide-burger .burger-bar path,
 .button-responsive path {
   fill: var(--main-color);

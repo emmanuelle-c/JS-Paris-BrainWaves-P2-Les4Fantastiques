@@ -48,12 +48,12 @@
     flex-direction: column;
     align-items: center;
   }
-  .card{
+  .card {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
   }
-  .avatar{
+  .avatar {
     margin-right: 1rem;
   }
   .description-container {
@@ -61,19 +61,19 @@
     flex-direction: column;
     align-content: flex-start;
     justify-content: space-evenly;
-}
-  .avatar img{
+  }
+  .avatar img {
     width: 12.5rem;
     height: 12.5rem;
   }
-  #card-title{
+  #card-title {
     justify-content: flex-start;
   }
-  .description{
+  .description {
     line-height: 1.2rem;
     width: 100%;
   }
   #card-title > h1 {
     width: 100%;
-  }  
+  }
 }

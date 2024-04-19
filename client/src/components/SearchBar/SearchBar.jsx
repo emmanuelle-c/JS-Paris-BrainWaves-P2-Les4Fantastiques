@@ -36,7 +36,7 @@ function SearchBar({
       <button className="search" type="button" onClick={handleClick}>
         chercher
       </button>
-      <button type="button" className="loupe" onClick={handleClick}><FaMagnifyingGlass /></button>
+      <button type="button" aria-label="loupe" className="loupe" onClick={handleClick}><FaMagnifyingGlass /></button>
     </section>
   );
 }

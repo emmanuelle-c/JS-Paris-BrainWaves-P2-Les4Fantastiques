@@ -21,6 +21,10 @@
   margin: 2rem 0;
 }
 
+#logo{
+  display: none;
+}
+
 /* style du burger menu */
 .burgermenu {
   color: white;
@@ -49,6 +53,7 @@
   background-color: rgba(123, 123, 123, 0.9);
   left: 0;
   transition: all 0.1s ease-in-out;
+  z-index: 1;
 }
 .show-burger .burgermenu-links {
   width: 17rem;
@@ -75,4 +80,82 @@
 
 .burgermenu-items {
   width: 50%;
+}
+
+/* VERSION MOBILE */
+@media screen and (max-width: 744px) {
+  /* display du logo */
+  .logo {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+  }
+  .logo a {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
+}
+#banniere{
+  display: none;
+}
+#logo{
+  display: block;
+  width: 70%;
+}
+/* display section connexion */
+.connexion {
+  display: none;
+}
+.button-responsive svg {
+  height: 24px;
+  width: 24px;
+}
+.button-responsive button {
+  border: none;
+  background-color: transparent;
+  color: var(--main-color);
+}
+.button-user {
+  padding-top: 0.2rem;
+}
+.log-responsive{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 11%;
+  width: 100%;
+  left: 90%;
+}
+.log-responsive button{
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+.log-responsive button:hover{
+  border-bottom: 0.1rem solid var(--main-color);
+  transition-duration: 0.2s;
+}
+/* display du boutton burger */
+.burger-bar svg {
+  height: 36px;
+  width: 36px;
+}
+.burger-bar {
+  padding: 0;
+}
+.burgermenu-links {
+  padding: 1.5rem;
+}  
+.hide-burger .burger-bar path,
+.button-responsive path {
+  fill: var(--main-color);
+}
+/* section des boutons */
+.button-container {
+  margin: 0.5rem;
+}
+/* VERSION TABLETTE */
+@media screen and (min-width: 744px) and (max-width: 1124px) {
 }

@@ -1,14 +1,12 @@
-import React from "react";
-
-import { exact } from "prop-types";
+import PropTypes from "prop-types";
 
 function Commentaire({ utilisateur, date, avis, notation }) {
     
     // Fonction pour générer les étoiles en fonction de la notation
-    function genererEtoiles(notation) {
+    function genererEtoiles(note) {
       const etoiles = [];
-      for (let i = 0; i < 5; i++) {
-        if (i < notation) {
+      for (let i = 0; i < 5; i+= 1) {
+        if (i < note) {
           etoiles.push(<span key={i}>&#9733;</span>); // Étoile pleine
         } else {
           etoiles.push(<span key={i}>&#9734;</span>); // Étoile vide
@@ -31,6 +29,13 @@ function Commentaire({ utilisateur, date, avis, notation }) {
       </div>
     );
   }
+
+  Commentaire.propTypes = {
+    utilisateur: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    avis: PropTypes.string.isRequired,
+    notation: PropTypes.number.isRequired
+  };
 
   export default Commentaire;
  

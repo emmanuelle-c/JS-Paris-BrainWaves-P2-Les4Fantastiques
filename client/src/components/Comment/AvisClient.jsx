@@ -39,7 +39,7 @@ function AvisClient() {
       <div className="command-container">
         
         <div className="total-avis"> <p className="number"> ⭐ 4,8 | 70 avis:</p> </div>
-        <div className="line-top"></div>
+       <div className="line-top"/>
 
         {commentaires.map((commentaire) => (
           <Commentaire 
@@ -52,8 +52,8 @@ function AvisClient() {
           
         ))} 
 
-        <div className="line-center"></div>
-        <div className="line-down"></div>
+        <div className="line-center"/> 
+        <div className="line-down"/>
             
            
 

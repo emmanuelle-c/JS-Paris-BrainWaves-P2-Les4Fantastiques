@@ -9,44 +9,37 @@
   border: 1px solid #ccc;
   border-radius: 30px;
 }
-
 .element-1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 55%;
 }
-
 .element-2 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 45%;
 }
-
 .usedata {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-
 .usedata-2 {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-
 .Home {
   height: 10%;
   width: 100%;
 }
-
 .position {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-
 #ville {
   width: 100%;
   padding: 8px;
@@ -54,7 +47,6 @@
   border: 3px solid #000000;
   border-radius: 20px;
 }
-
 #codePostal {
   width: 100%;
   padding: 8px;
@@ -62,11 +54,9 @@
   border: 3px solid #000000;
   border-radius: 20px;
 }
-
 label {
   font-weight: bold;
 }
-
 #nom {
   width: 106%;
   padding: 8px;
@@ -74,7 +64,6 @@ label {
   border: 3px solid #000000;
   border-radius: 20px;
 }
-
 #prenom {
   position: relative;
   left: -10%;
@@ -84,12 +73,10 @@ label {
   border: 3px solid #000000;
   border-radius: 20px;
 }
-
 .prenom {
   position: relative;
   left: -27px;
 }
-
 input[type="email"] {
   width: 100%;
   padding: 8px;
@@ -97,21 +84,18 @@ input[type="email"] {
   border: 3px solid #000000;
   border-radius: 20px;
 }
-
 input[type="tel"] {
   width: 100%;
   padding: 8px;
   border: 3px solid #000000;
   border-radius: 20px;
 }
-
 input[type="adresse"] {
   width: 100%;
   padding: 8px;
   border: 5px solid #000000;
   border-radius: 20px;
 }
-
 button[type="submit"] {
   position: relative;
   height: 180px;
@@ -125,8 +109,7 @@ button[type="submit"] {
   cursor: pointer;
   font-size: 30px;
 }
-
 button[type="submit"]:hover {
   background-color: #ff0000;
-  scale: 0.9;
+  padding: 60px;
 }

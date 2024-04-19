@@ -1,0 +1,77 @@
+.command-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.total-avis {
+  position: absolute;
+  height: 40px;
+  top: 30px;
+  right: 0;
+  left: 32vh;
+  width: 13%;
+  bottom: 0px;
+  border-style: solid;
+  border-radius: 45px 45px 45px 45px;
+  display: flex;
+  flex-direction: row;
+}
+
+.number {
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 23px;
+  font-family: "Poppins";
+  font-size: clamp(0.5rem, 2.5vw, 7rem);
+}
+
+.commentaire {
+  position: relative;
+  right: 0%;
+  left: 13%;
+  bottom: -100px;
+  padding-left: 50px;
+  padding-right: 420px;
+  width: 50%;
+  height: 300px;
+  font-weight: bold;
+  font-family: "Poppins";
+  font-size: clamp(0.5rem, 2.5vw, 0.9rem);
+}
+
+.date {
+  color: rgb(0, 0, 0);
+}
+
+.etoiles {
+  display: inline-block;
+  color: var(--star-color);
+}
+
+.line-top {
+  position: absolute;
+  top: 0%;
+  width: 50%;
+  left: 25%;
+  min-height: 1.5px;
+  background: black;
+}
+
+.line-center {
+  position: absolute;
+  top: 15%;
+  width: 1.5px;
+  left: 50%;
+  min-height: 50vh;
+  background: black;
+}
+
+.line-down {
+  position: absolute;
+  top: 87%;
+  width: 50%;
+  left: 25%;
+  min-height: 1.5px;
+  background: black;
+}

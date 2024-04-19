@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ScrollToTp from "react-scroll-to-top";
+import Slider from "./components/Steps/Slider";
 
 // import des composants
 import HeroCard from "./components/HeroCard/Hero";
@@ -114,14 +115,15 @@ function App() {
           </div>
         ))}
       </div>
-        <div className="show-more">
-          <button onClick={loadMoreHeroes} type="button">
-            Voir plus
-          </button>
-          <div className="scroll">
-            <ScrollToTp />
-          </div>
+      <div className="show-more">
+        <button onClick={loadMoreHeroes} type="button">
+          Voir plus
+        </button>
+        <div className="scroll">
+          <ScrollToTp />
         </div>
+      </div>
+      <Slider />
       <Footer />
     </div>
   );

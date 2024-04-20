@@ -52,9 +52,9 @@ console.log(hideButton)
     const endIndex = startIndex + 12; // calculer index de fin pour les suivants
     const nextHeroes = filterHeroes.slice(startIndex, endIndex); // extraire les héros suivants de la liste complète
     // (prevHeroes)contient les premiers héros déjà affichés
-    setDisplayedHeroes((prevHeroes) => {
-      
-    }); 
+    setDisplayedHeroes((prevHeroes) => [...prevHeroes, ...nextHeroes]); // cette syntaxe(...) permet de fusionner les héros précédents avec les suivants sans écraser les 1ers
+    setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant
+    }; 
     setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant
     if (endIndex >= filterHeroes.length){
      setHideButton(true);

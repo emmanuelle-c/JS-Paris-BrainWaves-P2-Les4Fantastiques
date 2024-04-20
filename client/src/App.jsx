@@ -22,7 +22,8 @@ function App() {
   const [search, setSearch] = useState("");
   const [filterHeroes, setFilterHeroes] = useState([]);
   const [searchDate, setSearchDate] = useState(new Date());
-
+  const [hideButton, setHideButton] = useState(false);
+console.log(hideButton)
   // générer une date random :
   function randomDate(start, end) {
     return new Date(+start + Math.random() * (end - start));
@@ -51,9 +52,15 @@ function App() {
     const endIndex = startIndex + 12; // calculer index de fin pour les suivants
     const nextHeroes = filterHeroes.slice(startIndex, endIndex); // extraire les héros suivants de la liste complète
     // (prevHeroes)contient les premiers héros déjà affichés
-    setDisplayedHeroes((prevHeroes) => [...prevHeroes, ...nextHeroes]); // cette syntaxe(...) permet de fusionner les héros précédents avec les suivants sans écraser les 1ers
+    setDisplayedHeroes((prevHeroes) => {
+      
+    }); 
     setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant
+    if (endIndex >= filterHeroes.length){
+     setHideButton(true);
+    }
   };
+
 
   const checkOccupations = (hero, occupations) => {
     let exist = false;
@@ -92,7 +99,6 @@ function App() {
       setDisplayedHeroes(filter.slice(0, 12));
     }
   };
-
   return (
     <div id="app">
       <div>
@@ -116,16 +122,18 @@ function App() {
         ))}
       </div>
       <div className="show-more">
+      {!hideButton &&(
         <button onClick={loadMoreHeroes} type="button">
-          Voir plus
-        </button>
+          Voir plus 
+        </button>)}
         <div className="scroll">
           <ScrollToTp />
         </div>
       </div>
       <Slider />
       <Footer />
-    </div>
+      </div>
+    
   );
 }
 

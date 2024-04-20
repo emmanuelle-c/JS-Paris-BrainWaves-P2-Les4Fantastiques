@@ -39,9 +39,9 @@ function AvisClient() {
       </div>
       <div className="line-top"/>
 
-      {commentaires.map((commentaire) => (
+      {commentaires.map((commentaire,index) => (
         <Commentaire
-          key={commentaire.utilisateur}
+          key={index}
           utilisateur={commentaire.utilisateur}
           date={commentaire.date}
           avis={commentaire.avis}

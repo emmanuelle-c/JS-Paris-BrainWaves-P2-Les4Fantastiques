@@ -54,12 +54,13 @@ console.log(hideButton)
     // (prevHeroes)contient les premiers héros déjà affichés
     setDisplayedHeroes((prevHeroes) => [...prevHeroes, ...nextHeroes]); // cette syntaxe(...) permet de fusionner les héros précédents avec les suivants sans écraser les 1ers
     setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant
-    }; 
-    setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant
+    
     if (endIndex >= filterHeroes.length){
-     setHideButton(true);
-    }
-  };
+      setHideButton(true);
+     }    
+      console.log(endIndex);
+      console.log(filterHeroes.length);
+    }; 
 
 
   const checkOccupations = (hero, occupations) => {

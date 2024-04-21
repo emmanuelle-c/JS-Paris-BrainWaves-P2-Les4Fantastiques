@@ -5,7 +5,6 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* margin-top: -100px; */
 }
 .header {
   display: flex;
@@ -22,7 +21,7 @@
   width: 8rem;
   height: 3rem;
   margin-top: 2rem;
-  margin-right: 2.5rem;
+  margin-right: 1.5rem;
   background-color: transparent;
   color: var(--main-color);
   font-size: 1.5rem;
@@ -40,8 +39,8 @@
   text-align: center;
 }
 .logo-entry {
-  max-width: 15%;
-  margin-left: auto;
+  max-width: 19%;
+  margin-left: 40%;
 }
 .logo-responsive {
   display: none;
@@ -74,10 +73,6 @@
   .sign {
     display: none;
   }
-  .header {
-    display: flex;
-    justify-content: flex-start;
-  }
   .logo-entry {
     max-width: 29%;
     margin-right: 21%;
@@ -109,11 +104,14 @@
     font-size: 1.4rem;
     color: var(--main-color);
     background-color: transparent;
-    border-radius: 1.5rem;
     border: none;
     margin-top: 0%;
   }
-
+  .hide-login:hover,
+  .hide-sign:hover {
+    transition-duration: 0.8s;
+    border-bottom: 0.3rem solid black;
+  }
   .banniere {
     margin-top: 4.5rem;
     width: 80%;

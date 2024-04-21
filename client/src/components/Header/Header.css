@@ -116,8 +116,8 @@
   }
 
   .button-responsive svg {
-    height: 24px;
-    width: 24px;
+    height: 35px;
+    width: 35px;
   }
   .button-responsive button {
     border: none;
@@ -134,7 +134,7 @@
     position: absolute;
     top: 11%;
     width: 100%;
-    left: 90%;
+    left: 84%;
   }
   .log-responsive button {
     padding-top: 0.5rem;

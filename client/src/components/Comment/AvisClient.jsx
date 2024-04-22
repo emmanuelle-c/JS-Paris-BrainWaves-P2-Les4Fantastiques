@@ -1,68 +1,122 @@
+import { useState } from "react";
 import "./AvisClient.css";
-import Commentaire from "./Commentaire";
 
 function AvisClient() {
-  // Données de commentaires
-  const commentaires = [
+  const [comments, setComments] = useState([
     {
-      utilisateur: "Jean - Pierre P.",
-      date: "Le 15 février 2024",
-      avis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . Lorem",
-      notation: 2,
+      id: 1,
+      user: "Jean Dupont",
+      date: "10 avril 2024",
+      content: "Super service !",
+      rating: 5,
     },
     {
-      utilisateur: "Catherine T.",
-      date: "Le 10 février 2024",
-      avis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . Lorem",
-      notation: 5,
+      id: 2,
+      user: "Marie Martin",
+      date: "12 avril 2024",
+      content: "J'ai adoré, je recommande !",
+      rating: 4,
     },
-    {
-      utilisateur: "Martin  L.",
-      date: "Le 5 mars 2024",
-      avis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . Lorem",
-      notation: 2,
-    },
-    {
-      utilisateur: "Maximilien T.",
-      date: "Le 20 janvier 2024",
-      avis: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna . Lorem",
-      notation: 4,
-    },
-  ];
+  ]);
+
+  const [newComment, setNewComment] = useState({
+    user: "",
+    content: "",
+    rating: 0,
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewComment({ ...newComment, [name]: value });
+  };
+
+  const handleRatingChange = (rating) => {
+    setNewComment({ ...newComment, rating });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const comment = {
+      id,
+      ...newComment,
+      date: new Date().toLocaleDateString(),
+    };
+    setComments([...comments, comment]);
+    setNewComment({ user: "", content: "", rating: 0 });
+  };
+
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i += 1) {
+      if (i <= rating) {
+        stars.push(
+          <span
+            key={i}
+            onClick={() => handleRatingChange(i)}
+            onKeyDown={() => handleRatingChange(i)}
+            role="presentation"
+          >
+            &#9733;
+          </span>
+        );
+      } else {
+        stars.push(
+          <span
+            key={i}
+            onClick={() => handleRatingChange(i)}
+            onKeyDown={() => handleRatingChange(i)}
+            role="presentation"
+          >
+            &#9734;
+          </span>
+        );
+      }
+    }
+    return stars;
+  };
 
   return (
-  <div className="section-commentaire">
-    <hr />
-    <div className="command-container">
-
-      <div className="total-avis">
+    <div className="comment-space">
+      <div className="div">
+        <hr className="hr" />
+      </div>
+      <h2 className="h2">Commentaires</h2>
+      <div className="comments">
+        {comments.map((comment) => (
+          <div key={comment.id} className="comment">
+            <p className="user">{comment.user}</p>
+            <p className="date">{comment.date}</p>
+            <div className="rating">{renderStars(comment.rating)}</div>
+            <p className="content">{comment.content}</p>
+          </div>
+        ))}
+      </div>
+      <form onSubmit={handleSubmit} className="comment-form">
+        <h3>Ajouter un commentaire</h3>
+        <input
+          type="text"
+          name="user"
+          placeholder="Votre nom"
+          value={newComment.user}
+          onChange={handleChange}
+          required
+        />
+        <div className="rating">{renderStars(newComment.rating)}</div>
+        <textarea
+          name="content"
+          placeholder="Votre commentaire"
+          value={newComment.content}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">Ajouter</button>
+      </form>
+      <div className="div-2">
         {" "}
-        <p className="number"> ⭐ 4,8 | 70 avis:</p>{" "}
+        <hr className="hr" />{" "}
       </div>
-
-      <div className="element-commentaire">
-        <div className="Avis">
-          {commentaires.map((commentaire) => (
-            <Commentaire
-              key={commentaire.utilisateur}
-              utilisateur={commentaire.utilisateur}
-              date={commentaire.date}
-              avis={commentaire.avis}
-              notation={commentaire.notation}
-            />
-          ))}
-        </div>
-{/* 
-        <div className="liner">
-          <div className="line-top" />
-          <div className="line-center" />
-          <div className="line-down" />
-        </div> */}
-      </div>
-
     </div>
-    <hr />
-  </div>  
   );
 }
 

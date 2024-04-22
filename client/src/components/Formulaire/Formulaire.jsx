@@ -12,7 +12,6 @@ function Formulaire() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Ajoutez ici le code pour soumettre les donnÃ©es du formulaire
   };
 
   return (

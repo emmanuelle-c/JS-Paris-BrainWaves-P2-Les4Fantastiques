@@ -1,204 +1,99 @@
-/* .command-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.comment-space {
+  max-width: 66%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.element-commentaire {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: auto;
-  width: 88%;
-  height: 85vh;
-  border-style: solid;
-  border-radius: 45px 45px 45px 45px;
-  
+.comments {
+  margin-bottom: 20px;
 }
 
-.Avis {
-   display: grid;
-   grid-template-columns: m;   
-}
-
-.total-avis {
-  position: absolute;
-  height: 40px;
-  top: 30px;
-  right: 0;
-  left: 32vh;
-  width: 13%;
-  bottom: 0px;
-  border-style: solid;
-  border-radius: 45px 45px 45px 45px;
-  display: flex;
-  flex-direction: row;
-}
-
-.number {
-  font-weight: bold;
-  color: var(--main-color);
-  font-family: "Poppins";
-  font-size: clamp(0.5rem, 2.5vw, 1.5rem);
-}
-
-.utilisateur {
+.h2 {
   color: var(--main-color);
 }
 
-.commentaire {
-  position: relative;
-  right: 0%;
-  left: 13%;
-  bottom: -100px;
-  padding-left: 50px;
-  padding-right: 420px;
-  width: 50%;
-  height: 300px;
+.comment {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user {
   font-weight: bold;
   font-family: "Poppins";
-
-  font-size: clamp(0.5rem, 2.5vw, 0.9rem);
+  color: var(--main-color);
 }
 
 .date {
-  color: rgb(0, 0, 0);
+  font-size: 0.8em;
+  color: #190707;
 }
 
-.etoiles {
-  display: inline-block;
-  color: var(--star-color);
+.rating {
+  margin-bottom: 5px;
 }
 
-.line-top {
-  position: absolute;
-  top: 0%;
-  width: 50%;
-  left: 25%;
-  min-height: 1.5px;  
-  background: black;
+.rating span {
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #ff9800;
 }
 
-.line-center {
-  position: absolute;
-  top: 15%;
-  width: 1.5px;
-  left: 50%;
-  min-height: 50vh;
-  background: black;
+.content {
+  margin-top: 5px;
 }
 
-.line-down {
-  position: absolute;
-  top: 87%;
-  width: 50%;
-  left: 25%;
-  min-height: 1.5px;
-  background: black;
-} */
-
-.command-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.comment-form {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.element-commentaire {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 88%;
-  height: 85vh;
-  border: 1px;
-  border-radius: 45px;
-  position: relative;
+.comment-form h3 {
+  margin-top: 0;
 }
 
-.Avis {
-  display: grid;
-  gap: 20px;
-  padding: 5%;
-  grid-template: 1fr 1fr/ 1fr 1fr;
-}
-
-.total-avis {
-  position: relative;
-  top: 89px;
-  right: 0;
-  left: -63vh;
-  width: 13%;
-  height: 40px;
-  border: 1px solid black;
-  border-radius: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.number {
-  font-weight: bold;
-  color: var(--main-color);
-  font-family: "Poppins";
-  font-size: clamp(0.5rem, 2.5vw, 1.5rem);
-}
-
-.utilisateur {
-  color: var(--main-color);
-}
-
-.commentaire {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 4%;
-  width: 60%;
-  margin-left: 20%;
-  font-weight: bold;
-  font-family: "Poppins";
-  font-size: clamp(0.5rem, 2.5vw, 0.77rem);
-}
-
-.date {
-  color: black;
-}
-
-.etoiles {
-  display: inline-block;
-  color: var(--star-color);
-}
-
-.line-top {
+.comment-form input,
+.comment-form textarea {
   width: 100%;
-  min-height: 1.5px;
-  background: rgb(255, 0, 0);
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-hr {
-  rotate: 90;
-  color: red;
-  width: 100px;
+.comment-form button {
+  position: relative;
+  background-color: #9942f6;
+  left: 35%;
+  width: 30%;
+  color: white;
+  border: none;
+  padding: 35px 30px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
 }
 
-/* .line-top {
-  top: 0;
-} */
-
-/* .line-down {
-  bottom: 15%;
-} */
-
-.line-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1.5px;
-  height: 50%;
-  transform: translate(-50%, -60%);
-  background: black;
+.comment-form button:hover {
+  background-color: #000000;
+  transform: scale(0.9);
 }
 
-/* .liner {
-  display: flex;
+.div {
+  position: relative;
+  left: -150px;
+  width: 160vh;
+  padding: 70px;
+}
 
-  width: 50%;
-} */
+.div-2 {
+  position: relative;
+  left: -150px;
+  width: 160vh;
+  padding: 80px;
+}
+
+.hr {
+  width: 100%;
+}

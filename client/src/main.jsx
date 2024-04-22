@@ -15,43 +15,35 @@ const router = createBrowserRouter([
   {
     path: "/pagehero/:id",
     element: (
-      
-        <main>
-          <PageHero />
-        </main>
-      
+      <main>
+        <PageHero />
+      </main>
     ),
   },
   {
     path: "/",
-    element:(
+    element: (
       <main>
-        <FirstPage/>
+        <FirstPage />
       </main>
     ),
   },
   {
     path: "/formulaire",
     element: (
-      
-        <main>
-          <Formulaire />
-        </main>
-      
+      <main>
+        <Formulaire />
+      </main>
     ),
   },
-{
+  {
     path: "/avisclient",
     element: (
-      
-        <main>
-          <AvisClient />
-        </main>
-      
+      <main>
+        <AvisClient />
+      </main>
     ),
   },
-
-  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

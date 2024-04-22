@@ -6,14 +6,14 @@ function AvisClient() {
     {
       id: 1,
       user: "Jean Dupont",
-      date: "10 avril 2024",
+      date: "10/04/2024",
       content: "Super service !",
       rating: 5,
     },
     {
       id: 2,
       user: "Marie Martin",
-      date: "12 avril 2024",
+      date: "12/04/2024",
       content: "J'ai adoré, je recommande !",
       rating: 4,
     },

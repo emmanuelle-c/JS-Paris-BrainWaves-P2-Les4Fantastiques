@@ -44,13 +44,7 @@
   width: 100%;
 }
 
-#ville,
-#codePostal,
-#nom,
-#prenom,
-input[type="email"],
-input[type="tel"],
-input[type="adresse"] {
+#nom {
   width: 100%;
   padding: 8px;
   border: 2px solid #000000;
@@ -60,7 +54,59 @@ input[type="adresse"] {
 }
 
 #prenom {
-  margin-left: -10px;
+  width: 100%;
+  padding: 8px;
+  margin-right: 40px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#email {
+  width: 97%;
+  padding: 8px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#telephone {
+  width: 100%;
+  padding: 8px;
+  margin-right: 20px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#ville {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#codePostal {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#adresse {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
 label {
@@ -71,9 +117,8 @@ label {
   height: 70%;
   width: 100%;
   padding: 10%;
-  background-color: rgba(0, 0, 139, 0.1);
-  box-shadow: 10px 5px 5px red;
-  color: #fff;
+  background-color: rgba(0, 0, 255, 0.363);
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -83,10 +128,6 @@ label {
     transform 0.3s;
 }
 
-#valider :hover {
-  background-color: #000000;
+#valider:hover {
   transform: scale(0.9);
-  transition:
-    background-color 0.3s,
-    transform 0.3s;
 }

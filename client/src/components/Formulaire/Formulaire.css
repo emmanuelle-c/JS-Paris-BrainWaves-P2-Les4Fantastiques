@@ -54,7 +54,7 @@
 }
 
 #prenom {
-  width: 100%;
+  width: 80%;
   padding: 8px;
   margin-right: 40px;
   border: 2px solid #000000;
@@ -73,7 +73,7 @@
 }
 
 #telephone {
-  width: 100%;
+  width: 80%;
   padding: 8px;
   margin-right: 20px;
   border: 2px solid #000000;
@@ -92,7 +92,7 @@
 }
 
 #codePostal {
-  width: 100%;
+  width: 80%;
   padding: 8px;
   border: 2px solid #000000;
   border-radius: 20px;
@@ -101,7 +101,7 @@
 }
 
 #adresse {
-  width: 100%;
+  width: 92%;
   padding: 8px;
   border: 2px solid #000000;
   border-radius: 20px;

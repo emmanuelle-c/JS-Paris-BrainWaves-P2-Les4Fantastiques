@@ -41,6 +41,7 @@ console.log(hideButton)
         shuffledHeroes.forEach((hero) => {
           hero.date = randomDate(new Date(2024, 4, 30), new Date(2024, 9, 30));
         });
+        console.log("shuffledHeroes",shuffledHeroes)
         setAllHeroes(shuffledHeroes);
         setDisplayedHeroes(shuffledHeroes.slice(0, 12)); // charger les 12 premiers héros du tableau qui a été mélangé
         setFilterHeroes(shuffledHeroes);
@@ -49,8 +50,11 @@ console.log(hideButton)
 
   // ajouter des héros en affichage 12 par 12 :
   const loadMoreHeroes = () => {
+    console.log("startIndex", startIndex)
     const endIndex = startIndex + 12; // calculer index de fin pour les suivants
     const nextHeroes = filterHeroes.slice(startIndex, endIndex); // extraire les héros suivants de la liste complète
+    console.log("endIndex", endIndex)
+    console.log(nextHeroes)
     // (prevHeroes)contient les premiers héros déjà affichés
     setDisplayedHeroes((prevHeroes) => [...prevHeroes, ...nextHeroes]); // cette syntaxe(...) permet de fusionner les héros précédents avec les suivants sans écraser les 1ers
     setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant

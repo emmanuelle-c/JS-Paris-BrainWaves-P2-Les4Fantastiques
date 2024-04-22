@@ -255,7 +255,7 @@ function Footer() {
           <div id="question">
             <p>UNE QUESTION ?</p>
             <br />
-            <a href="#question">voir notre FAQ</a>
+            <a href="/faq">voir notre FAQ</a>
           </div>
         </section>
         <hr />

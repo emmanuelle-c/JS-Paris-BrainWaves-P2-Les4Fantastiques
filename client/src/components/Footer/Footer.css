@@ -13,6 +13,9 @@
   font-family: poppins;
   color: white;
 }
+#footer-content p{
+  font-size: 1.3rem;
+}
 
 #footer-content {
   display: flex;
@@ -87,6 +90,11 @@
 
 hr {
   height: 60%;
+}
+
+#vu-sur svg{
+  width: 200px;
+  height: 40px;
 }
 /* VERSION MOBILE */
 @media screen and (max-width: 744px) {

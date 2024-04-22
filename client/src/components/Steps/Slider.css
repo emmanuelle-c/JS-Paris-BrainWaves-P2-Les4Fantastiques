@@ -1,20 +1,8 @@
-/* #app {
-  height: 100%;
-} */
 html,
 body {
   position: relative;
   height: 100%;
 }
-
-/* body {
-  background: #ffffff;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-} */
 
 .swiper {
   width: 900px;
@@ -100,4 +88,60 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 200;
+}
+
+/* VERSION MOBILE */
+
+@media screen and (max-width: 744px) {
+  .downTextImg {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+  .swiper-slide {
+    width: auto;
+    height: auto;
+  }
+  .upText {
+    display: flex;
+    align-items: flex-start;
+  }
+  .question {
+    font-size: 1rem;
+  }
+  .response {
+    font-size: 0.8rem;
+  }
+  .downText {
+    width: 80%;
+  }
+  .swiper {
+    width: auto;
+    height: auto;
+    margin: 3rem;
+    padding: 0;
+  }
+  .imgStep {
+    width: auto;
+    margin: 2% 0;
+    border: none;
+  }
+  #how {
+    font-size: 1.5rem;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, -22px);
+    top: var(--swiper-pagination-top, auto);
+    left: 0;
+    width: 100%;
+  }
+  .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, -38px);
+    left: auto;
+  }
+  .swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, -38px);
+    right: auto;
+  }
 }

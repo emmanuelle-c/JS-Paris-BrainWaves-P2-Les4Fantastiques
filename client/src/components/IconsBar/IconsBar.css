@@ -36,6 +36,8 @@
   width: 80%;
   margin-top: 1rem;
 }
+
+/* VERSION MOBILE */
 @media screen and (max-width: 744px) {
   .icons-bar {
     display: flex;
@@ -58,4 +60,19 @@
     width: 4rem;
     height: 4rem;
   }
+  .music, .detective, .party, .acting{
+    margin-top: 1%;
+  }
+  .acting:hover,
+.sport:hover,
+.moving:hover,
+.cours:hover,
+.outils:hover,
+.party:hover,
+.detective:hover,
+.music:hover {
+  transition-duration: 0.8s;
+  color: black;
+  border-bottom: 0.1rem solid black;
+}
 }

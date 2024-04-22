@@ -41,6 +41,7 @@
   background-color: var(--secondary-color);
   opacity: 50%;
   color: white;
+  cursor: pointer;
 }
 
 .react-datepicker__input-container > input {
@@ -59,6 +60,8 @@
 .loupe {
   display: none;
 }
+
+/* VERSION MOBILE */
 @media screen and (max-width: 744px) {
   .search-bar {
     width: 100%;

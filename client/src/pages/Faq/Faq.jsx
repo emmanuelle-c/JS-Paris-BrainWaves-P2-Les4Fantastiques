@@ -1,5 +1,6 @@
 
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer'
 import './Faq.css'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -108,6 +109,7 @@ function Faq() {
         </AccordionDetails>
       </Accordion>
     </div>
+    <Footer />
     </>
   )
 }

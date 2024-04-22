@@ -110,7 +110,10 @@ function AvisClient() {
           onChange={handleChange}
           required
         />
-        <button type="submit">Ajouter</button>
+
+        <button id="boutton" type="submit">
+          Ajouter
+        </button>
       </form>
       <div className="div-2">
         {" "}

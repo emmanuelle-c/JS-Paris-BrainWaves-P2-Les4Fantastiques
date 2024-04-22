@@ -97,7 +97,9 @@ function Formulaire() {
       </div>
 
       <div className="element-2">
-        <button type="submit">VALIDE TA COMMANDE EN UN CLICK</button>
+        <button id="valider" type="submit">
+          VALIDE TA COMMANDE EN UN CLICK
+        </button>
       </div>
     </div>
   );

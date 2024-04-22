@@ -42,12 +42,14 @@
 
 .content {
   margin-top: 5px;
+  font-family: "Poppins";
 }
 
 .comment-form {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-family: "Poppins";
 }
 
 .comment-form h3 {
@@ -63,7 +65,7 @@
 
 .comment-form button {
   position: relative;
-  background-color: #9942f6;
+  background-color: #aa00ff;
   left: 35%;
   width: 30%;
   color: white;
@@ -96,4 +98,18 @@
 
 .hr {
   width: 100%;
+}
+
+#boutton {
+  font-family: "Bebas Neue";
+  padding: 2%;
+  background-color: #9942f6;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
 }

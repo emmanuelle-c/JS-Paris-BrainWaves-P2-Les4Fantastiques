@@ -145,3 +145,11 @@ body {
     right: auto;
   }
 }
+
+/* VERSION TABLETTE */
+@media screen and (min-width: 744px) and (max-width: 1124px) {
+  .swiper {
+    width: auto;
+    margin-bottom: 2rem;
+  }
+}

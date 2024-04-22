@@ -13,7 +13,7 @@
   font-family: poppins;
   color: white;
 }
-#footer-content p{
+#footer-content p {
   font-size: 1.3rem;
 }
 
@@ -92,7 +92,7 @@ hr {
   height: 60%;
 }
 
-#vu-sur svg{
+#vu-sur svg {
   width: 200px;
   height: 40px;
 }
@@ -145,4 +145,19 @@ hr {
 }
 /* VERSION TABLETTE */
 @media screen and (min-width: 744px) and (max-width: 1124px) {
+  #footer-content p {
+    font-size: 1rem;
+  }
+  #partie-1 svg,
+  #remerciement svg,
+  #vu-sur svg {
+    width: 110px;
+  }
+  #avis p {
+    font-size: 0.8rem;
+  }
+  #follow-logos svg {
+    width: 40px;
+    height: 40px;
+  }
 }

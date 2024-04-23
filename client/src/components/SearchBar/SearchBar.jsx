@@ -44,7 +44,7 @@ SearchBar.propTypes = {
   handleClick: PropTypes.func.isRequired,
   search: PropTypes.string.isRequired,
   setSearch: PropTypes.func.isRequired,
-  searchDate: PropTypes.object.isRequired,
+  searchDate: PropTypes.shape.isRequired,
   setSearchDate: PropTypes.func.isRequired,
 };
 

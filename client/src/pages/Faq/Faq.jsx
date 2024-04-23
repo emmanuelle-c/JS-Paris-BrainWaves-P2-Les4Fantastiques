@@ -1,12 +1,12 @@
 
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer'
-import './Faq.css'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer'
+import './Faq.css'
 
 function Faq() {
     

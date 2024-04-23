@@ -15,7 +15,7 @@ function FirstPage() {
   return (
     <section className='background'>
     <div className='content'> 
-    <div className='header'>
+    <div className='button-header'>
         <button type='button' className='login'>LOGIN</button>
         <button type='button' className='sign'>SIGN IN</button>
         <button type="button" aria-label="button" className="button-user" onClick={handleShowLog} onKeyDown={handleShowLog} >
@@ -31,7 +31,7 @@ function FirstPage() {
     <div className="logo-header">
         <img src={logo} className='logo-entry' alt="logo" />
     </div>
-        <img src={ban} className='banniere' alt="banniere"/>
+        <img src={ban} className='banner' alt="banniere"/>
         <p className='text-entry'><span>RENDEZ VOTRE QUOTIDIEN EXTRAORDINAIRE</span> <br/>Déménagements sans stress, cours de sport dynamiques, animations d'anniversaires mémorables et bien plus encore...<br/>Louez dès aujourd'hui et vivez l'aventure avec nos héros à vos côtés!</p>    
         <Link to ="/accueil">
         <button type="button" className='button-entry'>DISCOVER THE EXPERIENCE</button>

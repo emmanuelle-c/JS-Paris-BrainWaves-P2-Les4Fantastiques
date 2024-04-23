@@ -2,7 +2,7 @@
   height: 100vh;
   background-image: url("/src/assets/images/entree-nicos.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -12,7 +12,7 @@
 .log-responsive-entry {
   display: none;
 }
-.header {
+.button-header {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -55,7 +55,7 @@
 .logo-responsive {
   display: none;
 }
-.banniere {
+.banner {
   margin-top: 0.5rem;
 }
 .text-entry {
@@ -118,7 +118,7 @@
     transition-duration: 0.8s;
     border-bottom: 0.3rem solid black;
   }
-  .banniere {
+  .banner {
     margin-top: 1.5rem;
     width: 80%;
   }

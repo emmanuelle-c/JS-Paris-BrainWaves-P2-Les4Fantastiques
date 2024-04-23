@@ -26,10 +26,10 @@ function HeroCard({ hero }) {
           <img src={hero.images.sm} alt="avatar" />
         </Link>
       </div>
+      <article className="description-container">
       <section id="card-title">
         <h1>{hero.name}</h1>
       </section>
-      <article className="description-container">
         <div className="description">
           <p>{hero.biography.fullName}</p>
           <p>

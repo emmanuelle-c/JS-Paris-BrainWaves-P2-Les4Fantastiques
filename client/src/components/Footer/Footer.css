@@ -13,6 +13,9 @@
   font-family: poppins;
   color: white;
 }
+#footer-content p {
+  font-size: 1.3rem;
+}
 
 #footer-content {
   display: flex;
@@ -21,9 +24,9 @@
   align-items: center;
 }
 
-#partie-1,
-#partie-2,
-#partie-3 {
+#opinion-and-payment-part,
+#seen-and-question-part,
+#follow-and-greetings-part {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,11 +35,11 @@
   height: 90%;
 }
 
-#partie-3 {
+#follow-and-greetings-part {
   height: 100%;
 }
 
-#avis {
+#opinion {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -45,7 +48,7 @@
   justify-content: space-evenly;
 }
 
-#paiement {
+#payment {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -55,8 +58,8 @@
 }
 
 #follow,
-#remerciement,
-#vu-sur {
+#greetings,
+#seen-on {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -88,6 +91,11 @@
 hr {
   height: 60%;
 }
+
+#seen-on svg {
+  width: 200px;
+  height: 40px;
+}
 /* VERSION MOBILE */
 @media screen and (max-width: 744px) {
   #footer {
@@ -107,9 +115,9 @@ hr {
   #footer p {
     font-size: 0.7rem;
   }
-  #partie-1 svg,
-  #remerciement svg,
-  #vu-sur svg {
+  #opinion-and-payment-part svg,
+  #greetings svg,
+  #seen-on svg {
     width: 80px;
   }
   #follow-logos svg {
@@ -122,19 +130,34 @@ hr {
     margin: 3% 0;
   }
 
-  #partie-1,
-  #partie-2,
-  #partie-3 {
+  #opinion-and-payment-part,
+  #seen-and-question-part,
+  #follow-and-greetings-part {
     padding: 1rem;
   }
   #question > a {
     font-size: 0.8rem;
   }
 
-  #paiement p {
+  #payment p {
     margin: 2% 0;
   }
 }
 /* VERSION TABLETTE */
 @media screen and (min-width: 744px) and (max-width: 1124px) {
+  #footer-content p {
+    font-size: 1rem;
+  }
+  #opinion-and-payment-part svg,
+  #greetings svg,
+  #seen-on svg {
+    width: 110px;
+  }
+  #opinion p {
+    font-size: 0.8rem;
+  }
+  #follow-logos svg {
+    width: 40px;
+    height: 40px;
+  }
 }

@@ -4,8 +4,8 @@ function Footer() {
   return (
     <section id="footer">
       <div id="footer-content">
-        <section id="partie-1">
-          <div id="avis">
+        <section id="opinion-and-payment-part">
+          <div id="opinion">
             <p>AVIS CLIENTS EXCELLENTS !</p>
             <svg
               width="192"
@@ -75,7 +75,7 @@ function Footer() {
             <br />
             <p>4543 avis</p>
           </div>
-          <div id="paiement">
+          <div id="payment">
             <p>PAIEMENT SECURISE</p>
             <svg
               width="141"
@@ -112,8 +112,8 @@ function Footer() {
           </div>
         </section>
         <hr />
-        <section id="partie-2">
-          <div id="vu-sur">
+        <section id="seen-and-question-part">
+          <div id="seen-on">
             <p>ILS PARLENTS DE NOUS</p>
             <svg
               width="254"
@@ -259,7 +259,7 @@ function Footer() {
           </div>
         </section>
         <hr />
-        <section id="partie-3">
+        <section id="follow-and-greetings-part">
           <div id="follow">
             <p>SUIVEZ-NOUS SUR</p>
             <div id="follow-logos">
@@ -321,7 +321,7 @@ function Footer() {
               </svg>
             </div>
           </div>
-          <div id="remerciement">
+          <div id="greetings">
             <p>REMERCIEMENTS</p>
             <svg
               width="148"

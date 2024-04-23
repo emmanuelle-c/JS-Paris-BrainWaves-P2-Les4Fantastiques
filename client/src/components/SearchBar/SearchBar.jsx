@@ -11,6 +11,8 @@ function SearchBar({
   setSearch,
   searchDate,
   setSearchDate,
+  searchName,
+  handleName,
 }) {
   return (
     <section className="search-bar">
@@ -31,6 +33,16 @@ function SearchBar({
           name="price"
           placeholder=" choisir votre tarif"
           onInput={(event) => setSearch(event.target.value)}
+        />
+      </div>
+      <div id="search-name">
+        <input 
+        value={searchName}
+        type="text" 
+        name="name-hero" 
+        id="name-hero"
+        placeholder=" Rechercher par nom" 
+        onChange={handleName}
         />
       </div>
       <button className="search" type="button" onClick={handleClick}>

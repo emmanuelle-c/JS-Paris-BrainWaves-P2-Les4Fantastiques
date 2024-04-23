@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import PageHero from "./pages/PageHero";
 import FirstPage from "./pages/FirstPage/FirstPage";
+import UserPage from "./pages/UserPage/UserPage";
 
 const router = createBrowserRouter([
   {
@@ -13,22 +14,27 @@ const router = createBrowserRouter([
   {
     path: "/pagehero/:id",
     element: (
-      
-        <main>
-          <PageHero />
-        </main>
-      
+      <main>
+        <PageHero />
+      </main>
     ),
   },
   {
     path: "/",
-    element:(
+    element: (
       <main>
-        <FirstPage/>
+        <FirstPage />
       </main>
     ),
   },
-  
+  {
+    path: "/userpage",
+    element: (
+      <main>
+        <UserPage />
+      </main>
+    ),
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

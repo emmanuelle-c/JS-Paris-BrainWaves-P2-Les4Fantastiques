@@ -5,6 +5,7 @@ import App from "./App";
 import PageHero from "./pages/PageHero";
 import FirstPage from "./pages/FirstPage/FirstPage";
 import UserPage from "./pages/UserPage/UserPage";
+import Faq from "./pages/Faq/Faq";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,14 @@ const router = createBrowserRouter([
         <UserPage />
       </main>
     ),
+  },
+  {
+    path:'/faq',
+    element:(
+      <main>
+        <Faq/>
+      </main>
+    )
   },
 ]);
 

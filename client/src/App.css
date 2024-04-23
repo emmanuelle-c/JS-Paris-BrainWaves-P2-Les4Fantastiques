@@ -10,6 +10,10 @@
   height: 100vh;
   width: 100vw;
 }
+body {
+  background: linear-gradient(rgba(0, 0, 139, 0.1) 0%, white);
+  background-repeat: no-repeat;
+}
 #app {
   width: 100vw;
   height: 100vh;

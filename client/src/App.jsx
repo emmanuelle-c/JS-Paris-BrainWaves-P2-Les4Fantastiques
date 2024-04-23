@@ -23,7 +23,7 @@ function App() {
   const [filterHeroes, setFilterHeroes] = useState([]);
   const [searchDate, setSearchDate] = useState(new Date());
   const [hideButton, setHideButton] = useState(false);
-console.log(hideButton)
+
   // générer une date random :
   function randomDate(start, end) {
     return new Date(+start + Math.random() * (end - start));
@@ -41,7 +41,6 @@ console.log(hideButton)
         shuffledHeroes.forEach((hero) => {
           hero.date = randomDate(new Date(2024, 4, 30), new Date(2024, 9, 30));
         });
-        console.log("shuffledHeroes",shuffledHeroes)
         setAllHeroes(shuffledHeroes);
         setDisplayedHeroes(shuffledHeroes.slice(0, 12)); // charger les 12 premiers héros du tableau qui a été mélangé
         setFilterHeroes(shuffledHeroes);

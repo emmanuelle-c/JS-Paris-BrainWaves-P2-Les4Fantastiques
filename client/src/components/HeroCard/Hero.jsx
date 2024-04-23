@@ -22,7 +22,7 @@ function HeroCard({ hero }) {
   return (
     <div className="card">
       <div className="avatar">
-        <Link key={hero.id} to={`/pagehero/${hero.id}`}>
+        <Link to={`/pagehero/${hero.id}`}>
           <img src={hero.images.sm} alt="avatar" />
         </Link>
       </div>
@@ -42,19 +42,20 @@ function HeroCard({ hero }) {
     </div>
   );
 }
+
 HeroCard.propTypes = {
   hero: PropTypes.shape({
-    id: PropTypes.shape.isRequired,
-    date: PropTypes.shape,
-    appearance: PropTypes.shape,
-    price: PropTypes.string,
-    name: PropTypes.string,
-    biography: PropTypes.shape,
-    connections: PropTypes.shape,
-    images: PropTypes.shape,
-    powerstats: PropTypes.shape,
-    work: PropTypes.shape,
-  }).isRequired,
+    id: PropTypes.number.isRequired,
+    images: PropTypes.shape({
+      sm: PropTypes.string.isRequired
+    }).isRequired,
+    name: PropTypes.string.isRequired,
+    biography: PropTypes.shape({
+      fullName: PropTypes.string.isRequired
+    }).isRequired,
+    date: PropTypes.instanceOf(Date).isRequired,
+    price: PropTypes.number.isRequired
+  }).isRequired
 };
 
 export default HeroCard;

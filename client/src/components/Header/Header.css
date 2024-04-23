@@ -107,6 +107,7 @@
   }
   #logo {
     display: block;
+    margin-top: -11%;
     width: 70%;
   }
   /* display section connexion */
@@ -118,8 +119,8 @@
   }
 
   .button-responsive svg {
-    height: 24px;
-    width: 24px;
+    height: 35px;
+    width: 35px;
   }
   .button-responsive button {
     border: none;
@@ -139,7 +140,7 @@
     left: 89%;
   }
   .log-responsive button {
-    padding-top: 0.5rem;
+    margin-top: 9%;
     cursor: pointer;
   }
   .log-responsive button:hover {

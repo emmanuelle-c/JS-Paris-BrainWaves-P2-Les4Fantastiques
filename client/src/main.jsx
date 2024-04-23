@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import PageHero from "./pages/PageHero";
 import FirstPage from "./pages/FirstPage/FirstPage";
+import AvisClient from "./components/Comment/AvisClient";
+import Faq from "./pages/Faq/Faq";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,22 @@ const router = createBrowserRouter([
         <FirstPage/>
       </main>
     ),
+  },
+  {
+    path:'/avisclient',
+    element:(
+      <main>
+        <AvisClient/>
+      </main>
+    )
+  },
+  {
+    path:'/faq',
+    element:(
+      <main>
+        <Faq/>
+      </main>
+    )
   },
   
 ]);

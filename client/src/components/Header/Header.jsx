@@ -40,8 +40,8 @@ function BurgerMenu() {
               </a>
             </li>
             <li className="burgermenu-items">
-              <a href="/" className="burgermenu-link">
-                A Propos
+              <a href="/faq" className="burgermenu-link">
+                FAQ
               </a>
             </li>
           </ul>

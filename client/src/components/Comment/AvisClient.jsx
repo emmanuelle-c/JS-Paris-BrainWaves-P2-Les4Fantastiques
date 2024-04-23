@@ -78,7 +78,7 @@ function AvisClient() {
 
   return (
     <div className="comment-space">
-      <div className="div">
+      <div className="liner-top">
         <hr className="hr" />
       </div>
       <h2 className="h2">Commentaires</h2>
@@ -115,7 +115,7 @@ function AvisClient() {
           Ajouter
         </button>
       </form>
-      <div className="div-2">
+      <div className="liner-down">
         {" "}
         <hr className="hr" />{" "}
       </div>

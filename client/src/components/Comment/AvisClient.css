@@ -80,22 +80,18 @@
     transform 0.3s;
 }
 
-.div {
+.liner-top {
   position: relative;
   left: -164px;
-  width: 160vh;
+  width: 169vh;
   padding: 70px;
 }
 
-.div-2 {
+.liner-down {
   position: relative;
   left: -164px;
-  width: 160vh;
+  width: 169vh;
   padding: 80px;
-}
-
-.hr {
-  width: 100%;
 }
 
 #boutton {

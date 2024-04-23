@@ -1,7 +1,4 @@
 /* style des bouttons connexion */
-/* header {
-  background-color: rgba(0, 0, 139, 0.1);
-} */
 .connexion > button {
   color: var(--secondary-color);
   background-color: rgba(0, 0, 139, 0.1);

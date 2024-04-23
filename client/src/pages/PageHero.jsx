@@ -6,6 +6,7 @@ import Header from "../components/Header/Header";
 import AvisClient from "../components/Comment/AvisClient";
 import Formulaire from "../components/Formulaire/Formulaire";
 
+
 function PageHero() {
   const [superhero, setSuperhero] = useState(null);
   const { id } = useParams();
@@ -104,7 +105,6 @@ function PageHero() {
           </section>
         )}
       </div>
-
       <AvisClient />
       <Formulaire />
     </>

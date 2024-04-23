@@ -3,9 +3,3 @@
 .titre {
   color: var(--main-color);
 }
-.size {
-  max-width: 60%;
-  display: flex;
-  flex-direction: column;
-  margin: 3% auto 5% auto;
-}

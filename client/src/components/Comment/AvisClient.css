@@ -17,6 +17,7 @@
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
+  border-radius: 30px;
 }
 
 .user {
@@ -51,6 +52,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family: "Poppins";
+  border-radius: 30px;
 }
 
 .comment-form h3 {

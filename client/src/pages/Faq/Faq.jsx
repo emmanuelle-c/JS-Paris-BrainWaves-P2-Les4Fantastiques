@@ -20,13 +20,13 @@ function Faq() {
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          <Typography className='titre'>Quels super-héros sont disponibles à la location ?</Typography>
+          <Typography className='titre'>Quels types de services proposons-nous ?</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-          Nous avons une équipe diversifiée de super-héros prêts à répondre à vos demandes. 
-          De la force surhumaine à la maîtrise des éléments, en passant par la vitesse fulgurante et la télépathie, 
-          nos héros ont une variété de compétences à votre service.
+          <Typography className='paragraphe'>
+          Nous proposons une gamme variée de services, allant des déménagements aux animations d'événements 
+          en passant par les cours de sport et bien d'autres encore. 
+          Consultez notre catalogue pour découvrir toutes nos offres.
           </Typography>
         </AccordionDetails>
       </Accordion>

@@ -16,7 +16,9 @@ function AvisClient() {
       date: "12/04/2024",
       content: "J'ai adoré, je recommande !",
       rating: 4,
+      
     },
+    
   ]);
 
   const [newComment, setNewComment] = useState({

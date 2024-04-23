@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./PageHero.css";
+import "./PageHeroResponsive.css"
 import { useParams } from "react-router-dom";
 import Header from "../components/Header/Header";
 import AvisClient from "../components/Comment/AvisClient";

@@ -3,8 +3,7 @@ import { FaRegUser } from "react-icons/fa6";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import ban from "../../assets/images/logos/banniere.svg";
-import logo from "../../assets/images/logos/logo-fond-0.png"
-
+import logo from "../../assets/images/logos/logo-fond-0.png";
 
 function BurgerMenu() {
   const [showLinks, setShowLinks] = useState(false);
@@ -16,7 +15,7 @@ function BurgerMenu() {
 
   const handleShowLog = () => {
     setShowLog(!showLog);
-  }
+  };
 
   return (
     <header>
@@ -41,8 +40,8 @@ function BurgerMenu() {
               </a>
             </li>
             <li className="burgermenu-items">
-              <a href="/" className="burgermenu-link">
-                A Propos
+              <a href="/faq" className="burgermenu-link">
+                FAQ
               </a>
             </li>
           </ul>
@@ -72,26 +71,35 @@ function BurgerMenu() {
           </button>
         </div>
         <div className="button-responsive">
-        <button type="button" aria-label="button" className="button-user" onClick={handleShowLog} onKeyDown={handleShowLog} >
-          <FaRegUser className="user" />
-        </button>
-        {showLog &&(
-        <ul className="log-responsive">
-        <button type='button' className='hide-login'>LOGIN</button>
-        <button type='button' className='hide-sign'>SIGN IN</button>
-        </ul>
-        )}
-    </div>
+          <button
+            type="button"
+            aria-label="button"
+            className="button-user"
+            onClick={handleShowLog}
+            onKeyDown={handleShowLog}
+          >
+            <FaRegUser className="user" />
+          </button>
+          {showLog && (
+            <ul className="log-responsive">
+              <button type="button" className="hide-login">
+                LOGIN
+              </button>
+              <button type="button" className="hide-sign">
+                SIGN IN
+              </button>
+            </ul>
+          )}
+        </div>
       </div>
       <div className="logo">
-      <Link  to="/" >
+        <Link id="click-to-accueil" to="/accueil">
           <img id="banniere" src={ban} alt="logo" />
-          <img id="logo" src={logo} alt="logo-mini" />  
-      </Link>
+          <img id="logo" src={logo} alt="logo-mini" />
+        </Link>
       </div>
     </header>
   );
 }
 
 export default BurgerMenu;
-

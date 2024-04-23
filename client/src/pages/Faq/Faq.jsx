@@ -20,10 +20,10 @@ function Faq() {
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          <Typography className='titre'>Quels types de services proposons-nous ?</Typography>
+          <Typography className='css-ahj2mt-MuiTypography-root'>Quels types de services proposons-nous ?</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography className='paragraphe'>
+          <Typography>
           Nous proposons une gamme variée de services, allant des déménagements aux animations d'événements 
           en passant par les cours de sport et bien d'autres encore. 
           Consultez notre catalogue pour découvrir toutes nos offres.

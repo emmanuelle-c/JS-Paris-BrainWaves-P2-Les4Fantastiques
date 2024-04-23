@@ -3,6 +3,7 @@
 .titre {
   color: var(--main-color);
 }
+
 .size {
   max-width: 60%;
   display: flex;

@@ -30,7 +30,7 @@ const router = createBrowserRouter([
   {
     path: "/userpage",
     element: (
-      <main>
+      <main id="main-userpage">
         <UserPage />
       </main>
     ),

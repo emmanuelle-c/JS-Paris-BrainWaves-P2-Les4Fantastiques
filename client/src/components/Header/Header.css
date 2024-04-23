@@ -22,13 +22,21 @@
 .logo {
   display: flex;
   justify-content: center;
+  width: 100%;
   margin: 2rem 0;
+}
+#click-to-accueil{
+  width: 50%;
 }
 
 #logo {
   display: none;
 }
 
+#banniere{
+  width: 70%;
+  margin-left: 5rem;
+}
 /* style du burger menu */
 .burgermenu {
   color: white;

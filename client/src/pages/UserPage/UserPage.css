@@ -1,11 +1,9 @@
-main{
-    height: 150vh;
+#main-userpage{
+    height: 100vh;
     background-image: url("/src/assets/images/entree-nicos.jpg");
     background-size: cover;
     object-fit: cover;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
 }
 
 .card-user-container{
@@ -13,10 +11,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.card-user-container hr{
-    height: initial;
+    margin-left: 18rem;
 }
 
 .card-user-container form{
@@ -28,12 +23,13 @@ main{
     font-family: "poppins";
     color: white;
     font-weight: 500;
+    margin-top: 3rem;
 }
 .card-user-container button{
-    width: 41%;
+    width: 50%;
     margin: 5%;
     padding: 1% 0;
-    background-color: transparent;
+    background-color: var(--main-color);
     color: white;
     font-size: 1.5rem;
     border: 1px solid;
@@ -49,6 +45,7 @@ main{
 #email-container input, #password-container input{
     border-radius: 30px;
     border: none;
+    width: 12rem;
 }
 
 #email-container label{
@@ -57,4 +54,8 @@ main{
 
 #password-container label{
     margin-right: 3%;
+}
+form p{
+    font-style: italic;
+    color: red;
 }

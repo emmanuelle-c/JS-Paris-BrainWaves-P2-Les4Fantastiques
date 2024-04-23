@@ -63,9 +63,11 @@ function BurgerMenu() {
           </button>
         </div>
         <div className="connexion">
+          <Link to="/userpage">
           <button type="button" className="login">
             LOGIN
           </button>
+          </Link>
           <button type="button" className="sign">
             SIGN IN
           </button>
@@ -82,9 +84,11 @@ function BurgerMenu() {
           </button>
           {showLog && (
             <ul className="log-responsive">
+              <Link to ="/userpage">
               <button type="button" className="hide-login">
                 LOGIN
               </button>
+              </Link>
               <button type="button" className="hide-sign">
                 SIGN IN
               </button>

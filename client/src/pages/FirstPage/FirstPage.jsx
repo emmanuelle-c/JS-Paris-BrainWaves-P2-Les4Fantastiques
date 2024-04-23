@@ -10,7 +10,9 @@ function FirstPage() {
     <div className='content'> 
     <div className='header'>
         <img src={logo} className='logo-entry' alt="logo" />
+        <Link to="/userpage">
         <button type='button' className='login'>LOGIN</button>
+        </Link>
         <button type='button' className='sign'>SIGN IN</button>
     </div>
     <img src={ban} className='banniere' alt="banniere"/>

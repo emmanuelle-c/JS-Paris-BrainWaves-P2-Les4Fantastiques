@@ -60,19 +60,28 @@
     width: 4rem;
     height: 4rem;
   }
-  .music, .detective, .party, .acting{
+  .music,
+  .detective,
+  .party,
+  .acting {
     margin-top: 1%;
   }
   .acting:hover,
-.sport:hover,
-.moving:hover,
-.cours:hover,
-.outils:hover,
-.party:hover,
-.detective:hover,
-.music:hover {
-  transition-duration: 0.8s;
-  color: black;
-  border-bottom: 0.1rem solid black;
+  .sport:hover,
+  .moving:hover,
+  .cours:hover,
+  .outils:hover,
+  .party:hover,
+  .detective:hover,
+  .music:hover {
+    transition-duration: 0.8s;
+    color: black;
+    border-bottom: 0.1rem solid black;
+  }
 }
+/* VERSION TABLETTE */
+@media screen and (min-width: 744px) and (max-width: 1124px) {
+  .icons-bar {
+    width: 90%;
+  }
 }

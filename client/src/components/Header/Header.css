@@ -169,4 +169,23 @@
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 744px) and (max-width: 1124px) {
+  .logo {
+    margin: 2rem 0 0 0;
+  }
+  #banniere {
+    width: 100%;
+  }
+  #click-to-accueil {
+    width: 60%;
+  }
+  .connexion > button {
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    margin-left: 0;
+    width: 6rem;
+    font-size: 1.2rem;
+  }
+  .burgermenu-links {
+    padding: 2rem;
+  }
 }

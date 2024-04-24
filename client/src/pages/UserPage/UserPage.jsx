@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { useStatus } from "../../assets/context/status";
+import Manue from "../../assets/images/Manue.jpg";
+import Coline from "../../assets/images/Coline.jpg";
+import Nicos from "../../assets/images/Nicos.jpg";
+import Adam from "../../assets/images/Adam.jpg";
 
 // import des fichiers style et composants :
 import Header from "../../components/Header/Header";
-import "../../components/Header/Header.css";
-import "../FirstPage/FirstPage.css";
 import "./UserPage.css";
+import Footer from "../../components/Footer/Footer";
 
 const users = [
   {
@@ -13,13 +17,15 @@ const users = [
     lastName: "Curiant",
     email: "emmanuelle.curiant@gmail.com",
     password: "manue",
+    image: Manue,
   },
   {
     id: 2,
     firstName: "Coline",
     lastName: "Grosso",
-    email: "coline.grosse@neuf.fr",
+    email: "coline.grosso@neuf.fr",
     password: "coco",
+    image: Coline,
   },
   {
     id: 3,
@@ -27,6 +33,7 @@ const users = [
     lastName: "Boulkhedert",
     email: "blackstar.per.onetap@gmail.com",
     password: "leprince",
+    image: Adam,
   },
   {
     id: 4,
@@ -34,31 +41,38 @@ const users = [
     lastName: "Muntu-Quituba",
     email: "nicos19@hotmail.fr",
     password: "nicoss",
-  }
+    image: Nicos,
+  },
 ];
 
 function UserPage() {
-  const [login, setLogin] = useState(false);
+  const { login, setLogin } = useStatus();
+
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [notUser, setNotUser] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
+
   const clickSubmit = (event) => {
     event.preventDefault();
-    for (let i= 0; i<users.length; i+=1){
-        if (emailInput === users[i].email && passwordInput === users[i].password) {
-            setLogin(true);
-        }
-        else {
-            setEmailInput("");
-            setPasswordInput("");
-            setNotUser(true);
-        }
+    for (let i = 0; i < users.length; i += 1) {
+      if (
+        emailInput === users[i].email &&
+        passwordInput === users[i].password
+      ) {
+        setLogin(true);
+        setCurrentUser(users[i]);
+      } else {
+        setEmailInput("");
+        setPasswordInput("");
+        setNotUser(true);
+      }
     }
   };
 
   return (
     <>
-      <Header />
+      <Header users={users} currentUser={currentUser} />
       <div className="card-user-container">
         {!login && (
           <form>
@@ -89,6 +103,7 @@ function UserPage() {
           </form>
         )}
       </div>
+      <Footer />
     </>
   );
 }

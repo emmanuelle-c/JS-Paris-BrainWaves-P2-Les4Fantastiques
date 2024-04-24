@@ -1,8 +1,13 @@
 /* style des bouttons connexion */
-.connexion > button {
+.connexion button {
   color: var(--secondary-color);
   background-color: rgba(0, 0, 139, 0.1);
   cursor: pointer;
+  width: 8rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--secondary-color);
 }
 
 .connexion {
@@ -10,7 +15,15 @@
   flex-direction: row;
 }
 
-.connexion a{
+.connexion img {
+  width: 12%;
+  height: 90%;
+  border-radius: 50px;
+  object-fit: cover;
+  margin: auto 1% auto 85%;
+}
+
+.connexion a {
   margin-top: 1rem;
   margin-right: 1.5rem;
 }
@@ -30,7 +43,7 @@
   width: 100%;
   margin: 2rem 0;
 }
-#click-to-accueil{
+#click-to-accueil {
   width: 50%;
 }
 
@@ -38,7 +51,7 @@
   display: none;
 }
 
-#banniere{
+#banniere {
   width: 70%;
   margin-left: 15%;
 }
@@ -185,9 +198,6 @@
 @media screen and (min-width: 744px) and (max-width: 1124px) {
   .logo {
     margin: 2rem 0 0 0;
-  }
-  #banniere {
-    width: 100%;
   }
   #click-to-accueil {
     width: 60%;

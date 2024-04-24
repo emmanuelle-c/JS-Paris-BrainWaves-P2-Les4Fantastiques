@@ -4,8 +4,10 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import ban from "../../assets/images/logos/banniere.svg";
 import logo from "../../assets/images/logos/logo-fond-0.png";
+import { useStatus } from "../../assets/context/status";
 
-function BurgerMenu() {
+function BurgerMenu({ currentUser }) {
+  const { login } = useStatus();
   const [showLinks, setShowLinks] = useState(false);
   const [showLog, setShowLog] = useState(false);
 
@@ -63,16 +65,18 @@ function BurgerMenu() {
           </button>
         </div>
         <div className="connexion">
-          <Link to="/userpage">
-          <button type="button" className="login">
-            LOGIN
-          </button>
-          </Link>
-          <Link to="/accueil">
-          <button type="button" className="sign">
-            SIGN IN
-          </button>
-          </Link>
+          {!login && (
+            <>
+              {" "}
+              <Link to="/userpage">
+                <button type="button">LOGIN</button>
+              </Link>
+              <Link to="/accueil">
+                <button type="button">SIGN IN</button>
+              </Link>
+            </>
+          )}
+          {login && <img src={currentUser.image} alt="avatar" />}
         </div>
         <div className="button-responsive">
           <button
@@ -86,15 +90,15 @@ function BurgerMenu() {
           </button>
           {showLog && (
             <ul className="log-responsive">
-              <Link to ="/userpage">
-              <button type="button" className="hide-login">
-                LOGIN
-              </button>
+              <Link to="/userpage">
+                <button type="button" className="hide-login">
+                  LOGIN
+                </button>
               </Link>
               <Link to="/accueil">
-              <button type="button" className="hide-sign">
-                SIGN IN
-              </button>
+                <button type="button" className="hide-sign">
+                  SIGN IN
+                </button>
               </Link>
             </ul>
           )}

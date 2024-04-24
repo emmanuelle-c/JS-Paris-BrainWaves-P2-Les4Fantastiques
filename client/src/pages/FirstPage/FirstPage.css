@@ -27,15 +27,15 @@
 .user-responsive {
   display: none;
 }
-/* .login {
+.login {
   margin-left: 18%;
-} */
+}
 .login,
 .sign {
   width: 8rem;
   height: 3rem;
-  /* margin-top: 1rem;
-  margin-right: 1.5rem; */
+  margin-top: 1rem;
+  margin-right: 1.5rem;
   background-color: transparent;
   color: var(--main-color);
   font-size: 1.5rem;

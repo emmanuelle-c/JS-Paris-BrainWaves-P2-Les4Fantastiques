@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { StatusProvider } from "./assets/context/status";
 import App from "./App";
 import PageHero from "./pages/PageHero";
 import FirstPage from "./pages/FirstPage/FirstPage";
@@ -50,6 +51,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
+    <StatusProvider>
     <RouterProvider router={router} />
+    </StatusProvider>
   </React.StrictMode>
 );

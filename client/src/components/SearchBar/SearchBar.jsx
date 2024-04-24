@@ -36,6 +36,7 @@ function SearchBar({
         />
       </div>
       <div id="search-name">
+      <label htmlFor="name">Nom :</label>
         <input 
         value={searchName}
         type="text" 
@@ -56,8 +57,10 @@ SearchBar.propTypes = {
   handleClick: PropTypes.func.isRequired,
   search: PropTypes.string.isRequired,
   setSearch: PropTypes.func.isRequired,
-  searchDate: PropTypes.shape.isRequired,
+  searchDate: PropTypes.instanceOf(Date).isRequired,
   setSearchDate: PropTypes.func.isRequired,
+  searchName: PropTypes.string.isRequired,
+  handleName: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

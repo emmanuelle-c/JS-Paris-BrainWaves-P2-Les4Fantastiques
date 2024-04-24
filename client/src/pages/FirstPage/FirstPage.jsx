@@ -16,8 +16,8 @@ function FirstPage() {
     <section className='background'>
     <div className='content'> 
     <div className='button-header'>
-        <button type='button' className='login'>LOGIN</button>
-        <button type='button' className='sign'>SIGN IN</button>
+        <button type='button' className='show-login'>LOGIN</button>
+        <button type='button' className='show-sign'>SIGN IN</button>
         <button type="button" aria-label="button" className="button-user" onClick={handleShowLog} onKeyDown={handleShowLog} >
           <FaRegUser className="user" />
         </button>

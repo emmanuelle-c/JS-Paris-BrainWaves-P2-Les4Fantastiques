@@ -24,7 +24,7 @@ function App() {
   const [searchDate, setSearchDate] = useState(new Date());
   const [searchName, setSearchName] = useState("");
   const [hideButton, setHideButton] = useState(false);
-
+  
   // générer une date random :
   function randomDate(start, end) {
     return new Date(+start + Math.random() * (end - start));
@@ -101,12 +101,11 @@ function App() {
   };
   const handleName =(e) => {
     setSearchName(e.target.value)
-    const filterByName = allHeroes.filter(hero => hero.name.toLowerCase().includes(e.target.value))
+    const filterByName = allHeroes.filter(hero => hero.name.toLowerCase().includes(e.target.value.toLowerCase()))
       {setSearchName &&
         setFilterHeroes(filterByName);
         setDisplayedHeroes(filterByName.slice(0, 12));
       }
-      console.log(filterByName);
   }
   return (
     <div id="app">
@@ -133,7 +132,7 @@ function App() {
         ))}
       </div>
       <div className="show-more">
-      {!hideButton &&(
+      {!hideButton &&( 
         <button onClick={loadMoreHeroes} type="button">
           Voir plus 
         </button>)}

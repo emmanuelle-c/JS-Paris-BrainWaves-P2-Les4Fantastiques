@@ -1,7 +1,7 @@
 .search-bar {
   font-family: "poppins";
   color: var(--main-color);
-  font-size: clamp(0.5rem, 2vw, 1.5rem);
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
   display: flex;
   width: 80%;
   align-items: center;
@@ -87,7 +87,7 @@ input#name-hero {
     height: 1rem;
   }
   #date,
-  #price-container {
+  #price-container, #search-name {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -95,7 +95,6 @@ input#name-hero {
   input#name-hero {
     width: 4rem;
     height: 1rem;
-    margin-top: 1rem;
   }
   .loupe {
     display: block;

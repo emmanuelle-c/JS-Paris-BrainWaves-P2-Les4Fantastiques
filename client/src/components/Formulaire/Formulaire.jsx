@@ -12,12 +12,12 @@ function Formulaire() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Ajoutez ici le code pour soumettre les donnÃ©es du formulaire
   };
 
   return (
     <div className="container" onSubmit={handleSubmit}>
-      <div className="element-1">
+      <div><p>Réserver ce super héro !</p></div>
+      <div className="container-data">
         <div className="usedata">
           <div>
             <label htmlFor="nom">NOM:</label>
@@ -97,8 +97,10 @@ function Formulaire() {
         </div>
       </div>
 
-      <div className="element-2">
-        <button type="submit">VALIDE TA COMMANDE EN UN CLICK</button>
+      <div className="container-button">
+        <button id="valider" type="submit">
+          VALIDE TA COMMANDE EN UN CLICK
+        </button>
       </div>
     </div>
   );

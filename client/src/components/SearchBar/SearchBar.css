@@ -87,7 +87,8 @@ input#name-hero {
     height: 1rem;
   }
   #date,
-  #price-container, #search-name {
+  #price-container,
+  #search-name {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

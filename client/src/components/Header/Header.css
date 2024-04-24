@@ -10,6 +10,11 @@
   flex-direction: row;
 }
 
+.connexion a{
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+}
+
 .button-container {
   display: flex;
   justify-content: space-between;
@@ -35,7 +40,7 @@
 
 #banniere{
   width: 70%;
-  margin-left: 5rem;
+  margin-left: 15%;
 }
 /* style du burger menu */
 .burgermenu {
@@ -188,8 +193,8 @@
     width: 60%;
   }
   .connexion > button {
-    margin-top: 1rem;
-    margin-right: 1.5rem;
+    /* margin-top: 1rem;
+    margin-right: 1.5rem; */
     margin-left: 0;
     width: 6rem;
     font-size: 1.2rem;

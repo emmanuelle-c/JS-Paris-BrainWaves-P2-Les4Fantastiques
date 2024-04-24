@@ -68,9 +68,11 @@ function BurgerMenu() {
             LOGIN
           </button>
           </Link>
+          <Link to="/accueil">
           <button type="button" className="sign">
             SIGN IN
           </button>
+          </Link>
         </div>
         <div className="button-responsive">
           <button
@@ -89,9 +91,11 @@ function BurgerMenu() {
                 LOGIN
               </button>
               </Link>
+              <Link to="/accueil">
               <button type="button" className="hide-sign">
                 SIGN IN
               </button>
+              </Link>
             </ul>
           )}
         </div>

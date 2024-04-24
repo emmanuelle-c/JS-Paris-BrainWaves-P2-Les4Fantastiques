@@ -102,9 +102,7 @@ function App() {
   const handleName =(e) => {
     setSearchName(e.target.value)
     const filterByName = allHeroes.filter(hero => hero.name.toLowerCase().includes(e.target.value.toLowerCase()))
-      setSearchName &&
-        setFilterHeroes(filterByName);
-        setDisplayedHeroes(filterByName.slice(0, 12));
+      setSearchName && setFilterHeroes(filterByName); setDisplayedHeroes(filterByName.slice(0, 12));
   }
   return (
     <div id="app">

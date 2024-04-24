@@ -1,7 +1,7 @@
 .search-bar {
   font-family: "poppins";
   color: var(--main-color);
-  font-size: clamp(0.5rem, 2vw, 1.5rem);
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
   display: flex;
   width: 80%;
   align-items: center;
@@ -30,7 +30,21 @@
   border-right: 1px solid var(--secondary-color);
   border-radius: 30px 30px;
 }
-
+#search-name {
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+  height: 100%;
+  align-items: center;
+  border-right: 1px solid var(--secondary-color);
+  border-radius: 30px 30px;
+}
+input#name-hero {
+  border: 0.5px solid var(--secondary-color);
+  width: 9rem;
+  height: 2rem;
+  border-radius: 30px;
+}
 .search {
   display: block;
   width: 20%;
@@ -73,10 +87,15 @@
     height: 1rem;
   }
   #date,
-  #price-container {
+  #price-container,
+  #search-name {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+  }
+  input#name-hero {
+    width: 4rem;
+    height: 1rem;
   }
   .loupe {
     display: block;

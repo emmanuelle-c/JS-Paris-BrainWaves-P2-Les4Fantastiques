@@ -1,43 +1,40 @@
 .container {
   display: flex;
   justify-content: center;
-  right: 10px;
-  width: 100vw;
-  height: 70vh;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 30px;
+  width: 100%;
+  max-width: 65%;
 }
 
-.element-1 {
+.container-data {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 55%;
+  width: 100%;
+  padding-right: 70px;
+  font-family: "Poppins";
 }
 
-.element-2 {
+.container-button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 45%;
+  padding-right: 20px;
 }
 
-.usedata {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
+.usedata,
 .usedata-2 {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .Home {
-  height: 10%;
   width: 100%;
 }
 
@@ -47,86 +44,90 @@
   width: 100%;
 }
 
+#nom {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#prenom {
+  width: 80%;
+  padding: 8px;
+  margin-right: 40px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#email {
+  width: 97%;
+  padding: 8px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#telephone {
+  width: 80%;
+  padding: 8px;
+  margin-right: 20px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
 #ville {
   width: 100%;
   padding: 8px;
-  border: none;
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
 #codePostal {
-  width: 100%;
+  width: 80%;
   padding: 8px;
-  border: none;
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#adresse {
+  width: 90%;
+  padding: 8px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
 label {
   font-weight: bold;
 }
 
-#nom {
-  width: 106%;
-  padding: 8px;
-  border: none;
-  border: 3px solid #000000;
-  border-radius: 20px;
-}
-
-#prenom {
-  position: relative;
-  left: -10%;
-  width: 110%;
-  padding: 8px;
-  border: none;
-  border: 3px solid #000000;
-  border-radius: 20px;
-}
-
-.prenom {
-  position: relative;
-  left: -27px;
-}
-
-input[type="email"] {
+#valider {
+  height: 70%;
   width: 100%;
-  padding: 8px;
+  padding: 10%;
+  background-color: rgba(0, 0, 255, 0.363);
+  color: rgb(255, 255, 255);
   border: none;
-  border: 3px solid #000000;
-  border-radius: 20px;
-}
-
-input[type="tel"] {
-  width: 100%;
-  padding: 8px;
-  border: 3px solid #000000;
-  border-radius: 20px;
-}
-
-input[type="adresse"] {
-  width: 100%;
-  padding: 8px;
-  border: 5px solid #000000;
-  border-radius: 20px;
-}
-
-button[type="submit"] {
-  position: relative;
-  height: 180px;
-  left: 50px;
-  width: 44%;
-  padding: 53px;
-  background-color: #9942f6;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
+  border-radius: 30px;
   cursor: pointer;
   font-size: 30px;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
 }
 
-button[type="submit"]:hover {
-  background-color: #ff0000;
-  scale: 0.9;
+#valider:hover {
+  transform: scale(0.9);
 }

@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./PageHero.css";
+import "./PageHeroResponsive.css";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header/Header";
+import AvisClient from "../components/Comment/AvisClient";
+import Formulaire from "../components/Formulaire/Formulaire";
 
 function PageHero() {
   const [superhero, setSuperhero] = useState(null);
@@ -102,6 +105,16 @@ function PageHero() {
           </section>
         )}
       </div>
+      ²
+      <div className="liner-top">
+        <hr className="hr" />
+      </div>
+      <AvisClient />
+      <div className="liner-down">
+        {" "}
+        <hr className="hr" />{" "}
+      </div>
+      <Formulaire />
     </>
   );
 }

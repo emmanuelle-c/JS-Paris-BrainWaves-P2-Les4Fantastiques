@@ -43,15 +43,22 @@ const users = [
     password: "nicoss",
     image: Nicos,
   },
+  {
+    id: 5,
+    firstName: "a",
+    lastName: "Muntu-Quituba",
+    email: "a",
+    password: "a",
+    image: Nicos,
+  },
 ];
 
 function UserPage() {
-  const { login, setLogin } = useStatus();
+  const { login, setLogin, currentUser, setCurrentUser } = useStatus();
 
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [notUser, setNotUser] = useState(false);
-  const [currentUser, setCurrentUser] = useState(null);
 
   const clickSubmit = (event) => {
     event.preventDefault();

@@ -6,8 +6,8 @@ import ban from "../../assets/images/logos/banniere.svg";
 import logo from "../../assets/images/logos/logo-fond-0.png";
 import { useStatus } from "../../assets/context/status";
 
-function BurgerMenu({ currentUser }) {
-  const { login } = useStatus();
+function BurgerMenu() {
+  const { login, currentUser } = useStatus();
   const [showLinks, setShowLinks] = useState(false);
   const [showLog, setShowLog] = useState(false);
 
@@ -27,24 +27,24 @@ function BurgerMenu({ currentUser }) {
         >
           <ul className="burgermenu-links">
             <li className="burgermenu-items">
-              <a href="/" className="burgermenu-link">
+              <Link to="/" className="burgermenu-link">
                 Accueil
-              </a>
+              </Link>
             </li>
             <li className="burgermenu-items">
-              <a href="/" className="burgermenu-link">
+              <Link to="/" className="burgermenu-link">
                 Portfolio
-              </a>
+              </Link>
             </li>
             <li className="burgermenu-items">
-              <a href="/" className="burgermenu-link">
+              <Link to="/" className="burgermenu-link">
                 Services
-              </a>
+              </Link>
             </li>
             <li className="burgermenu-items">
-              <a href="/faq" className="burgermenu-link">
+              <Link to="/faq" className="burgermenu-link">
                 FAQ
-              </a>
+              </Link>
             </li>
           </ul>
           <button

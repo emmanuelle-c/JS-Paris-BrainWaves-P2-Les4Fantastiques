@@ -22,8 +22,9 @@ function App() {
   const [search, setSearch] = useState("");
   const [filterHeroes, setFilterHeroes] = useState([]);
   const [searchDate, setSearchDate] = useState(new Date());
+  const [searchName, setSearchName] = useState("");
   const [hideButton, setHideButton] = useState(false);
-
+  
   // générer une date random :
   function randomDate(start, end) {
     return new Date(+start + Math.random() * (end - start));
@@ -89,7 +90,8 @@ function App() {
         (hero.price >= Number(search) &&
           hero.date.getMonth() === searchDate.getMonth() &&
           hero.date.getDate() >= searchDate.getDate())
-    );
+        );
+
     if (filter.length === 0) {
       setFilterHeroes(displayedHeroes);
     } else {
@@ -97,6 +99,14 @@ function App() {
       setDisplayedHeroes(filter.slice(0, 12));
     }
   };
+  const handleName =(e) => {
+    setSearchName(e.target.value)
+    const filterByName = allHeroes.filter(hero => hero.name.toLowerCase().includes(e.target.value.toLowerCase()))
+    if (searchName !== "") {
+      setFilterHeroes(filterByName); 
+      setDisplayedHeroes(filterByName.slice(0, 12));
+    }
+  }
   return (
     <div id="app">
       <div>
@@ -109,6 +119,8 @@ function App() {
           search={search}
           searchDate={searchDate}
           setSearchDate={setSearchDate}
+          searchName = {searchName}
+          handleName = {handleName}
         />
         <IconsBar filterHeroesByOccupation={filterHeroesByOccupation} />
       </div>
@@ -120,7 +132,7 @@ function App() {
         ))}
       </div>
       <div className="show-more">
-      {!hideButton &&(
+      {!hideButton &&( 
         <button onClick={loadMoreHeroes} type="button">
           Voir plus 
         </button>)}

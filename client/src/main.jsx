@@ -5,7 +5,10 @@ import { StatusProvider } from "./assets/context/status";
 import App from "./App";
 import PageHero from "./pages/PageHero";
 import FirstPage from "./pages/FirstPage/FirstPage";
+<<<<<<< HEAD
 import UserPage from "./pages/UserPage/UserPage";
+=======
+>>>>>>> 6aabfed57e64720b26fc029837a478d013ceb09a
 import Faq from "./pages/Faq/Faq";
 
 const router = createBrowserRouter([

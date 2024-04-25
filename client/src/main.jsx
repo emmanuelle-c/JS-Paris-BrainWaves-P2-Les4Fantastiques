@@ -5,6 +5,7 @@ import App from "./App";
 import PageHero from "./pages/PageHero";
 import FirstPage from "./pages/FirstPage/FirstPage";
 import Faq from "./pages/Faq/Faq";
+import Formulaire from "./components/Formulaire/Formulaire";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,14 @@ const router = createBrowserRouter([
     element:(
       <main>
         <Faq/>
+      </main>
+    )
+  },
+  {
+    path:'/formulaire',
+    element:(
+      <main>
+        <Formulaire/>
       </main>
     )
   },

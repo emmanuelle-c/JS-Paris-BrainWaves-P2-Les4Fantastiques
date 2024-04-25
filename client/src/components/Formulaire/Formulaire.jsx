@@ -13,10 +13,10 @@ function Formulaire() {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
-
+  
   return (
     <div className="container" onSubmit={handleSubmit}>
-      <div><p>Réserver ce super héro !</p></div>
+        {/* <h1 className="title-form">Réserver ce super héro !</h1> */}
       <div className="container-data">
         <div className="usedata">
           <div>

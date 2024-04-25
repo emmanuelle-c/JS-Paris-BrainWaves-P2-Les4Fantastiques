@@ -57,42 +57,17 @@ function FirstPage() {
               </button>
             </Link>
           )}
-          {/* {login && (
-            <>
-              <img
-                src={currentUser.image}
-                alt="avatar"
-                role="presentation"
-                onClick={handleShowlog}
-                onKeyDown={handleShowlog}
-              />
-              {showlog && (
-                <>
-                  <p
-                    id="log-out"
-                    role="presentation"
-                    onClick={() => setLogin(false)}
-                  >
-                    se déconnecter
-                  </p>
-                  <Link to="/userpage">
-                    <p id="log-in">mon compte</p>
-                  </Link>
-                </>
-              )}
-            </>
-          )} */}
         </div>
         <div className="logo-header">
           <img src={logo} className="logo-entry" alt="logo" />
         </div>
         <img src={ban} className="banner" alt="bannière" />
         <p className="text-entry">
-          <span>RENDEZ VOTRE QUOTIDIEN EXTRAORDINAIRE</span> <br />
+          <span>RENDEZ VOTRE QUOTIDIEN EXTRAORDINAIRE !</span> <br />
           Déménagements sans stress, cours de sport dynamiques, animations
           d'anniversaires mémorables et bien plus encore...
           <br />
-          Louez dès aujourd'hui et vivez l'aventure avec nos héros à vos côtés!
+          Réservez dès aujourd'hui et vivez l'aventure avec nos héros à vos côtés!
         </p>
         <Link to="/accueil">
           <button type="button" className="button-entry">

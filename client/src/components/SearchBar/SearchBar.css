@@ -1,7 +1,7 @@
 .search-bar {
   font-family: "poppins";
   color: var(--main-color);
-  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
   display: flex;
   width: 80%;
   align-items: center;
@@ -9,10 +9,16 @@
   height: 4rem;
   border: 1px solid var(--secondary-color);
   border-radius: 30px;
+  font-weight: 300;
+}
+
+.search-bar label {
+  font-weight: 300;
 }
 
 #date {
   display: flex;
+  flex-wrap: wrap;
   width: 50%;
   justify-content: space-evenly;
   height: 100%;
@@ -23,6 +29,7 @@
 
 #price-container {
   display: flex;
+  flex-wrap: wrap;
   width: 50%;
   justify-content: space-evenly;
   height: 100%;
@@ -32,6 +39,7 @@
 }
 #search-name {
   display: flex;
+  flex-wrap: wrap;
   width: 30%;
   justify-content: space-evenly;
   height: 100%;
@@ -52,8 +60,7 @@ input#name-hero {
   border: none;
   border-radius: 30px;
   font-size: clamp(1rem, 2vw, 1.5rem);
-  background-color: var(--secondary-color);
-  opacity: 50%;
+  background-color: var(--main-color);
   color: white;
   cursor: pointer;
 }
@@ -101,8 +108,7 @@ input#name-hero {
     display: block;
     border: none;
     border-radius: 30px;
-    background-color: var(--secondary-color);
-    opacity: 50%;
+    background-color: var(--main-color);
     width: 20%;
     height: 100%;
   }

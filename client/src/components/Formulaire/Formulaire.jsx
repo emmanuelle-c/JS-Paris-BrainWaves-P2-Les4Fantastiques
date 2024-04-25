@@ -16,8 +16,9 @@ function Formulaire() {
   };
 
   return (
+    <div className="bigContainer">
+    <h2 className="titleComment">Réserver ce super héro !</h2>
     <div className="container" onSubmit={handleSubmit}>
-      <div><p>Réserver ce super héro !</p></div>
       <div className="container-data">
         <div className="usedata">
           <div className="labelLeft">
@@ -103,6 +104,7 @@ function Formulaire() {
           VALIDE TA COMMANDE EN UN CLICK 
         </button>
       </div>
+    </div>
     </div>
   );
 }

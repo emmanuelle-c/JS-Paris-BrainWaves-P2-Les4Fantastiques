@@ -29,6 +29,13 @@
   #valider {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
+  .bigContainer {
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+  .titleComment {
+    margin-left: 16%;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -50,6 +57,9 @@
   .labelLeft {
     margin-right: 1rem;
   }
+  .textHero {
+    height: 380px;
+  }
 
   .container-button {
     width: 80%;
@@ -61,5 +71,9 @@
 
   #valider {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .bigContainer {
+    margin-top: 1rem;
+    max-width: 100%;
   }
 }

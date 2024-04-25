@@ -9,14 +9,14 @@ import { useStatus } from "../../contexts/auth";
 function BurgerMenu() {
   const { login, currentUser, setLogin } = useStatus();
   const [showLinks, setShowLinks] = useState(false);
-  const [showlog, Setshowlog] = useState(false);
+  const [showlog, setShowlog] = useState(false);
 
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
 
   const handleShowlog = () => {
-    Setshowlog(true);
+    setShowlog(true);
   };
   return (
     <header>

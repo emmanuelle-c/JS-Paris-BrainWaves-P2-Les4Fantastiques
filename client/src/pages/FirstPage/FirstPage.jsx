@@ -8,10 +8,10 @@ import logo from "../../assets/images/logos/logo-fond-0.png";
 
 function FirstPage() {
   const { login, currentUser, setLogin } = useStatus();
-  const [showlog, Setshowlog] = useState(false);
+  const [showlog, setShowlog] = useState(false);
 
   const handleShowlog = () => {
-    Setshowlog(true);
+    setShowlog(true);
   };
 
   return (

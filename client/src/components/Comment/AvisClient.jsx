@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./AvisClient.css";
+import "./AvisClientResponsive.css";
 
 function AvisClient() {
   const [comments, setComments] = useState([

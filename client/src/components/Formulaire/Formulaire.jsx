@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Formulaire.css";
+import "./FormulaireResponsive.css"
 
 function Formulaire() {
   const [nom, setNom] = useState("");
@@ -18,7 +19,7 @@ function Formulaire() {
     <div className="container" onSubmit={handleSubmit}>
       <div className="container-data">
         <div className="usedata">
-          <div>
+          <div className="labelLeft">
             <label htmlFor="nom">NOM:</label>
             <input
               type="text"
@@ -42,7 +43,7 @@ function Formulaire() {
         </div>
 
         <div className="usedata-2">
-          <div>
+          <div className="labelLeft">
             <label htmlFor="email">EMAIL:</label>
             <input
               type="email"
@@ -74,7 +75,7 @@ function Formulaire() {
         </div>
 
         <div className="position">
-          <div>
+          <div className="labelLeft">
             <label htmlFor="ville">VILLE:</label>
             <input
               type="text"

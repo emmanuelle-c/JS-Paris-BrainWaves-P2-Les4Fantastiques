@@ -4,6 +4,7 @@ import Manue from "../../assets/images/Manue.jpg";
 import Coline from "../../assets/images/Coline.jpg";
 import Nicos from "../../assets/images/Nicos.jpg";
 import Adam from "../../assets/images/Adam.jpg";
+import UserProfil from "../../components/UserProfil/UserProfil";
 
 // import des fichiers style et composants :
 import Header from "../../components/Header/Header";
@@ -18,6 +19,10 @@ const users = [
     email: "emmanuelle.curiant@gmail.com",
     password: "manue",
     image: Manue,
+    DDN: "12/12/1989",
+    adresse: "227 rue de charenton 75012 Paris",
+    tel: "06 50 38 70 36"
+
   },
   {
     id: 2,
@@ -26,6 +31,9 @@ const users = [
     email: "coline.grosso@neuf.fr",
     password: "coco",
     image: Coline,
+    DDN: "11/03/1986",
+    adresse: "4 rue Doudeauville 75018 Paris",
+    tel : "06 63 48 09 58"
   },
   {
     id: 3,
@@ -34,6 +42,9 @@ const users = [
     email: "blackstar.per.onetap@gmail.com",
     password: "leprince",
     image: Adam,
+    DDN: "24/05/2003",
+    adresse: "10 rue de l'arbre jaune 92230 Gennevilliers",
+    tel: "07 83 80 80 52"
   },
   {
     id: 4,
@@ -42,6 +53,9 @@ const users = [
     email: "nicos19@hotmail.fr",
     password: "nicoss",
     image: Nicos,
+    DDN : "19/10/1993",
+    adresse: "2 rue Jean Mermoz 78000 Versailles",
+    tel : "06 64 92 59 65"
   },
   {
     id: 5,
@@ -110,6 +124,9 @@ function UserPage() {
           </form>
         )}
       </div>
+      {login &&
+        users.map((user) => <UserProfil key={user.id} user={user}/>)
+      }
       <Footer />
     </>
   );

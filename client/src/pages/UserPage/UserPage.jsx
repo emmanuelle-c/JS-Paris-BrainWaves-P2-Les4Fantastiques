@@ -23,9 +23,9 @@ const users = [
     address: "227 rue de charenton 75012 Paris",
     tel: "06 50 38 70 36",
     orders: [
-      "Spiderman, le 01 Janv 2024, occasion : évènement, prix : 130€",
-      "Doctor Strange, le 02 Mars 2024, occasion: déménagement, prix : 94€"
-    ]
+      "Commande effectuée le 01 Janv 2024, prestataire: Spiderman, occasion : évènement, prix : 130€ - statut : validée",
+      "Commande effectuée le 02 Mars 2024, prestataire: Doctor Strange, occasion: déménagement, prix : 94€ - statut : validée",
+    ],
   },
   {
     id: 2,
@@ -36,11 +36,11 @@ const users = [
     image: Coline,
     DDN: "11/03/1986",
     address: "4 rue Doudeauville 75018 Paris",
-    tel : "06 63 48 09 58",
+    tel: "06 63 48 09 58",
     orders: [
-      "Spiderman, le 01 Janv 2024, occasion : évènement, prix : 130€",
-      "Doctor Strange, le 02 Mars 2024, occasion: déménagement, prix : 94€"
-    ]
+      "Commande effectuée le 01 Janv 2024, prestataire: Spiderman, occasion : évènement, prix : 130€ - statut : validée",
+      "Commande effectuée le 02 Mars 2024, prestataire: Doctor Strange, occasion: déménagement, prix : 94€ - statut : validée",
+    ],
   },
   {
     id: 3,
@@ -53,9 +53,9 @@ const users = [
     address: "10 rue de l'arbre jaune 92230 Gennevilliers",
     tel: "07 83 80 80 52",
     orders: [
-      "Spiderman, le 01 Janv 2024, occasion : évènement, prix : 130€",
-      "Doctor Strange, le 02 Mars 2024, occasion: déménagement, prix : 94€"
-    ]
+      "Commande effectuée le 01 Janv 2024, prestataire: Spiderman, occasion : évènement, prix : 130€ - statut : validée",
+      "Commande effectuée le 02 Mars 2024, prestataire: Doctor Strange, occasion: déménagement, prix : 94€ - statut : validée",
+    ],
   },
   {
     id: 4,
@@ -64,25 +64,13 @@ const users = [
     email: "nicos19@hotmail.fr",
     password: "nicoss",
     image: Nicos,
-    DDN : "19/10/1993",
+    DDN: "19/10/1993",
     address: "2 rue Jean Mermoz 78000 Versailles",
-    tel : "06 64 92 59 65",
+    tel: "06 64 92 59 65",
     orders: [
-      "Spiderman, le 01 Janv 2024, occasion : évènement, prix : 130€",
-      "Doctor Strange, le 02 Mars 2024, occasion: déménagement, prix : 94€"
-    ]
-  },
-  {
-    id: 5,
-    firstName: "a",
-    lastName: "Muntu-Quituba",
-    email: "a",
-    password: "a",
-    image: Nicos,
-    orders: [
-      "Spiderman, le 01 Janv 2024, occasion : évènement, prix : 130€",
-      "Doctor Strange, le 02 Mars 2024, occasion: déménagement, prix : 94€"
-    ]
+      "Commande effectuée le 01 Janv 2024, prestataire: Spiderman, occasion : évènement, prix : 130€ - statut : validée",
+      "Commande effectuée le 02 Mars 2024, prestataire: Doctor Strange, occasion: déménagement, prix : 94€ - statut : validée",
+    ],
   },
 ];
 
@@ -143,9 +131,12 @@ function UserPage() {
           </form>
         )}
       </div>
-      {login &&
-      <UserProfil />
-      }
+      {login && (
+        <>
+          <h1 id="welcome-message">Bienvenue sur votre compte !</h1>
+          <UserProfil />
+        </>
+      )}
       <Footer />
     </>
   );

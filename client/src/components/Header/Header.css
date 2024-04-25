@@ -1,21 +1,22 @@
 /* style des bouttons connexion */
-.connexion button {
-  color: var(--secondary-color);
-  background-color: rgba(0, 0, 139, 0.1);
+.connection button {
+  color: white;
+  background-color: var(--main-color);
   cursor: pointer;
   width: 8rem;
   height: 3rem;
   font-size: 1.5rem;
   border-radius: 1.5rem;
-  border: 1px solid var(--secondary-color);
+  border: none;
+  box-shadow: 2px 5px 15px 0px rgba(0, 0, 0, 0.7);
 }
 
-.connexion {
+.connection {
   display: flex;
   flex-direction: row;
 }
 
-.connexion img {
+.connection img {
   width: 12%;
   height: 90%;
   border-radius: 50px;
@@ -23,7 +24,7 @@
   margin: auto 1% auto 85%;
 }
 
-.connexion a {
+.connection a {
   margin-top: 1rem;
   margin-right: 1.5rem;
 }
@@ -36,14 +37,14 @@
   display: none;
 }
 
-/* style de la bannière */
+/* style of banner */
 .logo {
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 2rem 0;
 }
-#click-to-accueil {
+#click-to-home {
   width: 50%;
 }
 
@@ -51,11 +52,11 @@
   display: none;
 }
 
-#banniere {
+#banner {
   width: 70%;
   margin-left: 15%;
 }
-/* style du burger menu */
+/* style of burger menu */
 .burgermenu {
   color: white;
 }
@@ -103,7 +104,7 @@
   cursor: pointer;
 }
 .hide-burger .burger-bar path {
-  fill: var(--secondary-color);
+  fill: var(--main-color);
 }
 .show-burger .burger-bar path {
   fill: white;
@@ -115,7 +116,7 @@
 
 /* VERSION MOBILE */
 @media screen and (max-width: 744px) {
-  /* display du logo */
+  /* display of logo */
   .logo {
     display: flex;
     margin: 0;
@@ -128,7 +129,7 @@
     justify-content: center;
   }
 
-  #banniere {
+  #banner {
     display: none;
   }
   #logo {
@@ -136,8 +137,8 @@
     margin-top: -11%;
     width: 70%;
   }
-  /* display section connexion */
-  .connexion {
+  /* display of connection section */
+  .connection {
     display: none;
   }
   .button-responsive {
@@ -145,35 +146,15 @@
   }
 
   .button-responsive svg {
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
   }
   .button-responsive button {
     border: none;
     background-color: transparent;
     color: var(--main-color);
   }
-  .button-user {
-    padding-top: 0.2rem;
-  }
-  .log-responsive {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 7%;
-    width: 100%;
-    left: 81%;
-  }
-  .log-responsive button {
-    margin-top: 4%;
-    cursor: pointer;
-  }
-  .log-responsive button:hover {
-    border-bottom: 0.1rem solid var(--main-color);
-    transition-duration: 0.2s;
-  }
-  /* display du boutton burger */
+  /* display of burger button */
   .burger-bar svg {
     height: 36px;
     width: 36px;
@@ -188,7 +169,7 @@
   .button-responsive path {
     fill: var(--main-color);
   }
-  /* section des boutons */
+  /* button section */
   .button-container {
     margin: 0.5rem;
   }
@@ -199,12 +180,10 @@
   .logo {
     margin: 2rem 0 0 0;
   }
-  #click-to-accueil {
+  #click-to-home {
     width: 60%;
   }
-  .connexion > button {
-    /* margin-top: 1rem;
-    margin-right: 1.5rem; */
+  .connection > button {
     margin-left: 0;
     width: 6rem;
     font-size: 1.2rem;

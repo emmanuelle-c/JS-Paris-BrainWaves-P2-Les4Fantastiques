@@ -2,21 +2,16 @@ import { useState } from "react";
 import { FaRegUser } from "react-icons/fa6";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import ban from "../../assets/images/logos/banniere.svg";
+import ban from "../../assets/images/logos/banner.svg";
 import logo from "../../assets/images/logos/logo-fond-0.png";
-import { useStatus } from "../../assets/context/status";
+import { useStatus } from "../../contexts/auth";
 
 function BurgerMenu() {
   const { login, currentUser } = useStatus();
   const [showLinks, setShowLinks] = useState(false);
-  const [showLog, setShowLog] = useState(false);
 
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
-  };
-
-  const handleShowLog = () => {
-    setShowLog(!showLog);
   };
 
   return (
@@ -64,49 +59,28 @@ function BurgerMenu() {
             </svg>
           </button>
         </div>
-        <div className="connexion">
+        <div className="connection">
           {!login && (
             <>
               {" "}
               <Link to="/userpage">
                 <button type="button">LOGIN</button>
               </Link>
-              <Link to="/accueil">
-                <button type="button">SIGN IN</button>
-              </Link>
             </>
           )}
           {login && <img src={currentUser.image} alt="avatar" />}
         </div>
         <div className="button-responsive">
-          <button
-            type="button"
-            aria-label="button"
-            className="button-user"
-            onClick={handleShowLog}
-            onKeyDown={handleShowLog}
-          >
-            <FaRegUser className="user" />
-          </button>
-          {showLog && (
-            <ul className="log-responsive">
-              <Link to="/userpage">
-                <button type="button" className="hide-login">
-                  LOGIN
-                </button>
-              </Link>
-              <Link to="/accueil">
-                <button type="button" className="hide-sign">
-                  SIGN IN
-                </button>
-              </Link>
-            </ul>
-          )}
+          <Link to="/userpage">
+            <button type="button" aria-label="button" className="button-user">
+              <FaRegUser className="user" />
+            </button>
+          </Link>
         </div>
       </div>
       <div className="logo">
-        <Link id="click-to-accueil" to="/accueil">
-          <img id="banniere" src={ban} alt="logo" />
+        <Link id="click-to-home" to="/accueil">
+          <img id="banner" src={ban} alt="logo" />
           <img id="logo" src={logo} alt="logo-mini" />
         </Link>
       </div>

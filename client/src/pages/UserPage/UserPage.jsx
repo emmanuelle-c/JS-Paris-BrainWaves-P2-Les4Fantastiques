@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useStatus } from "../../assets/context/status";
+import { useStatus } from "../../contexts/auth";
 import Manue from "../../assets/images/Manue.jpg";
 import Coline from "../../assets/images/Coline.jpg";
 import Nicos from "../../assets/images/Nicos.jpg";

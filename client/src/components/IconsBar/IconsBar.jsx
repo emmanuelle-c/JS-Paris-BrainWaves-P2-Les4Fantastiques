@@ -7,7 +7,6 @@ import { PiStudentBold, PiDetectiveBold, PiMusicNoteFill } from "react-icons/pi"
 import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 import { LuPartyPopper } from "react-icons/lu";
 
-
 function IconsBar({filterHeroesByOccupation}) {
 
     return(
@@ -45,6 +44,7 @@ function IconsBar({filterHeroesByOccupation}) {
         <p className="text">Cours de musique</p>
         </button>
        </div>
+        
  )
 }
 

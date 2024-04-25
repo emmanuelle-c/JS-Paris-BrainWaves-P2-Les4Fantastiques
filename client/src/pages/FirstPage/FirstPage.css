@@ -27,11 +27,11 @@
 .user-responsive {
   display: none;
 }
-.login {
+.show-login {
   margin-left: 18%;
 }
-.login,
-.sign {
+.show-login,
+.show-sign {
   width: 8rem;
   height: 3rem;
   margin-top: 1rem;

@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -255,7 +256,7 @@ function Footer() {
           <div id="question">
             <p>UNE QUESTION ?</p>
             <br />
-            <a href="/faq">voir notre FAQ</a>
+            <Link to="/faq">voir notre FAQ</Link>
           </div>
         </section>
         <hr />

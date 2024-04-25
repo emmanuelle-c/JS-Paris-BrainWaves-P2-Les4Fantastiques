@@ -106,7 +106,6 @@ function PageHero() {
           </section>
         )}
       </div>
-      ²
       <div className="liner-top">
         <hr className="hr" />
       </div>

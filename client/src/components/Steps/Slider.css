@@ -3,14 +3,12 @@ body {
   position: relative;
   height: 100%;
 }
-
 .swiper {
   width: 900px;
   height: 450px;
-  padding: 50px;
+  padding: 23px 50px 50px 50px;
   margin-bottom: 5rem;
 }
-
 .swiper-slide {
   background-position: center;
   background-size: cover;

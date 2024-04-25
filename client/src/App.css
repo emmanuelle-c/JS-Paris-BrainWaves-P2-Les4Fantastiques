@@ -68,7 +68,7 @@ a {
 }
 .show-more > button {
   background-color: var(--main-color);
-  margin: 10px;
+  margin: 4%;
   padding: 18px 45px;
   width: 12%;
   font-size: 1.5rem;

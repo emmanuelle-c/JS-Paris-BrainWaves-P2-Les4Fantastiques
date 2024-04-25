@@ -13,7 +13,15 @@
 
 .connection {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+#log-out {
+  font-family: "Poppins";
+  color: var(--main-color);
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: 2%;
 }
 
 .connection img {

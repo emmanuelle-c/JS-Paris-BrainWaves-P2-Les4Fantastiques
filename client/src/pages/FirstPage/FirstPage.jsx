@@ -4,7 +4,8 @@ import { FaRegUser } from "react-icons/fa6";
 import ban from "../../assets/images/logos/banner.svg";
 import logo from "../../assets/images/logos/logo-fond-0.png";
 
-function FirstPage() {
+function FirstPage() {  
+  
   return (
     <section className="background">
       <div className="content">

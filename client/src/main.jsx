@@ -32,17 +32,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/userpage",
-    element: (
-        <UserPage />
-    ),
+    element: <UserPage />,
   },
   {
-    path:'/faq',
-    element:(
+    path: "/faq",
+    element: (
       <main>
-        <Faq/>
+        <Faq />
       </main>
-    )
+    ),
   },
 ]);
 
@@ -51,7 +49,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <StatusProvider>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </StatusProvider>
   </React.StrictMode>
 );

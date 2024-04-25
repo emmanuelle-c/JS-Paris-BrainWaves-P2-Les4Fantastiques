@@ -1,62 +1,65 @@
 @media screen and (max-width: 830px) {
+  .container-data {
+    color: #7b7b7b;
+    padding-right: 0px;
+    padding-left: 33px;
+  }
 
-    .container-data {
-        color: #7B7B7B;
-        /* width: 100%; */
+  .textHero {
+    height: 250px;
+  }
 
-    
-    }
-    
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        width: 320px;
-        /* max-width: 100%; */
-        background-color: #E1E1E1;
-        /* padding-left: 2rem; */
-        
-    
-    }
-    .container-button{
-        width: 100%;
-        /* padding-right: 0px; */
-
-    }
-    .labelLeft{
-        margin-right: 1rem;
-        /* padding-left: 4rem; */
-    }
-    
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 464px;
+    max-width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .container-button {
+    width: 100%;
+    padding-right: 0px;
+    margin-top: 1rem;
+  }
+  .labelLeft {
+    margin-right: 1rem;
+  }
+  #valider {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 }
 
-@media screen and (max-width: 470px){
-    .container-data {
-        color: #7B7B7B;
-        /* padding-right: inherit; */
-    }
-    
+@media screen and (max-width: 470px) {
+  .container-data {
+    color: #7b7b7b;
+    /* padding-right: inherit; */
+  }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        width: 320px;
-        max-width: 100%;
-        background-color: #E1E1E1;
-        padding: 5px;
-    
-    }
-    .labelLeft{
-        margin-right: 1rem;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    max-width: 100%;
+    background-color: #e1e1e1;
+    padding: 5px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .labelLeft {
+    margin-right: 1rem;
+  }
 
-    .container-button{
-        width: 100%;
-        padding-right: 0px;
+  .container-button {
+    width: 80%;
+    padding-right: 0px;
+    margin-top: 5px;
+    margin-left: 32px;
+    margin-bottom: 15px;
+  }
 
-    }
-
-    
-   
-    
+  #valider {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 }

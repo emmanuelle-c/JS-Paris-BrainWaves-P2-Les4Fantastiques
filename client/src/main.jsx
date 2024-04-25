@@ -4,8 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import PageHero from "./pages/PageHero";
 import FirstPage from "./pages/FirstPage/FirstPage";
-import AvisClient from "./components/Comment/AvisClient";
-import Formulaire from "./components/Formulaire/Formulaire";
+import Faq from "./pages/Faq/Faq";
 
 const router = createBrowserRouter([
   {
@@ -29,21 +28,14 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/formulaire",
-    element: (
+    path:'/faq',
+    element:(
       <main>
-        <Formulaire />
+        <Faq/>
       </main>
-    ),
+    )
   },
-  {
-    path: "/avisclient",
-    element: (
-      <main>
-        <AvisClient />
-      </main>
-    ),
-  },
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

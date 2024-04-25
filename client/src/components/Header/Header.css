@@ -2,6 +2,7 @@
 .connexion > button {
   color: var(--secondary-color);
   background-color: rgba(0, 0, 139, 0.1);
+  cursor: pointer;
 }
 
 .connexion {
@@ -73,6 +74,7 @@
   border: none;
   padding: 1%;
   background-color: transparent;
+  cursor: pointer;
 }
 .hide-burger .burger-bar path {
   fill: var(--secondary-color);
@@ -105,6 +107,7 @@
   }
   #logo {
     display: block;
+    margin-top: -11%;
     width: 70%;
   }
   /* display section connexion */
@@ -116,8 +119,8 @@
   }
 
   .button-responsive svg {
-    height: 24px;
-    width: 24px;
+    height: 35px;
+    width: 35px;
   }
   .button-responsive button {
     border: none;
@@ -132,12 +135,12 @@
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: 11%;
+    top: 7%;
     width: 100%;
-    left: 90%;
+    left: 81%;
   }
   .log-responsive button {
-    padding-top: 0.5rem;
+    margin-top: 4%;
     cursor: pointer;
   }
   .log-responsive button:hover {
@@ -153,7 +156,7 @@
     padding: 0;
   }
   .burgermenu-links {
-    padding: 1.5rem;
+    padding: 10% 0;
   }
   .hide-burger .burger-bar path,
   .button-responsive path {
@@ -167,4 +170,23 @@
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 744px) and (max-width: 1124px) {
+  .logo {
+    margin: 2rem 0 0 0;
+  }
+  #banniere {
+    width: 100%;
+  }
+  #click-to-accueil {
+    width: 60%;
+  }
+  .connexion > button {
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    margin-left: 0;
+    width: 6rem;
+    font-size: 1.2rem;
+  }
+  .burgermenu-links {
+    padding: 2rem;
+  }
 }

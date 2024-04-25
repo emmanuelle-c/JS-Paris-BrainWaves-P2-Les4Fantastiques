@@ -17,7 +17,9 @@ function AvisClient() {
       date: "12/04/2024",
       content: "J'ai adoré, je recommande !",
       rating: 4,
+      
     },
+    
   ]);
 
   const [newComment, setNewComment] = useState({
@@ -79,9 +81,6 @@ function AvisClient() {
 
   return (
     <div className="comment-space">
-      <div className="liner-top">
-        <hr className="hr" />
-      </div>
       <h2 className="h2">Commentaires</h2>
       <div className="comments">
         {comments.map((comment) => (
@@ -116,10 +115,6 @@ function AvisClient() {
           Ajouter
         </button>
       </form>
-      <div className="liner-down">
-        {" "}
-        <hr className="hr" />{" "}
-      </div>
     </div>
   );
 }

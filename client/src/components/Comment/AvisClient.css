@@ -80,20 +80,6 @@
     transform 0.3s;
 }
 
-.liner-top {
-  position: relative;
-  left: -164px;
-  width: 169vh;
-  padding: 70px;
-}
-
-.liner-down {
-  position: relative;
-  left: -164px;
-  width: 169vh;
-  padding: 80px;
-}
-
 #boutton {
   font-family: "Bebas Neue";
   padding: 2%;

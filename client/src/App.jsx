@@ -18,16 +18,18 @@ import "./App.css";
 function App() {
   const [allHeroes, setAllHeroes] = useState([]);
   const [displayedHeroes, setDisplayedHeroes] = useState([]);
-  const [startIndex, setStartIndex] = useState(12);
+  const [currentIndex, setCurrentIndex] = useState(1);
   const [search, setSearch] = useState("");
   const [filterHeroes, setFilterHeroes] = useState([]);
   const [searchDate, setSearchDate] = useState(new Date());
-
+  const [searchName, setSearchName] = useState("");
+  const [hideButton, setHideButton] = useState(false);
+  
   // générer une date random :
   function randomDate(start, end) {
     return new Date(+start + Math.random() * (end - start));
   }
-  // fetch les données API, suffle les données et afficher seulement 12 par défaut :
+  // fetch les données API, shuffle les données et afficher seulement 12 par défaut :
   useEffect(() => {
     axios
       .get(
@@ -48,12 +50,15 @@ function App() {
 
   // ajouter des héros en affichage 12 par 12 :
   const loadMoreHeroes = () => {
-    const endIndex = startIndex + 12; // calculer index de fin pour les suivants
-    const nextHeroes = filterHeroes.slice(startIndex, endIndex); // extraire les héros suivants de la liste complète
-    // (prevHeroes)contient les premiers héros déjà affichés
-    setDisplayedHeroes((prevHeroes) => [...prevHeroes, ...nextHeroes]); // cette syntaxe(...) permet de fusionner les héros précédents avec les suivants sans écraser les 1ers
-    setStartIndex(endIndex); // mettre à jour index de départ pour clic suivant
-  };
+    const endIndex =  (currentIndex+1) * 12; // calculer index de fin pour les suivants
+    const nextHeroes = filterHeroes.slice(0, endIndex); // extraire les héros suivants de la liste complète
+    setDisplayedHeroes(nextHeroes)    
+
+    if (endIndex >= filterHeroes.length){
+      setHideButton(true);
+    }    
+    setCurrentIndex(currentIndex+1)
+  }; 
 
   const checkOccupations = (hero, occupations) => {
     let exist = false;
@@ -64,11 +69,12 @@ function App() {
   };
 
   const filterHeroesByOccupation = (occupations) => {
+    setHideButton(false);
     const filteredHeroesWork = allHeroes.filter((hero) =>
       checkOccupations(hero, occupations)
     );
     setFilterHeroes(filteredHeroesWork);
-    setDisplayedHeroes(filteredHeroesWork);
+    setDisplayedHeroes(filteredHeroesWork.slice(0, 12));
   };
   // ajouter une propriété "price" à chaque héro du tableau :
   allHeroes.forEach((hero) => {
@@ -84,7 +90,8 @@ function App() {
         (hero.price >= Number(search) &&
           hero.date.getMonth() === searchDate.getMonth() &&
           hero.date.getDate() >= searchDate.getDate())
-    );
+        );
+
     if (filter.length === 0) {
       setFilterHeroes(displayedHeroes);
     } else {
@@ -92,7 +99,14 @@ function App() {
       setDisplayedHeroes(filter.slice(0, 12));
     }
   };
-
+  const handleName =(e) => {
+    setSearchName(e.target.value)
+    const filterByName = allHeroes.filter(hero => hero.name.toLowerCase().includes(e.target.value.toLowerCase()))
+    if (searchName !== "") {
+      setFilterHeroes(filterByName); 
+      setDisplayedHeroes(filterByName.slice(0, 12));
+    }
+  }
   return (
     <div id="app">
       <div>
@@ -105,6 +119,8 @@ function App() {
           search={search}
           searchDate={searchDate}
           setSearchDate={setSearchDate}
+          searchName = {searchName}
+          handleName = {handleName}
         />
         <IconsBar filterHeroesByOccupation={filterHeroesByOccupation} />
       </div>
@@ -116,16 +132,17 @@ function App() {
         ))}
       </div>
       <div className="show-more">
+      {!hideButton &&( 
         <button onClick={loadMoreHeroes} type="button">
-          Voir plus
-        </button>
+          Voir plus 
+        </button>)}
         <div className="scroll">
           <ScrollToTp />
         </div>
       </div>
       <Slider />
       <Footer />
-    </div>
+      </div>
   );
 }
 

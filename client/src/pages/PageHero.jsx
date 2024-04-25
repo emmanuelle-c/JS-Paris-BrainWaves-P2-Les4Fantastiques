@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header/Header";
 import AvisClient from "../components/Comment/AvisClient";
 import Formulaire from "../components/Formulaire/Formulaire";
-
+import Footer from "../components/Footer/Footer"
 
 function PageHero() {
   const [superhero, setSuperhero] = useState(null);
@@ -106,8 +106,16 @@ function PageHero() {
           </section>
         )}
       </div>
+      <div className="liner-top">
+        <hr className="hr" />
+      </div>
       <AvisClient />
+      <div className="liner-down">
+        {" "}
+        <hr className="hr" />{" "}
+      </div>
       <Formulaire />
+      <Footer />
     </>
   );
 }

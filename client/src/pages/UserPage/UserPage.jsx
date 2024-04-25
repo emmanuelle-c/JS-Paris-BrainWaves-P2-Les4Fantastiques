@@ -20,9 +20,12 @@ const users = [
     password: "manue",
     image: Manue,
     DDN: "12/12/1989",
-    adresse: "227 rue de charenton 75012 Paris",
-    tel: "06 50 38 70 36"
-
+    address: "227 rue de charenton 75012 Paris",
+    tel: "06 50 38 70 36",
+    orders: [
+      "Spiderman, le 01 Janv 2024, occasion : évènement, prix : 130€",
+      "Doctor Strange, le 02 Mars 2024, occasion: déménagement, prix : 94€"
+    ]
   },
   {
     id: 2,
@@ -32,8 +35,12 @@ const users = [
     password: "coco",
     image: Coline,
     DDN: "11/03/1986",
-    adresse: "4 rue Doudeauville 75018 Paris",
-    tel : "06 63 48 09 58"
+    address: "4 rue Doudeauville 75018 Paris",
+    tel : "06 63 48 09 58",
+    orders: [
+      "Spiderman, le 01 Janv 2024, occasion : évènement, prix : 130€",
+      "Doctor Strange, le 02 Mars 2024, occasion: déménagement, prix : 94€"
+    ]
   },
   {
     id: 3,
@@ -43,8 +50,12 @@ const users = [
     password: "leprince",
     image: Adam,
     DDN: "24/05/2003",
-    adresse: "10 rue de l'arbre jaune 92230 Gennevilliers",
-    tel: "07 83 80 80 52"
+    address: "10 rue de l'arbre jaune 92230 Gennevilliers",
+    tel: "07 83 80 80 52",
+    orders: [
+      "Spiderman, le 01 Janv 2024, occasion : évènement, prix : 130€",
+      "Doctor Strange, le 02 Mars 2024, occasion: déménagement, prix : 94€"
+    ]
   },
   {
     id: 4,
@@ -54,8 +65,12 @@ const users = [
     password: "nicoss",
     image: Nicos,
     DDN : "19/10/1993",
-    adresse: "2 rue Jean Mermoz 78000 Versailles",
-    tel : "06 64 92 59 65"
+    address: "2 rue Jean Mermoz 78000 Versailles",
+    tel : "06 64 92 59 65",
+    orders: [
+      "Spiderman, le 01 Janv 2024, occasion : évènement, prix : 130€",
+      "Doctor Strange, le 02 Mars 2024, occasion: déménagement, prix : 94€"
+    ]
   },
   {
     id: 5,
@@ -64,6 +79,10 @@ const users = [
     email: "a",
     password: "a",
     image: Nicos,
+    orders: [
+      "Spiderman, le 01 Janv 2024, occasion : évènement, prix : 130€",
+      "Doctor Strange, le 02 Mars 2024, occasion: déménagement, prix : 94€"
+    ]
   },
 ];
 
@@ -125,7 +144,7 @@ function UserPage() {
         )}
       </div>
       {login &&
-        users.map((user) => <UserProfil key={user.id} user={user}/>)
+      <UserProfil />
       }
       <Footer />
     </>

@@ -1,4 +1,7 @@
-function UserProfil ({ user }) {
+import { useStatus } from "../../contexts/auth";
+
+function UserProfil () {
+    const { currentUser } = useStatus()
     return (
         <>
         <section id="user-list">
@@ -8,10 +11,15 @@ function UserProfil ({ user }) {
             </ul>
         </section>
         <section className="information-container">
-            <p>{user.firstname}</p>
-            <p>{user.lastname}</p>
-            <p>{user.email}</p>
-            
+            <p>{currentUser.firstName}</p>
+            <p>{currentUser.lastName}</p>
+            <p>{currentUser.DDN}</p>
+            <p>{currentUser.email}</p>
+            <p>{currentUser.tel}</p>
+            <p>{currentUser.address}</p>
+        </section>
+        <section className="information-container">
+            {currentUser.orders.map((order) => <p key={order.index}>{order}</p>)}
         </section>
         </>
     )

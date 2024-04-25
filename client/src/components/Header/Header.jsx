@@ -7,13 +7,17 @@ import logo from "../../assets/images/logos/logo-fond-0.png";
 import { useStatus } from "../../contexts/auth";
 
 function BurgerMenu() {
-  const { login, currentUser } = useStatus();
+  const { login, currentUser, setLogin } = useStatus();
   const [showLinks, setShowLinks] = useState(false);
+  const [showlog, setShowlog] = useState(false);
 
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
 
+  const handleShowlog = () => {
+    setShowlog(true);
+  };
   return (
     <header>
       <div className="button-container">
@@ -68,7 +72,26 @@ function BurgerMenu() {
               </Link>
             </>
           )}
-          {login && <img src={currentUser.image} alt="avatar" />}
+          {login && (
+            <>
+              <img
+                src={currentUser.image}
+                alt="avatar"
+                role="presentation"
+                onClick={handleShowlog}
+                onKeyDown={handleShowlog}
+              />
+              {showlog && (
+                <p
+                  id="log-out"
+                  role="presentation"
+                  onClick={() => setLogin(false)}
+                >
+                  se déconnecter
+                </p>
+              )}
+            </>
+          )}
         </div>
         <div className="button-responsive">
           <Link to="/userpage">

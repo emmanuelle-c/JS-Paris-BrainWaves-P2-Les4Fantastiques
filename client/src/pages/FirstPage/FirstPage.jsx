@@ -1,20 +1,51 @@
 import "./FirstPage.css";
 import { Link } from "react-router-dom";
 import { FaRegUser } from "react-icons/fa6";
+import { useState } from "react";
+import { useStatus } from "../../contexts/auth";
 import ban from "../../assets/images/logos/banner.svg";
 import logo from "../../assets/images/logos/logo-fond-0.png";
 
-function FirstPage() {  
-  
+
+function FirstPage() {
+  const { login, currentUser, setLogin } = useStatus();
+  const [showlog, setShowlog] = useState(false);
+
+  const handleShowlog = () => {
+    setShowlog(true);
+  };
   return (
     <section className="background">
       <div className="content">
         <div className="button-header">
-          <Link to="/userpage">
-            <button type="button" className="login">
-              LOGIN
-            </button>
-          </Link>
+          {!login && (
+            <Link to="/userpage">
+              <button type="button" className="login">
+                LOGIN
+              </button>
+            </Link>
+          )}
+          {login && (
+            <>
+              <img
+                src={currentUser.image}
+                alt="avatar"
+                role="presentation"
+                onClick={handleShowlog}
+                onKeyDown={handleShowlog}
+              />
+              {showlog && (
+                <p
+                  id="log-out"
+                  role="presentation"
+                  onClick={() => setLogin(false)}
+                >
+                  se déconnecter
+                </p>
+              )}
+            </>
+          )}
+
           <Link to="/userpage">
             <button type="button" aria-label="button" className="button-user">
               <FaRegUser className="user" />

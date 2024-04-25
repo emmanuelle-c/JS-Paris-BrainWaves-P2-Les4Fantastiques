@@ -16,7 +16,7 @@ function BurgerMenu() {
   };
 
   const handleShowlog = () => {
-    setShowlog(true);
+    setShowlog(!showlog);
   };
   return (
     <header>
@@ -82,23 +82,55 @@ function BurgerMenu() {
                 onKeyDown={handleShowlog}
               />
               {showlog && (
-                <p
-                  id="log-out"
-                  role="presentation"
-                  onClick={() => setLogin(false)}
-                >
-                  se déconnecter
-                </p>
+                <>
+                  <p
+                    id="log-out"
+                    role="presentation"
+                    onClick={() => setLogin(false)}
+                  >
+                    se déconnecter
+                  </p>
+                  <Link to="/userpage">
+                    <p id="log-in">mon compte</p>
+                  </Link>
+                </>
               )}
             </>
           )}
         </div>
         <div className="button-responsive">
-          <Link to="/userpage">
-            <button type="button" aria-label="button" className="button-user">
-              <FaRegUser className="user" />
-            </button>
-          </Link>
+          {!login && (
+            <Link to="/userpage">
+              <button type="button" aria-label="button" className="button-user">
+                <FaRegUser className="user" />
+              </button>
+            </Link>
+          )}
+          {login && (
+            <>
+              <img
+                src={currentUser.image}
+                alt="avatar"
+                role="presentation"
+                onClick={handleShowlog}
+                onKeyDown={handleShowlog}
+              />
+              {showlog && (
+                <>
+                  <p
+                    id="log-out"
+                    role="presentation"
+                    onClick={() => setLogin(false)}
+                  >
+                    se déconnecter
+                  </p>
+                  <Link to="/userpage">
+                    <p id="log-in">mon compte</p>
+                  </Link>
+                </>
+              )}
+            </>
+          )}
         </div>
       </div>
       <div className="logo">

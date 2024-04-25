@@ -19,6 +19,7 @@
   flex-direction: column;
   justify-content: flex-end;
   z-index: 1;
+  align-items: flex-end;
 }
 
 #log-out {
@@ -26,7 +27,7 @@
   color: var(--main-color);
   font-weight: 400;
   margin-left: auto;
-  margin-right: 2%;
+  margin-right: 0%;
 }
 
 .button-header img {

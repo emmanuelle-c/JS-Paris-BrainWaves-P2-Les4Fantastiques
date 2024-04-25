@@ -6,6 +6,7 @@ import { useStatus } from "../../contexts/auth";
 import ban from "../../assets/images/logos/banner.svg";
 import logo from "../../assets/images/logos/logo-fond-0.png";
 
+
 function FirstPage() {
   const { login, currentUser, setLogin } = useStatus();
   const [showlog, Setshowlog] = useState(false);
@@ -13,7 +14,6 @@ function FirstPage() {
   const handleShowlog = () => {
     Setshowlog(true);
   };
-
   return (
     <section className="background">
       <div className="content">

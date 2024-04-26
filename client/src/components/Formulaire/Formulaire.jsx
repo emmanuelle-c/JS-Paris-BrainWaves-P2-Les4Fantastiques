@@ -17,8 +17,9 @@ function Formulaire() {
   };
 
   return (
+    <div className="bigContainer">
+    <h2 className="titleComment">Réserver ce super héro !</h2>
     <div className="container" onSubmit={handleSubmit}>
-      <h1>Réserver ce super héro !</h1>
       <div className="container-data">
         <div className="usedata">
           <div className="labelLeft">
@@ -99,6 +100,7 @@ function Formulaire() {
         </div>
       </div>
       <Paypal />
+    </div>
     </div>
   );
 }

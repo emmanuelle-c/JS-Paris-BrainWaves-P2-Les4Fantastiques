@@ -12,7 +12,7 @@ function FirstPage() {
   const [showlog, setShowlog] = useState(false);
 
   const handleShowlog = () => {
-    setShowlog(true);
+    setShowlog(!showlog);
   };
   return (
     <section className="background">
@@ -35,33 +35,39 @@ function FirstPage() {
                 onKeyDown={handleShowlog}
               />
               {showlog && (
-                <p
-                  id="log-out"
-                  role="presentation"
-                  onClick={() => setLogin(false)}
-                >
-                  se déconnecter
-                </p>
+                <>
+                  <p
+                    id="log-out"
+                    role="presentation"
+                    onClick={() => setLogin(false)}
+                  >
+                    se déconnecter
+                  </p>
+                  <Link to="/userpage">
+                    <p id="log-in">mon compte</p>
+                  </Link>
+                </>
               )}
             </>
           )}
-
-          <Link to="/userpage">
-            <button type="button" aria-label="button" className="button-user">
-              <FaRegUser className="user" />
-            </button>
-          </Link>
+          {!login && (
+            <Link to="/userpage">
+              <button type="button" aria-label="button" className="button-user">
+                <FaRegUser className="user" />
+              </button>
+            </Link>
+          )}
         </div>
         <div className="logo-header">
           <img src={logo} className="logo-entry" alt="logo" />
         </div>
         <img src={ban} className="banner" alt="bannière" />
         <p className="text-entry">
-          <span>RENDEZ VOTRE QUOTIDIEN EXTRAORDINAIRE</span> <br />
+          <span>RENDEZ VOTRE QUOTIDIEN EXTRAORDINAIRE !</span> <br />
           Déménagements sans stress, cours de sport dynamiques, animations
           d'anniversaires mémorables et bien plus encore...
           <br />
-          Louez dès aujourd'hui et vivez l'aventure avec nos héros à vos côtés!
+          Réservez dès aujourd'hui et vivez l'aventure avec nos héros à vos côtés!
         </p>
         <Link to="/accueil">
           <button type="button" className="button-entry">

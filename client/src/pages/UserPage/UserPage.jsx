@@ -4,6 +4,7 @@ import Manue from "../../assets/images/Manue.jpg";
 import Coline from "../../assets/images/Coline.jpg";
 import Nicos from "../../assets/images/Nicos.jpg";
 import Adam from "../../assets/images/Adam.jpg";
+import UserProfil from "../../components/UserProfil/UserProfil";
 
 // import des fichiers style et composants :
 import Header from "../../components/Header/Header";
@@ -15,17 +16,31 @@ const users = [
     id: 1,
     firstName: "Emmanuelle",
     lastName: "Curiant",
-    email: "emmanuelle.curiant@gmail.com",
+    email: "manue.dubendo@gmail.com",
     password: "manue",
     image: Manue,
+    DDN: "12/02/1978",
+    address: "77 rue la vie heureuse 75012 Paris",
+    tel: "06 28 28 28 28",
+    orders: [
+      "Commande effectuée le 01 Janv 2024, prestataire: Spiderman, occasion : évènement, prix : 130€ - statut : validée",
+      "Commande effectuée le 02 Mars 2024, prestataire: Doctor Strange, occasion: déménagement, prix : 94€ - statut : validée",
+    ],
   },
   {
     id: 2,
     firstName: "Coline",
     lastName: "Grosso",
-    email: "coline.grosso@neuf.fr",
+    email: "supercoco@neuf.fr",
     password: "coco",
     image: Coline,
+    DDN: "11/06/1996",
+    address: "4 rue de la joyeusetée 75018 Paris",
+    tel: "06 63 63 63 63",
+    orders: [
+      "Commande effectuée le 01 Janv 2024, prestataire: Spiderman, occasion : évènement, prix : 130€ - statut : validée",
+      "Commande effectuée le 02 Mars 2024, prestataire: Doctor Strange, occasion: déménagement, prix : 94€ - statut : validée",
+    ],
   },
   {
     id: 3,
@@ -34,22 +49,28 @@ const users = [
     email: "blackstar.per.onetap@gmail.com",
     password: "leprince",
     image: Adam,
+    DDN: "24/02/2024",
+    address: "10 rue de l'arbre jaune 92230 Gennevilliers",
+    tel: "07 83 83 83 83",
+    orders: [
+      "Commande effectuée le 01 Janv 2024, prestataire: Spiderman, occasion : évènement, prix : 130€ - statut : validée",
+      "Commande effectuée le 02 Mars 2024, prestataire: Doctor Strange, occasion: déménagement, prix : 94€ - statut : validée",
+    ],
   },
   {
     id: 4,
     firstName: "Nicos",
     lastName: "Muntu-Quituba",
-    email: "nicos19@hotmail.fr",
+    email: "nicoslebogoss@hotmail.fr",
     password: "nicoss",
     image: Nicos,
-  },
-  {
-    id: 5,
-    firstName: "a",
-    lastName: "Muntu-Quituba",
-    email: "a",
-    password: "a",
-    image: Nicos,
+    DDN: "19/10/1903",
+    address: "2 rue du petit colibri 78000 Versailles",
+    tel: "06 64 64 64 64",
+    orders: [
+      "Commande effectuée le 01 Janv 2024, prestataire: Spiderman, occasion : évènement, prix : 130€ - statut : validée",
+      "Commande effectuée le 02 Mars 2024, prestataire: Doctor Strange, occasion: déménagement, prix : 94€ - statut : validée",
+    ],
   },
 ];
 
@@ -110,6 +131,12 @@ function UserPage() {
           </form>
         )}
       </div>
+      {login && (
+        <>
+          <h1 id="welcome-message">Bienvenue sur votre compte !</h1>
+          <UserProfil />
+        </>
+      )}
       <Footer />
     </>
   );

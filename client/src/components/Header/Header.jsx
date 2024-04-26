@@ -31,13 +31,8 @@ function BurgerMenu() {
               </Link>
             </li>
             <li className="burgermenu-items">
-              <Link to="/" className="burgermenu-link">
-                Portfolio
-              </Link>
-            </li>
-            <li className="burgermenu-items">
-              <Link to="/" className="burgermenu-link">
-                Services
+              <Link to="" className="burgermenu-link">
+                Comment ça marche ?
               </Link>
             </li>
             <li className="burgermenu-items">

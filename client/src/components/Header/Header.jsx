@@ -31,7 +31,7 @@ function BurgerMenu() {
               </Link>
             </li>
             <li className="burgermenu-items">
-              <a href="/Accueil/#link-burger" className="burgermenu-link">
+              <a href="/accueil#link-burger" className="burgermenu-link">
                 Comment ça marche ?
               </a>
             </li>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Paypal from "../Paypal/Paypal";
 import "./Formulaire.css";
 
 function Formulaire() {
@@ -13,10 +14,10 @@ function Formulaire() {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
-  
+
   return (
     <div className="container" onSubmit={handleSubmit}>
-        {/* <h1 className="title-form">Réserver ce super héro !</h1> */}
+      {/* <h1 className="title-form">Réserver ce super héro !</h1> */}
       <div className="container-data">
         <div className="usedata">
           <div>
@@ -97,11 +98,7 @@ function Formulaire() {
         </div>
       </div>
 
-      <div className="container-button">
-        <button id="valider" type="submit">
-          VALIDE TA COMMANDE EN UN CLICK
-        </button>
-      </div>
+      <Paypal />
     </div>
   );
 }

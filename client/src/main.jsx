@@ -29,22 +29,21 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path:'/faq',
-    element:(
+    path: "/faq",
+    element: (
       <main>
-        <Faq/>
+        <Faq />
       </main>
-    )
+    ),
   },
   {
-    path:'/formulaire',
-    element:(
+    path: "/formulaire",
+    element: (
       <main>
-        <Formulaire/>
+        <Formulaire />
       </main>
-    )
+    ),
   },
-  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

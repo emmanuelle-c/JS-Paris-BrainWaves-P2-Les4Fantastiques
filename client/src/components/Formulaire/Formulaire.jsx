@@ -18,7 +18,7 @@ function Formulaire() {
 
   return (
     <div className="container" onSubmit={handleSubmit}>
-      {/* <h1 className="title-form">Réserver ce super héro !</h1> */}
+      <h1>Réserver ce super héro !</h1>
       <div className="container-data">
         <div className="usedata">
           <div className="labelLeft">

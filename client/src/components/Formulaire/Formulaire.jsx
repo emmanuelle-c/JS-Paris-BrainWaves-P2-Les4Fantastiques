@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Paypal from "../Paypal/Paypal";
 import "./Formulaire.css";
 import "./FormulaireResponsive.css"
 
@@ -98,12 +99,7 @@ function Formulaire() {
           </div>
         </div>
       </div>
-
-      <div className="container-button">
-        <button id="valider" type="submit">
-          VALIDE TA COMMANDE EN UN CLICK 
-        </button>
-      </div>
+      <Paypal />
     </div>
     </div>
   );

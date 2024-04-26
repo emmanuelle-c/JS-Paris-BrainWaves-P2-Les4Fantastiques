@@ -46,7 +46,7 @@ const users = [
     id: 3,
     firstName: "Adam",
     lastName: "Boulkhedert",
-    email: "blackstar.per.onetap@gmail.com",
+    email: "panpiboubou@gmail.com",
     password: "leprince",
     image: Adam,
     DDN: "24/02/2024",

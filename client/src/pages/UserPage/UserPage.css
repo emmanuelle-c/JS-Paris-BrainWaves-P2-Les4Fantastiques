@@ -54,3 +54,9 @@ form p {
   font-style: italic;
   color: red;
 }
+
+#welcome-message {
+  font-family: "Poppins";
+  color: var(--main-color);
+  text-align: center;
+}

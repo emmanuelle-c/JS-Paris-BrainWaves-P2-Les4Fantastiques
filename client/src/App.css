@@ -98,6 +98,7 @@ a {
   align-items: center;
   margin: 4rem 0 2rem;
 }
+
 /* VERSION MOBILE */
 @media screen and (max-width: 744px) {
   .hero-container {

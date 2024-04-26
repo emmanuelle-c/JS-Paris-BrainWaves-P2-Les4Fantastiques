@@ -5,10 +5,6 @@
     padding-left: 33px;
   }
 
-  .textHero {
-    height: 250px;
-  }
-
   .container {
     display: flex;
     flex-direction: column;
@@ -34,7 +30,8 @@
     max-width: 100%;
   }
   .titleComment {
-    margin-left: 16%;
+    margin-left: 28%;
+    margin-right: 25%;
   }
 }
 
@@ -57,9 +54,6 @@
   .labelLeft {
     margin-right: 1rem;
   }
-  .textHero {
-    height: 380px;
-  }
 
   .container-button {
     width: 80%;
@@ -75,5 +69,11 @@
   .bigContainer {
     margin-top: 1rem;
     max-width: 100%;
+  }
+
+  .titleComment {
+    margin-left: 10%;
+    margin-right: 0%;
+    font-size: 20px;
   }
 }

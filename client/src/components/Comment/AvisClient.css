@@ -1,11 +1,11 @@
 .comment-space {
   max-width: 66%;
   margin: 0 auto;
-  padding: 20px;
 }
 
 .comments {
   margin-bottom: 20px;
+  margin-top: 2rem;
 }
 
 .h2 {

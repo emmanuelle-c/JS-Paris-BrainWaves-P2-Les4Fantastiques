@@ -16,7 +16,7 @@ import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 export default function Slider() {
   return (
-    <Swiper
+    <Swiper id="link-burger"
       effect="flip"
       grabCursor
       pagination
@@ -34,7 +34,7 @@ export default function Slider() {
         <div className="downTextImg">
           <img className="imgStep" alt="image1" src={sliderOne} />
           <div className="downText">
-            <p className="question">Vous avez besoin d'un super héro ? </p>
+            <p className="question">Vous avez besoin d'un super-héro ? </p>
             <p className="response">
               Que ça soit pour un anniversaire, un déménagement ou un cours
               particulier ! Notre site est fait pour ça !{" "}
@@ -73,7 +73,7 @@ export default function Slider() {
           <div className="downText">
             <p className="question">Vous profitez de votre super-héro. </p>
             <p className="response">
-              Il ne vous reste qu'à passer du bon temps queqlque soit loccasion
+              Il ne vous reste qu'à passer du bon temps quelque soit l'occasion
               !{" "}
             </p>
           </div>

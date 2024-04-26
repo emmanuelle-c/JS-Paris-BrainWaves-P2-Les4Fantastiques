@@ -27,13 +27,13 @@ function BurgerMenu() {
           <ul className="burgermenu-links">
             <li className="burgermenu-items">
               <Link to="/" className="burgermenu-link">
-                Accueil
+                Page d'entrée
               </Link>
             </li>
             <li className="burgermenu-items">
-              <Link to="/" className="burgermenu-link">
+              <a href="/Accueil/#link-burger" className="burgermenu-link">
                 Comment ça marche ?
-              </Link>
+              </a>
             </li>
             <li className="burgermenu-items">
               <Link to="/faq" className="burgermenu-link">

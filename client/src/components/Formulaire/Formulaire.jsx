@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Paypal from "../Paypal/Paypal";
 import "./Formulaire.css";
+import "./FormulaireResponsive.css"
 
 function Formulaire() {
   const [nom, setNom] = useState("");
@@ -20,7 +21,7 @@ function Formulaire() {
       {/* <h1 className="title-form">Réserver ce super héro !</h1> */}
       <div className="container-data">
         <div className="usedata">
-          <div>
+          <div className="labelLeft">
             <label htmlFor="nom">NOM:</label>
             <input
               type="text"
@@ -44,7 +45,7 @@ function Formulaire() {
         </div>
 
         <div className="usedata-2">
-          <div>
+          <div className="labelLeft">
             <label htmlFor="email">EMAIL:</label>
             <input
               type="email"
@@ -76,7 +77,7 @@ function Formulaire() {
         </div>
 
         <div className="position">
-          <div>
+          <div className="labelLeft">
             <label htmlFor="ville">VILLE:</label>
             <input
               type="text"
@@ -97,7 +98,6 @@ function Formulaire() {
           </div>
         </div>
       </div>
-
       <Paypal />
     </div>
   );

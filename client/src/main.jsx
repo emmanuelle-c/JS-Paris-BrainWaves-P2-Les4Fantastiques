@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { StatusProvider } from "./contexts/auth";
 import App from "./App";
 import PageHero from "./pages/PageHero";
 import FirstPage from "./pages/FirstPage/FirstPage";
+import UserPage from "./pages/UserPage/UserPage";
 import Faq from "./pages/Faq/Faq";
-import Formulaire from "./components/Formulaire/Formulaire";
 
 const router = createBrowserRouter([
   {
@@ -29,18 +30,14 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/userpage",
+    element: <UserPage />,
+  },
+  {
     path: "/faq",
     element: (
       <main>
         <Faq />
-      </main>
-    ),
-  },
-  {
-    path: "/formulaire",
-    element: (
-      <main>
-        <Formulaire />
       </main>
     ),
   },
@@ -50,6 +47,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <StatusProvider>
+      <RouterProvider router={router} />
+    </StatusProvider>
   </React.StrictMode>
 );

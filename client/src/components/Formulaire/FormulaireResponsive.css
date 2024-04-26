@@ -5,10 +5,6 @@
     padding-left: 33px;
   }
 
-  .textHero {
-    height: 250px;
-  }
-
   .container {
     display: flex;
     flex-direction: column;
@@ -28,6 +24,14 @@
   }
   #valider {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .bigContainer {
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+  .titleComment {
+    margin-left: 28%;
+    margin-right: 25%;
   }
 }
 
@@ -61,5 +65,15 @@
 
   #valider {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .bigContainer {
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+
+  .titleComment {
+    margin-left: 10%;
+    margin-right: 0%;
+    font-size: 20px;
   }
 }

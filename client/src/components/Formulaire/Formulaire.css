@@ -3,10 +3,8 @@
   justify-content: center;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 30px;
-  max-width: 65%;
-  background-color: #e1e1e1;
+  width: 100%;
   margin-bottom: 60px;
 }
 
@@ -53,7 +51,7 @@
 #nom {
   width: 100%;
   padding: 8px;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   border-radius: 20px;
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -63,7 +61,7 @@
   width: 80%;
   padding: 8px;
   margin-right: 40px;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   border-radius: 20px;
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -72,7 +70,7 @@
 #email {
   width: 97%;
   padding: 8px;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   border-radius: 20px;
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -82,7 +80,7 @@
   width: 80%;
   padding: 8px;
   margin-right: 20px;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   border-radius: 20px;
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -91,7 +89,7 @@
 #ville {
   width: 100%;
   padding: 8px;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   border-radius: 20px;
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -100,7 +98,7 @@
 #codePostal {
   width: 80%;
   padding: 8px;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   border-radius: 20px;
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -109,7 +107,7 @@
 #adresse {
   width: 90%;
   padding: 8px;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   border-radius: 20px;
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -139,15 +137,12 @@ label {
   transform: scale(0.9);
 }
 
-@media screen and (max-width: 744px) {
-  .container {
-    flex-direction: column;
-  }
-  .container-button {
-    width: 100%;
-    height: 20%;
-  }
-  #valider {
-    font-size: 2rem;
-  }
+.bigContainer {
+  max-width: 66%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.titleComment {
+  color: var(--main-color);
+  margin-left: 30%;
 }

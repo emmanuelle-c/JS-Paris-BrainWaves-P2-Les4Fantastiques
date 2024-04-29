@@ -83,7 +83,7 @@ function AvisClient() {
       <div className="comments">
         {comments.map((comment) => (
           <div key={comment.id} className="comment">
-            <p className="user">{comment.user}</p>
+            <p className="user-comment">{comment.user}</p>
             <p className="date">{comment.date}</p>
             <div className="rating">{renderStars(comment.rating)}</div>
             <p className="content">{comment.content}</p>

@@ -17,6 +17,10 @@
   .comment-form h3 {
     margin-bottom: 1rem;
   }
+
+  .user-comment {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -36,5 +40,9 @@
 
   .comment-form h3 {
     margin-bottom: 1rem;
+  }
+
+  .user-comment {
+    font-size: 14px;
   }
 }

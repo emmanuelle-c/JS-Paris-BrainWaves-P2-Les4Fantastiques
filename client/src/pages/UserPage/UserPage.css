@@ -60,3 +60,8 @@ form p {
   color: var(--main-color);
   text-align: center;
 }
+@media screen and (max-width: 744px) {
+  form p {
+    font-size: 0.8rem;
+  }
+}

@@ -30,7 +30,12 @@ function BurgerMenu() {
                 Page d'entrée
               </Link>
             </li>
-            <li className="burgermenu-items">
+            <li
+              className="burgermenu-items"
+              role="presentation"
+              onClick={handleShowLinks}
+              onKeyDown={handleShowLinks}
+            >
               <a href="/accueil#link-burger" className="burgermenu-link">
                 Comment ça marche ?
               </a>

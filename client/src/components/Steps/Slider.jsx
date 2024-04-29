@@ -16,7 +16,8 @@ import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 export default function Slider() {
   return (
-    <Swiper id="link-burger"
+    <Swiper
+      id="link-burger"
       effect="flip"
       grabCursor
       pagination
@@ -34,10 +35,10 @@ export default function Slider() {
         <div className="downTextImg">
           <img className="imgStep" alt="image1" src={sliderOne} />
           <div className="downText">
-            <p className="question">Vous avez besoin d'un super-héro ? </p>
+            <p className="question">Vous avez besoin d'un super-héros ? </p>
             <p className="response">
-              Que ça soit pour un anniversaire, un déménagement ou un cours
-              particulier ! Notre site est fait pour ça !{" "}
+              Que ça soit notamment pour un anniversaire, un déménagement ou un
+              cours particulier, notre site est fait pour vous !
             </p>
           </div>
         </div>
@@ -53,10 +54,10 @@ export default function Slider() {
         <div className="downTextImg">
           <img className="imgStep" alt="image2" src={sliderTwo} />
           <div className="downText">
-            <p className="question">Vous trouvez votre super-héro. </p>
+            <p className="question">Vous trouvez votre super-héros. </p>
             <p className="response">
               Vous pouvez réserver les services de vos super-héros en fonction
-              de vos besoins !{" "}
+              de vos besoins directement sur notre site !{" "}
             </p>
           </div>
         </div>
@@ -71,10 +72,10 @@ export default function Slider() {
         <div className="downTextImg">
           <img className="imgStep" alt="image3" src={sliderThree} />
           <div className="downText">
-            <p className="question">Vous profitez de votre super-héro. </p>
+            <p className="question">Vous disposez de votre super-héros. </p>
             <p className="response">
-              Il ne vous reste qu'à passer du bon temps quelque soit l'occasion
-              !{" "}
+              Le jour venu, il ne vous reste qu'à profiter de ses services
+              quelque soit l'occasion !
             </p>
           </div>
         </div>

@@ -124,7 +124,7 @@ function UserPage() {
                 onChange={(event) => setPasswordInput(event.target.value)}
               />
             </section>
-            {notUser && <p>**utilisateur non reconnu**</p>}
+            {notUser && <p id="error-log">**utilisateur non reconnu**</p>}
             <button type="submit" onClick={clickSubmit}>
               LOG IN
             </button>

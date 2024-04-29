@@ -14,26 +14,30 @@
 .connection {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  margin-top: 1%;
+  margin-right: 1%;
 }
 
-#log-out {
+.connection-menu {
   font-family: "Poppins";
   color: var(--main-color);
   font-weight: 400;
-  margin-left: auto;
-  margin-right: 2%;
+  text-align: end;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  line-height: 2rem;
+  position: absolute;
+  top: 14%;
+  z-index: 1;
 }
 
 .connection img {
-  left: 85%;
-  position: absolute;
-  width: 5%;
-  border-radius: 100%;
-}
-
-.connection a {
-  margin-top: 1rem;
-  margin-right: 1.5rem;
+  width: 12%;
+  border-radius: 50px;
+  object-fit: cover;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .button-container {
@@ -163,9 +167,15 @@
   }
   .button-responsive img {
     width: 12%;
-    height: 90%;
-    border-radius: 100%;
-    margin: auto 1% auto 81%;
+    border-radius: 50px;
+    object-fit: cover;
+    margin: auto 1% auto 85%;
+  }
+
+  .connection-menu {
+    top: 4%;
+    right: 2%;
+    font-size: 0.8rem;
   }
   /* display of burger button */
   .burger-bar svg {
@@ -210,5 +220,8 @@
   }
   .burgermenu-links {
     padding: 2rem;
+  }
+  .connection-menu {
+    top: 10%;
   }
 }

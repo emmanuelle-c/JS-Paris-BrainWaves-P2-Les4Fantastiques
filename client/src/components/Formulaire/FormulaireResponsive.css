@@ -76,4 +76,7 @@
     margin-right: 0%;
     font-size: 20px;
   }
+  #error-message{
+    font-size: 0.7rem;
+  }
 }

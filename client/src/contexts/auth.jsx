@@ -17,7 +17,7 @@ export function StatusProvider({ children }) {
 }
 
 StatusProvider.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export const useStatus = () => useContext(StatusContext);

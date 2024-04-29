@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { StatusProvider } from "./contexts/auth";
 import App from "./App";
-import PageHero from "./pages/PageHero";
+import PageHero from "./pages/PageHero/PageHero";
 import FirstPage from "./pages/FirstPage/FirstPage";
 import UserPage from "./pages/UserPage/UserPage";
 import Faq from "./pages/Faq/Faq";

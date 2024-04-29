@@ -41,7 +41,7 @@ function Faq() {
         <AccordionDetails>
           <Typography style={{fontFamily:"Poppins"}}>
           C'est simple ! Vous parcourez notre catalogue en ligne, choisissez le super-héros et le service désiré, 
-          sélectionnez la date et l'heure qui vous conviennent, puis procédez au paiement sécurisé. 
+          sélectionnez la date qui vous convient, puis procédez au paiement sécurisé. 
           Votre super-héros sera alors prêt à intervenir selon vos besoins.
           </Typography>
         </AccordionDetails>
@@ -58,7 +58,7 @@ function Faq() {
           <Typography style={{fontFamily:"Poppins"}}>
           Nous avons une équipe diversifiée de super-héros prêts à répondre à vos demandes. 
           De la force surhumaine à la maîtrise des éléments, en passant par la vitesse fulgurante et la télépathie, 
-          nos héros ont une variété de compétences à votre service.
+          nos héros ont une large variété de compétences à votre service.
           </Typography>
         </AccordionDetails>
       </Accordion>

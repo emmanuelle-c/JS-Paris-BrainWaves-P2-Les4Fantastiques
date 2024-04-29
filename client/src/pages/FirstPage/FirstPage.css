@@ -136,6 +136,9 @@
     left: 80%;
     width: 16%;
   }
+  .user {
+    font-size: 30px;
+  }
   .button-header {
     margin-right: 15%;
     margin-top: 2%;

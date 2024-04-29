@@ -41,10 +41,6 @@
   .container-data {
     color: #7b7b7b;
   }
-  .user {
-    font-size: 14px;
-  }
-
   .container {
     display: flex;
     flex-direction: column;

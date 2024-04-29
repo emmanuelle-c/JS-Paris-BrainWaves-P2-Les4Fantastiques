@@ -24,6 +24,7 @@
   font-weight: bold;
   font-family: "Poppins";
   color: var(--main-color);
+  font-size: 14px;
 }
 
 .date {

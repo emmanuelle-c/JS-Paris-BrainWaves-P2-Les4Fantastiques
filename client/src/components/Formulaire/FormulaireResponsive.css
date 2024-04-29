@@ -4,7 +4,9 @@
     padding-right: 0px;
     padding-left: 33px;
   }
-
+  .user {
+    font-size: 14px;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -39,6 +41,9 @@
   .container-data {
     color: #7b7b7b;
     /* padding-right: inherit; */
+  }
+  .user {
+    font-size: 14px;
   }
 
   .container {

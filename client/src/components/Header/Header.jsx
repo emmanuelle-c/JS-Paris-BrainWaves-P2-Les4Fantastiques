@@ -30,7 +30,12 @@ function BurgerMenu() {
                 Page d'entrée
               </Link>
             </li>
-            <li className="burgermenu-items">
+            <li
+              className="burgermenu-items"
+              role="presentation"
+              onClick={handleShowLinks}
+              onKeyDown={handleShowLinks}
+            >
               <a href="/Accueil/#link-burger" className="burgermenu-link">
                 Comment ça marche ?
               </a>
@@ -77,18 +82,18 @@ function BurgerMenu() {
                 onKeyDown={handleShowlog}
               />
               {showlog && (
-                <>
+                <div className="connection-menu">
                   <p
-                    id="log-out"
+                    id="log-out-user"
                     role="presentation"
                     onClick={() => setLogin(false)}
                   >
                     se déconnecter
                   </p>
                   <Link to="/userpage">
-                    <p id="log-in">mon compte</p>
+                    <p id="log-in-user">mon compte</p>
                   </Link>
-                </>
+                </div>
               )}
             </>
           )}
@@ -111,18 +116,18 @@ function BurgerMenu() {
                 onKeyDown={handleShowlog}
               />
               {showlog && (
-                <>
+                <div className="connection-menu">
                   <p
-                    id="log-out"
+                    id="log-out-user"
                     role="presentation"
                     onClick={() => setLogin(false)}
                   >
                     se déconnecter
                   </p>
                   <Link to="/userpage">
-                    <p id="log-in">mon compte</p>
+                    <p id="log-in-user">mon compte</p>
                   </Link>
-                </>
+                </div>
               )}
             </>
           )}

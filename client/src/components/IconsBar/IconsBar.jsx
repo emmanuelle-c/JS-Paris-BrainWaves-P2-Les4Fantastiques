@@ -17,7 +17,7 @@ function IconsBar({filterHeroesByOccupation}) {
         </button>
         <button className="moving" type="button" onClick={() => filterHeroesByOccupation(["titan","destroyer","retired"])}>
         <BsBoxSeam/>
-        <p className="text">Déménagement</p>
+        <p className="text">Demenagement</p>
         </button>
         <button className="cours" type="button" onClick={() => filterHeroesByOccupation(["professor","student","teacher"])}>
         <PiStudentBold/>
@@ -33,7 +33,7 @@ function IconsBar({filterHeroesByOccupation}) {
         </button>
         <button className="party" type="button" onClick={() => filterHeroesByOccupation(["musician","florist","magician","singer"])}>
         <LuPartyPopper/>
-        <p className="text">Evénements</p>
+        <p className="text">Evenements</p>
         </button>
         <button className="detective" type="button" onClick={() => filterHeroesByOccupation(["investigator","tracker","spy","journalist"])}>
         <PiDetectiveBold/>

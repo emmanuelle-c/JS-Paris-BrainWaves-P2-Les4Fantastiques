@@ -3,18 +3,18 @@ import "./Hero.css";
 import { Link } from "react-router-dom";
 
 function convertMonth(month) {
-  if (month === 0) return "Janvier";
-  if (month === 1) return "Février";
+  if (month === 0) return "Janv.";
+  if (month === 1) return "Fev.";
   if (month === 2) return "Mars";
   if (month === 3) return "Avril";
   if (month === 4) return "Mai";
   if (month === 5) return "Juin";
-  if (month === 6) return "Juillet";
+  if (month === 6) return "Juil.";
   if (month === 7) return "Août";
-  if (month === 8) return "Septembre";
-  if (month === 9) return "Octobre";
-  if (month === 10) return "Novembre";
-  if (month === 11) return "Décembre";
+  if (month === 8) return "Sept.";
+  if (month === 9) return "Oct.";
+  if (month === 10) return "Nov.";
+  if (month === 11) return "Dec.";
   return false;
 }
 
@@ -33,10 +33,10 @@ function HeroCard({ hero }) {
         <div className="description">
           <p>{hero.biography.fullName}</p>
           <p>
-            prochaine dispo : {hero.date.getDate()}{" "}
+            Prochaine dispo : {hero.date.getDate()}{" "}
             {convertMonth(hero.date.getMonth())}
           </p>
-          <p>prix : {hero.price}€ par jour</p>
+          <p>Prix : {hero.price}€ par jour</p>
         </div>
       </article>
     </div>

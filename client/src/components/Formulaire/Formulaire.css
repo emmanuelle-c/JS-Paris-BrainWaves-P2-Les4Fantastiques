@@ -146,3 +146,10 @@ label {
   color: var(--main-color);
   margin-left: 30%;
 }
+
+#error-message{
+  color: red;
+  font-family: "Poppins";
+  padding: 2%;
+  font-size: 1rem;
+}

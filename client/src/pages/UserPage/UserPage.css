@@ -50,7 +50,7 @@
 #password-container label {
   margin-right: 3%;
 }
-form p {
+#error-log {
   font-style: italic;
   color: red;
 }
@@ -59,4 +59,9 @@ form p {
   font-family: "Poppins";
   color: var(--main-color);
   text-align: center;
+}
+@media screen and (max-width: 744px) {
+  #error-log {
+    font-size: 0.8rem;
+  }
 }

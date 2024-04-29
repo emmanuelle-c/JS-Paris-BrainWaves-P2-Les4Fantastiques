@@ -4,7 +4,9 @@
     padding-right: 0px;
     padding-left: 33px;
   }
-
+  .user {
+    font-size: 14px;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -38,7 +40,9 @@
 @media screen and (max-width: 470px) {
   .container-data {
     color: #7b7b7b;
-    /* padding-right: inherit; */
+  }
+  .user {
+    font-size: 14px;
   }
 
   .container {
@@ -75,5 +79,8 @@
     margin-left: 10%;
     margin-right: 0%;
     font-size: 20px;
+  }
+  #error-message {
+    font-size: 0.7rem;
   }
 }

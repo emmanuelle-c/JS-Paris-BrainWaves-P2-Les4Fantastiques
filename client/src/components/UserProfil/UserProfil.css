@@ -27,6 +27,7 @@
 .information-sections {
   font-family: "Poppins";
   max-width: 50%;
+  font-weight: 300;
 }
 #orders-container p {
   border: 0.5px solid black;

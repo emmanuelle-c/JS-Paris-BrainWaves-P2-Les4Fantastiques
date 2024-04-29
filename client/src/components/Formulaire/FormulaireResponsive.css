@@ -40,7 +40,6 @@
 @media screen and (max-width: 470px) {
   .container-data {
     color: #7b7b7b;
-    /* padding-right: inherit; */
   }
   .user {
     font-size: 14px;

@@ -32,6 +32,10 @@
   z-index: 1;
 }
 
+#log-in-user{
+  color: var(--main-color);
+}
+
 .connection img {
   width: 12%;
   border-radius: 50px;

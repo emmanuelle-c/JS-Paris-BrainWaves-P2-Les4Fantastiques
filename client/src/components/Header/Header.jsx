@@ -36,9 +36,9 @@ function BurgerMenu() {
               onClick={handleShowLinks}
               onKeyDown={handleShowLinks}
             >
-              <Link to="/accueil#link-burger" className="burgermenu-link">
+              <a href="/accueil#link-burger" className="burgermenu-link">
                 Comment ça marche ?
-              </Link>
+              </a>
             </li>
             <li className="burgermenu-items">
               <Link to="/faq" className="burgermenu-link">

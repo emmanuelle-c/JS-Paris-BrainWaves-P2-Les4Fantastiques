@@ -22,16 +22,16 @@ React: For building a modular and scalable front-end application.
 - User-Friendly Interface: A responsive and intuitive interface for easy navigation and booking.
   
 ## Technologies Used
-JavaScript
-HTML
-CSS
-React
+- JavaScript
+- HTML
+- CSS
+- React
 
 ## Installation and Usage
-Clone the Repository: git clone https://github.com/yourusername/the-hero-experience.git
-Navigate to the Project Directory: cd the-hero-experience
-Install Dependencies: npm install
-Run the Application: npm start
+- Clone the Repository: git clone https://github.com/yourusername/the-hero-experience.git
+- Navigate to the Project Directory: cd the-hero-experience
+- Install Dependencies: npm install
+- Run the Application: npm start
 
 ## View the project here :
 https://the-hero-experience.vercel.app/
